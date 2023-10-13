@@ -1,7 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Primeira-Liga</title>
+    <style>
+        /* Center the tables on the page */
+        body {
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Add some spacing between the tables */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        /* Style for the tables */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 8px 10px; /* Adjust the padding to make columns narrower */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Round the top-left and top-right corners of the first row */
+        tr:first-child th:first-child {
+            border-top-left-radius: 10px;
+        }
+
+        tr:first-child th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        /* Round the bottom-left and bottom-right corners of the last row */
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">

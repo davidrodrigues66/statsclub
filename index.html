@@ -3,18 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title>League Index</title>
+    <style>
+        /* Styling for the blue bar */
+        .top-bar {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        ul li img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+        ul li a {
+            font-size: 24px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Leagues</h1>
-    <ul>
-        <li><a href="Premier%20League.html">Premier League</a></li>
-        <li><a href="Primeira%20Liga.html">Primeira Liga</a></li>
-        <li><a href="La%20Liga.html">La Liga</a></li>
-        <li><a href="Serie%20A.html">Serie A</a></li>
-        <li><a href="Bundesliga.html">Bundesliga</a></li>
-        <li><a href="Ligue%201.html">Ligue 1</a></li>
+    <!-- Blue bar at the top of the page -->
+    <div class="top-bar">
+        Stats Club
+    </div>
+    
+    <div class="content">
+        <h1>Leagues</h1>
+        <ul>
+            <li>
+                <img src="logos/premier_league_logo.png" alt="Premier League Logo">
+                <a href="Premier%20League.html">Premier League</a>
+            </li>
+            
+            <li>
+                <img src="logos/primeira_liga_logo.png" alt="Primeira Liga Logo">
+                <a href="Primeira%20Liga.html">Primeira Liga</a>
+            </li>
+
+            <li>
+                <img src="logos/la_liga_logo.png" alt="La Liga Logo">
+                <a href="La%20Liga.html">La Liga</a>
+            </li>
+
+            <li>
+                <img src="logos/serie_a_logo.png" alt="Serie A Logo">
+                <a href="Serie%20A.html">Serie A</a>
+            </li>
+
+            <li>
+                <img src="logos/bundesliga_logo.png" alt="Bundesliga Logo">
+                <a href="Bundesliga.html">Bundesliga</a>
+            </li>
+
+            <li>
+                <img src="logos/ligue_1_logo.png" alt="Ligue 1 Logo">
+                <a href="Ligue%201.html">Ligue 1</a>
+            </li>
 
 
-    </ul>
+        </ul>
+    </div>
 </body>
 </html>

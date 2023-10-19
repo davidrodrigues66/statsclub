@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Premier-League</title>
     <style>
+
+        
         /* Center the tables on the page */
         body {
             margin: 0;
-            background-color: #f2f2f2;
+            background-color: #ffffff;
         }
 
         /* Add some spacing between the tables */
@@ -32,38 +35,67 @@
         th, td {
             padding: 8px 10px; /* Adjust the padding to make columns narrower */
             text-align: left;
+            font-family: 'Arial', sans-serif;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #003366;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color:#ffffff;
+        }
+
+        .toggle-button {
+            background-color: #003366; /* Modern blue color */
+            color: #fff; /* White text */
+            margin-top: 10px;
+            padding: 10px 20px; /* Adequate padding */
+            border: none;
+            border-radius: 5px; /* Slightly rounded corners */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px; /* Larger font size for modern look */
+            font-weight: bold; /* Bold text */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        .toggle-button:hover {
+            background-color: #001a33; /* Darker blue on hover */
+        }
+
+        h1 {
+            font-size: 24px;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: bold;
         }
 
-        /* Round the top-left and top-right corners of the first row */
-        tr:first-child th:first-child {
-            border-top-left-radius: 10px;
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color:#003366;
         }
 
-        tr:first-child th:last-child {
-            border-top-right-radius: 10px;
+        h3 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
         }
 
-        /* Round the bottom-left and bottom-right corners of the last row */
-        tr:last-child td:first-child {
-            border-bottom-left-radius: 10px;
-        }
-
-        tr:last-child td:last-child {
-            border-bottom-right-radius: 10px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Next games</h1>
-        <div><h3>Home advantage is 0.23</h3></div>
-        <div>
-            <table border="1" class="dataframe">
+        <img src="../static/logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;">
+    </div>
+    
+    
+    <div class="container">
+        <h2>Next games</h2>
+        <h3>Home advantage is 0.23</h3>
+        <table class="your-table-class">
+            <tr>
+              <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -134,14 +166,17 @@
       <td>Fulham</td>
     </tr>
   </tbody>
-</table>
-        </div>
+</table></td>
+            </tr>
+          </table>
+          
     </div>
 
     <div class="container">
         
-        <h1>Liverpool vs Everton</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Liverpool vs Everton</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -240,9 +275,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Bournemouth vs Wolves</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Bournemouth vs Wolves</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -341,9 +378,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Newcastle Utd vs Crystal Palace</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Newcastle Utd vs Crystal Palace</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -436,15 +475,17 @@
       <td>38.0</td>
       <td>50.0</td>
       <td>38.0</td>
-      <td>-0.26</td>
+      <td>-0.27</td>
       <td>0</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Brentford vs Burnley</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Brentford vs Burnley</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -543,9 +584,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Manchester City vs Brighton</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Manchester City vs Brighton</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -644,9 +687,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Nott&#39;ham Forest vs Luton Town</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Nott&#39;ham Forest vs Luton Town</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -745,9 +790,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Chelsea vs Arsenal</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Chelsea vs Arsenal</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -846,9 +893,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Sheffield Utd vs Manchester Utd</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Sheffield Utd vs Manchester Utd</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -947,9 +996,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Aston Villa vs West Ham</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Aston Villa vs West Ham</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1048,9 +1099,11 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
-        <h1>Tottenham vs Fulham</h1>
-        <table border="1" class="dataframe">
+        <button class="toggle-button" onclick="toggleTable(this)">Tottenham vs Fulham</button>
+        <div class="table-container" style="display: none;">
+            <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1149,12 +1202,24 @@
     </tr>
   </tbody>
 </table>
+        </div>
         
     </div>
+    <script>
+        function toggleTable(button) {
+            var tableContainer = button.nextElementSibling;
+            if (tableContainer.style.display === "none" || tableContainer.style.display === "") {
+                tableContainer.style.display = "block";
+            } else {
+                tableContainer.style.display = "none";
+            }
+        }
+    </script>
+
     <div class="container">
-        <h1>
+        <h2>
             Tabela Premier-League
-        </h1>
+        </h2>
         <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1496,7 +1561,7 @@
       <td>38.0</td>
       <td>50.0</td>
       <td>38.0</td>
-      <td>-0.26</td>
+      <td>-0.27</td>
       <td>0</td>
       <td>1</td>
     </tr>

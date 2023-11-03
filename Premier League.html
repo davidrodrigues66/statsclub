@@ -10,7 +10,7 @@
         .top-bar {
             background-color: #003366;
             color: white;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
             font-size: 36px;
             font-family: 'Bebas Neue', sans-serif;
@@ -20,10 +20,11 @@
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
             z-index: 100; /* Set a higher z-index to keep the top bar above other elements */
+            height: 50px;
         }
 
         .content {
-            margin-top: 60px; /* Adjust the margin to match the top bar's height */
+            margin-top: 100px; /* Adjust the margin to match the top bar's height */
             height: 1500px; /* Example content height to demonstrate scrollability */
             overflow: auto; /* Enable scrolling for the content when it overflows */
         }
@@ -268,13 +269,12 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
-        Stats Club
+        <img src="logo.png">
     </div>
 
     <div id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-button">X</button>
         <ul>
-            <li><a href="/newlayout"> New Layout</a></li>
             <li><a href="/Premier League"> Premier League</a></li>
             <li><a href="/Primeira Liga"> Primeira Liga </a></li>
             <li><a href="/La Liga"> La Liga </a></li>
@@ -285,10 +285,6 @@
     </div>
 
     <div class="content">
-
-        <div class="container">
-            <img src="logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;">
-        </div>
 
         <div class="test1container">
 

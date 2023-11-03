@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <title>League Index</title>
+    <title>Stats Club</title>
+    <link rel="icon" type="image/x-icon" href="logo_32.ico">
     <style>
         /* Styling for the blue bar */
         .top-bar {
             background-color: #003366;
             color: white;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
             font-size: 36px;
             font-family: 'Bebas Neue', sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+            z-index: 100; /* Set a higher z-index to keep the top bar above other elements */
+            height: 50px;
         }
 
         .content {
@@ -64,7 +72,7 @@
 <body>
     <!-- Blue bar at the top of the page -->
     <div class="top-bar">
-        Stats Club
+        <img src="logo.png">
     </div>
     
     <div class="content">

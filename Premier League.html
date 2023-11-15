@@ -26,8 +26,29 @@
 
         .content {
             margin-top: 60px; /* Adjust the margin to match the top bar's height */
-            height: 1500px; /* Example content height to demonstrate scrollability */
-            overflow: auto; /* Enable scrolling for the content when it overflows */
+            height: auto; /* Example content height to demonstrate scrollability */
+            overflow: hidden; /* Enable scrolling for the content when it overflows */
+            margin-bottom: 50px;
+        }
+
+        .logo{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-container{
+            margin-top: 20px;
+            flex: 1; /* Occupy half the available space */
+            background-color:  transparent; /* Set a background color for the left container */
+            margin-left: 50px;
+            display: flex;
+            
         }
 
         
@@ -50,7 +71,7 @@
             border-radius: 10px; /* Rounded corners */
             background-color: #003366;
             margin-top: 10px;
-            display: inline-block; /* Keep tables on the same line */
+            
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
             width: max-content;
             text-align: center;
@@ -61,7 +82,7 @@
             border: 1px solid transparent; /* Border around the container */
             border-radius: 10px; /* Rounded corners */
             background-color: #003366;
-            margin-top: 30px;
+            margin-top: 90px;
             display: inline-block; /* Keep tables on the same line */
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
             width: max-content;
@@ -73,7 +94,7 @@
         .table-container table {
             display: inline-block; /* Ensure the table behaves as an inline-block element */
             text-align: center; /* Reset text alignment for table content */
-            width: auto;
+            width: max-content;
         }
 
         #dynamic-table {
@@ -146,8 +167,9 @@
 
         .table-toggle-button {
             display: inline-block;
-            width: 50px;
-            height: 20px;
+            width: max-content;
+            height: max-content;
+            padding: 4px;
             margin-right: 5px;
             background-color: #003366; /* Modern blue color */
             color: #fff; /* White text */
@@ -170,8 +192,10 @@
         }
 
         .simple-table {
-            font-size: 15px;
+            display: block;
+            font-size: 13px;
         }
+
 
         h1 {
             font-size: 24px;
@@ -183,18 +207,20 @@
             font-family: 'Arial', sans-serif;
             font-weight: bold;
             color:#003366;
+            font-size: 20px;
         }
 
         h3 {
             font-family: 'Arial', sans-serif;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 15px;
             color:#003366;
         }
 
-        .test1container {
+        .maincontainer {
             display: flex;
             background-color: white;
+            margin-bottom: 30px;
         }
 
         /* Style for the left container */
@@ -313,7 +339,6 @@
     <div id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-button">X</button>
         <ul>
-            <li><a href="/newlayout"> New Layout</a></li>
             <li><a href="/Premier League"> Premier League</a></li>
             <li><a href="/Primeira Liga"> Primeira Liga </a></li>
             <li><a href="/La Liga"> La Liga </a></li>
@@ -325,15 +350,20 @@
 
     <div class="content">
 
-        <div class="container">
-            <img src="logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;">
+        <div class="info-container">
+            <div class="logo">
+                <img src="./logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;">
+            </div>
+            <div>
+                <h2> Premier League 23/24</h2>
+                <h3>The home team has an average advantage of 0.33 goals</h3>
+            </div>
         </div>
 
-        <div class="test1container">
+        <div class="maincontainer">
 
             <div class="left-container">
-                <h2>Next games</h2>
-                <h3>The average home advantage is 0.33 goals</h3>
+                <h2>Fixtures</h2>
                 <div class="button-container">
                     
                     
@@ -1436,7 +1466,8 @@
             </div>
 
             <div class="right-container">
-                <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Total</button>
+                <h2>Premier League Standings </h2>
+                <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Overall</button>
                 <button class="table-toggle-button" data-table="home" onclick="showTable('home')">Home</button>
                 <button class="table-toggle-button" data-table="away" onclick="showTable('away')">Away</button>
 
@@ -2228,15 +2259,23 @@
                 if (activeButton === button) {
                     // If the same button is clicked again, hide the displayed table
                     dynamicTable.style.display = 'none';
+                    button.classList.remove('active-button');
                     activeButton = null;
                 } else {
-                    // Move the table content to the dynamic-table and show it
+                    // Move the table content to the dynamic-table, show it, and add the "active-button" class
                     var tableContent = tableContainer.querySelector('.table-content');
                     dynamicTable.innerHTML = tableContent.innerHTML;
                     dynamicTable.style.display = 'block';
+                    button.classList.add('active-button');
+                    
+                    // If there was a previously active button, remove the "active-button" class from it
+                    if (activeButton) {
+                        activeButton.classList.remove('active-button');
+                    }
+                    
                     activeButton = button;
+                    }
                 }
-            }
 
         </script>
 
@@ -2257,20 +2296,18 @@
                 sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
             });
         </script>
-        <div class="container">
+
+        <div style="width: max-content; margin: auto; display: flex; flex-direction: column;" class="container">
             <h2>
-                Tabela Premier League
+                Premier League Overall Stats
             </h2>
-        </div>
-        <div class="table-container">
-            <table border="1" class="dataframe">
+            <div class="table-container">
+                <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Pos</th>
+      <th>Tier</th>
       <th>Team</th>
-      <th>BTTS</th>
-      <th>CS</th>
-      <th>FTS</th>
       <th>Form</th>
       <th>Power Ranking</th>
       <th>Win%</th>
@@ -2291,11 +2328,9 @@
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>Manchester City</td>
-      <td>7</td>
-      <td>4</td>
       <td>1</td>
+      <td>A</td>
+      <td>Manchester City</td>
       <td>2.33</td>
       <td>1.49</td>
       <td>75%</td>
@@ -2314,11 +2349,9 @@
       <td>8%</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
+      <td>A</td>
       <td>Liverpool</td>
-      <td>8</td>
-      <td>4</td>
-      <td>0</td>
       <td>2.25</td>
       <td>1.48</td>
       <td>67%</td>
@@ -2337,11 +2370,9 @@
       <td>0%</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
+      <td>A</td>
       <td>Arsenal</td>
-      <td>6</td>
-      <td>5</td>
-      <td>1</td>
       <td>2.25</td>
       <td>1.05</td>
       <td>67%</td>
@@ -2360,11 +2391,9 @@
       <td>8%</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>Tottenham</td>
-      <td>8</td>
       <td>4</td>
-      <td>0</td>
+      <td>B</td>
+      <td>Tottenham</td>
       <td>2.17</td>
       <td>0.48</td>
       <td>67%</td>
@@ -2383,11 +2412,9 @@
       <td>0%</td>
     </tr>
     <tr>
-      <th>5</th>
+      <td>5</td>
+      <td>A</td>
       <td>Aston Villa</td>
-      <td>8</td>
-      <td>2</td>
-      <td>2</td>
       <td>2.08</td>
       <td>0.92</td>
       <td>67%</td>
@@ -2406,11 +2433,9 @@
       <td>17%</td>
     </tr>
     <tr>
-      <th>6</th>
+      <td>6</td>
+      <td>C</td>
       <td>Manchester Utd</td>
-      <td>5</td>
-      <td>4</td>
-      <td>3</td>
       <td>1.75</td>
       <td>-0.50</td>
       <td>58%</td>
@@ -2429,11 +2454,9 @@
       <td>25%</td>
     </tr>
     <tr>
-      <th>7</th>
+      <td>7</td>
+      <td>A</td>
       <td>Newcastle Utd</td>
-      <td>5</td>
-      <td>5</td>
-      <td>2</td>
       <td>1.67</td>
       <td>1.21</td>
       <td>50%</td>
@@ -2452,11 +2475,9 @@
       <td>17%</td>
     </tr>
     <tr>
-      <th>8</th>
+      <td>8</td>
+      <td>B</td>
       <td>Brighton</td>
-      <td>12</td>
-      <td>0</td>
-      <td>0</td>
       <td>1.58</td>
       <td>0.27</td>
       <td>42%</td>
@@ -2475,11 +2496,9 @@
       <td>0%</td>
     </tr>
     <tr>
-      <th>9</th>
+      <td>9</td>
+      <td>B</td>
       <td>West Ham</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1</td>
       <td>1.42</td>
       <td>0.07</td>
       <td>42%</td>
@@ -2498,11 +2517,9 @@
       <td>8%</td>
     </tr>
     <tr>
-      <th>10</th>
+      <td>10</td>
+      <td>B</td>
       <td>Chelsea</td>
-      <td>6</td>
-      <td>3</td>
-      <td>4</td>
       <td>1.33</td>
       <td>0.46</td>
       <td>33%</td>
@@ -2521,11 +2538,9 @@
       <td>33%</td>
     </tr>
     <tr>
-      <th>11</th>
+      <td>11</td>
+      <td>B</td>
       <td>Brentford</td>
-      <td>7</td>
-      <td>3</td>
-      <td>2</td>
       <td>1.33</td>
       <td>0.08</td>
       <td>33%</td>
@@ -2544,11 +2559,9 @@
       <td>17%</td>
     </tr>
     <tr>
-      <th>12</th>
+      <td>12</td>
+      <td>C</td>
       <td>Crystal Palace</td>
-      <td>5</td>
-      <td>5</td>
-      <td>4</td>
       <td>1.25</td>
       <td>-0.45</td>
       <td>33%</td>
@@ -2567,11 +2580,9 @@
       <td>33%</td>
     </tr>
     <tr>
-      <th>13</th>
+      <td>13</td>
+      <td>C</td>
       <td>Wolves</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1</td>
       <td>1.25</td>
       <td>-0.25</td>
       <td>33%</td>
@@ -2590,11 +2601,9 @@
       <td>8%</td>
     </tr>
     <tr>
-      <th>14</th>
+      <td>14</td>
+      <td>C</td>
       <td>Everton</td>
-      <td>5</td>
-      <td>2</td>
-      <td>5</td>
       <td>1.17</td>
       <td>-0.34</td>
       <td>33%</td>
@@ -2613,11 +2622,9 @@
       <td>42%</td>
     </tr>
     <tr>
-      <th>15</th>
+      <td>15</td>
+      <td>C</td>
       <td>Nott'ham Forest</td>
-      <td>7</td>
-      <td>3</td>
-      <td>3</td>
       <td>1.08</td>
       <td>-0.23</td>
       <td>25%</td>
@@ -2636,11 +2643,9 @@
       <td>25%</td>
     </tr>
     <tr>
-      <th>16</th>
+      <td>16</td>
+      <td>D</td>
       <td>Fulham</td>
-      <td>5</td>
-      <td>3</td>
-      <td>5</td>
       <td>1.00</td>
       <td>-0.70</td>
       <td>25%</td>
@@ -2659,11 +2664,9 @@
       <td>42%</td>
     </tr>
     <tr>
-      <th>17</th>
+      <td>17</td>
+      <td>D</td>
       <td>Bournemouth</td>
-      <td>7</td>
-      <td>2</td>
-      <td>4</td>
       <td>0.75</td>
       <td>-1.02</td>
       <td>17%</td>
@@ -2682,11 +2685,9 @@
       <td>33%</td>
     </tr>
     <tr>
-      <th>18</th>
+      <td>18</td>
+      <td>D</td>
       <td>Luton Town</td>
-      <td>8</td>
-      <td>0</td>
-      <td>4</td>
       <td>0.50</td>
       <td>-0.93</td>
       <td>8%</td>
@@ -2705,11 +2706,9 @@
       <td>33%</td>
     </tr>
     <tr>
-      <th>19</th>
+      <td>19</td>
+      <td>D</td>
       <td>Sheffield Utd</td>
-      <td>8</td>
-      <td>0</td>
-      <td>4</td>
       <td>0.42</td>
       <td>-1.57</td>
       <td>8%</td>
@@ -2728,11 +2727,9 @@
       <td>33%</td>
     </tr>
     <tr>
-      <th>20</th>
+      <td>20</td>
+      <td>D</td>
       <td>Burnley</td>
-      <td>7</td>
-      <td>0</td>
-      <td>5</td>
       <td>0.33</td>
       <td>-1.54</td>
       <td>8%</td>
@@ -2752,7 +2749,9 @@
     </tr>
   </tbody>
 </table>
+            </div>
         </div>
+        
     </div>
 
 </body>

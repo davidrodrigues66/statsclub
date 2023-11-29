@@ -5,262 +5,7 @@
     <meta charset="ISO-8859-1">
     <title>Ligue 1</title>
     <link rel="icon" type="image/x-icon" href="logo_32.ico">
-    <style>
-
-        .top-bar {
-            background-color: #003366;
-            color: white;
-            padding: 5px;
-            text-align: center;
-            font-size: 36px;
-            font-family: 'Bebas Neue', sans-serif;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-            z-index: 100; /* Set a higher z-index to keep the top bar above other elements */
-            height: 50px;
-        }
-
-        .content {
-            margin-top: 100px; /* Adjust the margin to match the top bar's height */
-            height: 1500px; /* Example content height to demonstrate scrollability */
-            overflow: auto; /* Enable scrolling for the content when it overflows */
-        }
-
-        
-
-        /* Center the tables on the page */
-        body {
-            margin: 0;
-            background-color: #ffffff;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between; /* Items at opposite ends of the container */
-            align-items: flex-start;
-            margin: 20px;
-        }
-
-        .table-container {
-            text-align: right; /* Align the table to the right */
-            flex: 1;
-        }
-
-        table {
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-top: 10px;
-            table-layout: auto; /* Set the table layout to adapt to content */
-        }
-
-        th, td {
-            padding: 8px 10px;
-            text-align: left;
-            border-left: none;
-            border-right: none;
-            font-family: 'Arial', sans-serif;
-        }
-        
-
-        th {
-            background-color: #003366;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        tr:hover {background-color:lightgray; color:black ;}
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            flex: 1; /* Let the button container take up available space */
-            text-align: left;
-            align-items: flex-start;
-        }
-
-        .toggle-button {
-            background-color: #003366; /* Modern blue color */
-            color: #fff; /* White text */
-            margin-top: 10px;
-            padding: 10px 20px; /* Adequate padding */
-            border: none;
-            border-radius: 5px; /* Slightly rounded corners */
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            font-size: 15px; /* Larger font size for modern look */
-            font-weight: bold; /* Bold text */
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Smooth color transition on hover */
-            width: 340px; /* Set a fixed width */
-            height: 40px; /* Set a fixed height */
-        }
-
-        .table-display {
-            display: block;
-        }
-
-        .table-toggle-button {
-            display: inline-block;
-            width: 50px;
-            height: 20px;
-            margin-right: 5px;
-            background-color: #003366; /* Modern blue color */
-            color: #fff; /* White text */
-            border: none;
-            border-radius: 5px; /* Slightly rounded corners */
-            text-align: center;
-            text-decoration: none;
-            font-size: 13px; /* Larger font size for modern look */
-            font-weight: bold; /* Bold text */
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Smooth color transition on hover */
-        }
-
-        .toggle-button:hover {
-            background-color: #001a33; /* Darker blue on hover */
-        }
-
-        .table-toggle-button:hover {
-            background-color: #001a33; /* Darker blue on hover */
-        }
-
-        .simple-table {
-            font-size: 15px;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-family: 'Bebas Neue', sans-serif;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            color:#003366;
-        }
-
-        h3 {
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            font-size: 12px;
-            color:#003366;
-        }
-
-        .test1container {
-            display: flex;
-            background-color: white;
-        }
-
-        /* Style for the left container */
-        .left-container {
-            margin-top: 20px;
-            flex: 1; /* Occupy half the available space */
-            background-color:  #ffffff; /* Set a background color for the left container */
-            margin-left: 50px;
-        }
-
-        .middle-container {
-            flex: 1;
-            background-color: #ffffff; /* Set the desired background color */
-            margin: 0 10px; /* Adjust margin as needed */
-        }
-
-        /* Style for the right container */
-        .right-container {
-            flex: 1;
-            background-color:  #ffffff; /* Set a background color for the right container */
-            margin-right: 20px;
-            margin-left: 50px;
-        }
-
-        /* Style for the sidebar */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Initially hidden */
-            width: 250px;
-            height: 100%;
-            background-color: #003366;
-            overflow-y: auto;
-            transition: left 0.3s ease;
-            z-index: 200;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar li {
-            padding: 10px;
-        }
-
-        .sidebar a {
-            color: #fff;
-            font-family: 'Bebas Neue', sans-serif;
-            text-decoration: none;
-        }
-
-        .sidebar ul li:first-child {
-            margin-top: 30px; /* Adjust the margin as needed to create space */
-        }
-
-        /* Style for the button */
-        #toggle-sidebar {
-            background-color: #003366;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 24px;
-        }
-
-        /* Style for the hamburger button */
-        .hamburger {
-            background: none; /* Remove background */
-            border: none; /* Remove border */
-            color: white;
-            cursor: pointer;
-            font-size: 24px;
-            padding: 10px;
-            position: absolute; /* Position absolutely within the top bar */
-            left: 10px; /* Adjust the left position as needed */
-        }
-
-        .line {
-            background-color: white;
-            height: 3px;
-            width: 30px;
-            margin: 4px 0;
-        }
-
-        .close-button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 24px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .active-button {
-            background-color: #001a33; /* Change this to the desired darker color */
-            color: #fff; /* Change this to the desired text color */
-        }
-
-
-    </style>
-
-
+    <link rel="stylesheet" href="static\styles.css">
 </head>
 <body>
     <div class="top-bar">
@@ -269,14 +14,15 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
-        <img src="logo.png">
+        <img src="logo_vector.png">
     </div>
 
     <div id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-button">X</button>
         <ul>
+            <li style="font-weight: bold;">Leagues</li>
             <li><a href="/Premier League"> Premier League</a></li>
-            <li><a href="/Primeira Liga"> Primeira Liga </a></li>
+            <li><a href="/Primeira Liga"> Liga Portugal </a></li>
             <li><a href="/La Liga"> La Liga </a></li>
             <li><a href="/Serie A"> Serie A </a></li>
             <li><a href="/Bundesliga"> Bundesliga </a></li>
@@ -286,11 +32,20 @@
 
     <div class="content">
 
-        <div class="test1container">
+        <div class="info-container">
+            <div class="logo">
+                <img src="./logos/ligue_1_logo.png" alt="Ligue 1 Logo" style="width: 100px; height: auto;">
+            </div>
+            <div>
+                <h2> Ligue 1 23/24</h2>
+                <h3>The home team has an average advantage of 0.38 goals</h3>
+            </div>
+        </div>
+
+        <div class="maincontainer">
 
             <div class="left-container">
-                <h2>Next games</h2>
-                <h3>The average home advantage is 0.44 goals</h3>
+                <h2>Fixtures</h2>
                 <div class="button-container">
                     
                     
@@ -299,1065 +54,230 @@
                     
                     
                     
+                    
+                    
                     <button class="toggle-button" onclick="toggleTable(this)">
-                        Paris S-G 
-                        <span style="background-color: green; padding: 5px; border-radius: 5px; font-size: 10px;">A</span>
-                        vs 
-                        Montpellier
-                        <span style="background-color: lightgreen; padding: 5px; border-radius: 5px;font-size: 10px;">B</span> 
+                        <div>
+                            <img src="ligue1_logos\montpellier.png" alt="Montpellier logo"> 
+                            Montpellier 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="ligue1_logos\clermont.png" alt="Montpellier logo"> 
+                            Clermont Foot
+                            <span style="background-color: red">D</span>
+                        </div>
                     </button>
+
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
                             <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Paris S-G</th>
       <th>Montpellier</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.5</td>
-      <td>2.1</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.34</td>
-      <td>1.22</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>40%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>30%</td>
-      <td>10%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.9</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.3</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.6</td>
-      <td>1.4</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>0.76</td>
-      <td>2.28</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>0.64</td>
-      <td>1.02</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>50%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>30%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>30%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>7.6</td>
-      <td>22.8</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>6.4</td>
-      <td>10.2</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Lorient 
-                        <span style="background-color: red; padding: 5px; border-radius: 5px; font-size: 10px;">D</span>
-                        vs 
-                        Lens
-                        <span style="background-color: orange; padding: 5px; border-radius: 5px;font-size: 10px;">C</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Lorient</th>
-      <th>Lens</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.0</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.28</td>
-      <td>-0.01</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>20%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>40%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.5</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>2.0</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.5</td>
-      <td>-0.1</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>0.89</td>
-      <td>1.54</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.57</td>
-      <td>1.16</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>60%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>10%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>40%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>8.9</td>
-      <td>15.4</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>15.7</td>
-      <td>11.6</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Marseille 
-                        <span style="background-color: lightgreen; padding: 5px; border-radius: 5px; font-size: 10px;">B</span>
-                        vs 
-                        Lille
-                        <span style="background-color: green; padding: 5px; border-radius: 5px;font-size: 10px;">A</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Marseille</th>
-      <th>Lille</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.33</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.22</td>
-      <td>0.55</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>33%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>33%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.33</td>
-      <td>1.4</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.33</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.0</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.72</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>0.9</td>
-      <td>0.94</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>44%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>33%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>33%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>15.5</td>
-      <td>13.0</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>8.1</td>
-      <td>9.4</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Lyon 
-                        <span style="background-color: red; padding: 5px; border-radius: 5px; font-size: 10px;">D</span>
-                        vs 
-                        Metz
-                        <span style="background-color: red; padding: 5px; border-radius: 5px;font-size: 10px;">D</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Lyon</th>
-      <th>Metz</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>0.33</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-1.2</td>
-      <td>-0.77</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>0%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>67%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>0.78</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>2.0</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-1.22</td>
-      <td>-0.8</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.12</td>
-      <td>0.71</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.99</td>
-      <td>1.51</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>56%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>22%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>44%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>10.1</td>
-      <td>7.1</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>17.9</td>
-      <td>15.1</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Strasbourg 
-                        <span style="background-color: red; padding: 5px; border-radius: 5px; font-size: 10px;">D</span>
-                        vs 
-                        Clermont Foot
-                        <span style="background-color: red; padding: 5px; border-radius: 5px;font-size: 10px;">D</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Strasbourg</th>
       <th>Clermont Foot</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
-      <td>1.1</td>
-      <td>0.5</td>
+      <td>1.08</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>Power Ranking</th>
-      <td>-0.52</td>
-      <td>-0.85</td>
+      <td>-0.06</td>
+      <td>-0.82</td>
     </tr>
     <tr>
       <th>Win%</th>
-      <td>30%</td>
-      <td>10%</td>
+      <td>25%</td>
+      <td>17%</td>
     </tr>
     <tr>
       <th>Loss%</th>
-      <td>50%</td>
-      <td>70%</td>
+      <td>42%</td>
+      <td>58%</td>
     </tr>
     <tr>
       <th>Wins by &gt;2</th>
-      <td>1</td>
+      <td>3</td>
       <td>0</td>
     </tr>
     <tr>
       <th>Losses by &gt;2</th>
-      <td>3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>0.9</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.5</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.6</td>
-      <td>-0.9</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.05</td>
-      <td>0.53</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.31</td>
-      <td>0.94</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>40%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>20%</td>
-      <td>10%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>40%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>10.5</td>
-      <td>5.3</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>13.1</td>
-      <td>9.4</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Nantes 
-                        <span style="background-color: orange; padding: 5px; border-radius: 5px; font-size: 10px;">C</span>
-                        vs 
-                        Reims
-                        <span style="background-color: lightgreen; padding: 5px; border-radius: 5px;font-size: 10px;">B</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nantes</th>
-      <th>Reims</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.4</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.27</td>
-      <td>0.28</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>40%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>40%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.6</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.9</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.3</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.22</td>
-      <td>1.31</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.98</td>
-      <td>0.92</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>60%</td>
-      <td>70%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>20%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>20%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>12.2</td>
-      <td>13.1</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>19.8</td>
-      <td>9.2</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Toulouse 
-                        <span style="background-color: orange; padding: 5px; border-radius: 5px; font-size: 10px;">C</span>
-                        vs 
-                        Le Havre
-                        <span style="background-color: red; padding: 5px; border-radius: 5px;font-size: 10px;">D</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Toulouse</th>
-      <th>Le Havre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.1</td>
-      <td>1.1</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.36</td>
-      <td>-0.13</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>20%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>30%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.0</td>
-      <td>1.1</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.2</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.2</td>
-      <td>-0.2</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.0</td>
-      <td>0.88</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.51</td>
-      <td>1.89</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>40%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>40%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>50%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>10.0</td>
-      <td>8.8</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>15.1</td>
-      <td>18.9</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Monaco 
-                        <span style="background-color: green; padding: 5px; border-radius: 5px; font-size: 10px;">A</span>
-                        vs 
-                        Brest
-                        <span style="background-color: orange; padding: 5px; border-radius: 5px;font-size: 10px;">C</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Monaco</th>
-      <th>Brest</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.5</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.14</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>40%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>30%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>0</td>
       <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.33</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.42</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.09</td>
+      <td>-0.75</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.44</td>
+      <td>1.14</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.2</td>
+      <td>1.59</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>42%</td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>33%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>42%</td>
+      <td>58%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="ligue1_logos\reims.png" alt="Reims logo"> 
+                            Reims 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="ligue1_logos\strasbourg.png" alt="Reims logo"> 
+                            Strasbourg
+                            <span style="background-color: red">D</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Reims</th>
+      <th>Strasbourg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.54</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>0.01</td>
+      <td>-0.53</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>46%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>38%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>Losses by &gt;2</th>
-      <td>1</td>
-      <td>1</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>1</td>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>2</td>
-      <td>2</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
-      <td>1.1</td>
-      <td>2.3</td>
+      <td>1.38</td>
+      <td>0.83</td>
     </tr>
     <tr>
       <th>AVG GA</th>
-      <td>1.1</td>
-      <td>1.4</td>
+      <td>1.38</td>
+      <td>1.33</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>0.0</td>
-      <td>0.9</td>
+      <td>-0.5</td>
     </tr>
     <tr>
       <th>AVG xG</th>
-      <td>1.47</td>
-      <td>1.59</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
       <td>1.32</td>
-      <td>0.97</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>50%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>30%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>FTS%</th>
-      <td>40%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>14.7</td>
-      <td>15.9</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>13.2</td>
-      <td>9.7</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        Nice 
-                        <span style="background-color: green; padding: 5px; border-radius: 5px; font-size: 10px;">A</span>
-                        vs 
-                        Rennes
-                        <span style="background-color: lightgreen; padding: 5px; border-radius: 5px;font-size: 10px;">B</span> 
-                    </button>
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nice</th>
-      <th>Rennes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.2</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.22</td>
-      <td>0.63</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>20%</td>
-      <td>60%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>20%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>Wins by &gt;2</th>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Losses by &gt;2</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.6</td>
-      <td>1.1</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.3</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.3</td>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.61</td>
-      <td>1.45</td>
+      <td>1.05</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
-      <td>1.18</td>
-      <td>0.75</td>
+      <td>1.16</td>
+      <td>1.29</td>
     </tr>
     <tr>
       <th>BTTS%</th>
-      <td>80%</td>
-      <td>30%</td>
+      <td>62%</td>
+      <td>42%</td>
     </tr>
     <tr>
       <th>CS%</th>
-      <td>20%</td>
-      <td>70%</td>
+      <td>31%</td>
+      <td>25%</td>
     </tr>
     <tr>
       <th>FTS%</th>
-      <td>20%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>xG</th>
-      <td>16.1</td>
-      <td>14.5</td>
-    </tr>
-    <tr>
-      <th>xGA</th>
-      <td>11.8</td>
-      <td>7.5</td>
+      <td>8%</td>
+      <td>42%</td>
     </tr>
   </tbody>
 </table>
@@ -1368,21 +288,23 @@
             </div>
             
             <div class="middle-container">
-                <div id="dynamic-table" class="table-container" >
+                <div id="dynamic-table" class="middle-table-container" >
                     <!-- Table content will be dynamically populated here -->
                 </div>
             </div>
 
             <div class="right-container">
-                <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Total</button>
+                <h2>Ligue 1 Standings </h2>
+                <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Overall</button>
                 <button class="table-toggle-button" data-table="home" onclick="showTable('home')">Home</button>
                 <button class="table-toggle-button" data-table="away" onclick="showTable('away')">Away</button>
 
-                <div id="total-table" class="simple-table">
-                    <table border="1" class="dataframe">
+                <div class="table-container">
+                    <div id="total-table" class="simple-table">
+                        <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Pos</th>
       <th>Tier</th>
       <th>Team</th>
       <th>P</th>
@@ -1396,229 +318,229 @@
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>A</td>
-      <td>Nice</td>
-      <td>22</td>
-      <td>10</td>
-      <td>6</td>
-      <td>4</td>
-      <td>0</td>
-      <td>11</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2</th>
+      <td>1</td>
       <td>A</td>
       <td>Paris S-G</td>
-      <td>21</td>
-      <td>10</td>
-      <td>6</td>
+      <td>30</td>
+      <td>13</td>
+      <td>9</td>
       <td>3</td>
       <td>1</td>
-      <td>23</td>
-      <td>9</td>
+      <td>34</td>
+      <td>11</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>2</td>
+      <td>A</td>
+      <td>Nice</td>
+      <td>29</td>
+      <td>13</td>
+      <td>8</td>
+      <td>5</td>
+      <td>0</td>
+      <td>14</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>3</td>
       <td>A</td>
       <td>Monaco</td>
-      <td>20</td>
-      <td>10</td>
-      <td>6</td>
-      <td>2</td>
-      <td>2</td>
-      <td>23</td>
-      <td>14</td>
+      <td>24</td>
+      <td>13</td>
+      <td>7</td>
+      <td>3</td>
+      <td>3</td>
+      <td>27</td>
+      <td>19</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>A</td>
       <td>Lille</td>
-      <td>18</td>
-      <td>10</td>
+      <td>23</td>
+      <td>13</td>
+      <td>6</td>
       <td>5</td>
-      <td>3</td>
       <td>2</td>
-      <td>14</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>B</td>
-      <td>Reims</td>
       <td>17</td>
-      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
       <td>5</td>
-      <td>2</td>
-      <td>3</td>
-      <td>16</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>B</td>
-      <td>Montpellier</td>
-      <td>15</td>
-      <td>10</td>
-      <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>19</td>
+      <td>C</td>
+      <td>Reims</td>
+      <td>20</td>
       <td>13</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>C</td>
-      <td>Brest</td>
-      <td>15</td>
-      <td>10</td>
-      <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>11</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>C</td>
-      <td>Nantes</td>
-      <td>14</td>
-      <td>10</td>
-      <td>4</td>
-      <td>2</td>
-      <td>4</td>
-      <td>16</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>B</td>
-      <td>Marseille</td>
-      <td>12</td>
-      <td>9</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>12</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>C</td>
-      <td>Lens</td>
-      <td>12</td>
-      <td>10</td>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>12</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>B</td>
-      <td>Rennes</td>
-      <td>12</td>
-      <td>10</td>
-      <td>2</td>
       <td>6</td>
       <td>2</td>
+      <td>5</td>
+      <td>18</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>B</td>
+      <td>Lens</td>
+      <td>19</td>
+      <td>13</td>
+      <td>5</td>
+      <td>4</td>
+      <td>4</td>
       <td>16</td>
       <td>13</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>D</td>
-      <td>Strasbourg</td>
-      <td>11</td>
-      <td>10</td>
-      <td>3</td>
-      <td>2</td>
-      <td>5</td>
-      <td>9</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>C</td>
-      <td>Toulouse</td>
-      <td>11</td>
-      <td>10</td>
-      <td>2</td>
-      <td>5</td>
-      <td>3</td>
-      <td>11</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>D</td>
-      <td>Le Havre</td>
-      <td>11</td>
-      <td>10</td>
-      <td>2</td>
-      <td>5</td>
-      <td>3</td>
-      <td>10</td>
+      <td>7</td>
+      <td>B</td>
+      <td>Brest</td>
+      <td>18</td>
       <td>12</td>
+      <td>5</td>
+      <td>3</td>
+      <td>4</td>
+      <td>14</td>
+      <td>14</td>
     </tr>
     <tr>
-      <th>15</th>
+      <td>8</td>
       <td>D</td>
-      <td>Lorient</td>
-      <td>10</td>
-      <td>10</td>
-      <td>2</td>
+      <td>Metz</td>
+      <td>16</td>
+      <td>13</td>
       <td>4</td>
       <td>4</td>
+      <td>5</td>
       <td>15</td>
       <td>20</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>D</td>
-      <td>Metz</td>
       <td>9</td>
+      <td>C</td>
+      <td>Le Havre</td>
+      <td>16</td>
+      <td>13</td>
+      <td>3</td>
+      <td>7</td>
+      <td>3</td>
+      <td>12</td>
+      <td>13</td>
+    </tr>
+    <tr>
       <td>10</td>
-      <td>2</td>
+      <td>D</td>
+      <td>Nantes</td>
+      <td>15</td>
+      <td>13</td>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>17</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>B</td>
+      <td>Rennes</td>
+      <td>15</td>
+      <td>13</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4</td>
+      <td>19</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>B</td>
+      <td>Marseille</td>
+      <td>14</td>
+      <td>12</td>
       <td>3</td>
       <td>5</td>
-      <td>8</td>
+      <td>4</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>C</td>
+      <td>Montpellier</td>
+      <td>13</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>16</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>D</td>
+      <td>Strasbourg</td>
+      <td>13</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>10</td>
       <td>16</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>D</td>
-      <td>Clermont Foot</td>
-      <td>5</td>
-      <td>10</td>
-      <td>1</td>
+      <td>15</td>
+      <td>C</td>
+      <td>Toulouse</td>
+      <td>12</td>
+      <td>13</td>
       <td>2</td>
-      <td>7</td>
-      <td>9</td>
-      <td>18</td>
+      <td>6</td>
+      <td>5</td>
+      <td>13</td>
+      <td>17</td>
     </tr>
     <tr>
-      <th>18</th>
+      <td>16</td>
+      <td>D</td>
+      <td>Lorient</td>
+      <td>11</td>
+      <td>13</td>
+      <td>2</td>
+      <td>5</td>
+      <td>6</td>
+      <td>17</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>D</td>
+      <td>Clermont Foot</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2</td>
+      <td>3</td>
+      <td>7</td>
+      <td>8</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>18</td>
       <td>D</td>
       <td>Lyon</td>
-      <td>3</td>
-      <td>9</td>
-      <td>0</td>
-      <td>3</td>
-      <td>6</td>
       <td>7</td>
-      <td>18</td>
+      <td>12</td>
+      <td>1</td>
+      <td>4</td>
+      <td>7</td>
+      <td>9</td>
+      <td>21</td>
     </tr>
   </tbody>
 </table>
-                </div>
-                <div id="home-table" class="simple-table" style="display: none;">
-                    <table border="1" class="dataframe">
+                    </div>
+                    <div id="home-table" class="simple-table" style="display: none;">
+                        <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Pos</th>
       <th>Team</th>
       <th>P</th>
       <th>G</th>
@@ -1631,211 +553,211 @@
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>Monaco</td>
-      <td>12</td>
-      <td>5</td>
-      <td>4</td>
-      <td>0</td>
       <td>1</td>
-      <td>11</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Lille</td>
-      <td>12</td>
-      <td>5</td>
-      <td>4</td>
-      <td>0</td>
-      <td>1</td>
-      <td>7</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>Paris S-G</td>
-      <td>10</td>
+      <td>16</td>
+      <td>7</td>
       <td>5</td>
-      <td>3</td>
       <td>1</td>
       <td>1</td>
-      <td>12</td>
-      <td>4</td>
+      <td>20</td>
+      <td>6</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>Marseille</td>
-      <td>10</td>
+      <td>2</td>
+      <td>Nice</td>
+      <td>15</td>
+      <td>7</td>
       <td>4</td>
       <td>3</td>
-      <td>1</td>
       <td>0</td>
       <td>7</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>5</th>
+      <td>3</td>
+      <td>Monaco</td>
+      <td>15</td>
+      <td>6</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>13</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Lille</td>
+      <td>13</td>
+      <td>6</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>5</td>
       <td>Rennes</td>
+      <td>12</td>
+      <td>8</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+      <td>17</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Marseille</td>
+      <td>11</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Lens</td>
+      <td>11</td>
+      <td>6</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Reims</td>
       <td>9</td>
       <td>6</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Nantes</td>
+      <td>9</td>
+      <td>7</td>
       <td>2</td>
       <td>3</td>
+      <td>2</td>
+      <td>12</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Strasbourg</td>
+      <td>9</td>
+      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>8</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Lorient</td>
+      <td>9</td>
+      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Brest</td>
+      <td>8</td>
+      <td>5</td>
+      <td>2</td>
+      <td>2</td>
       <td>1</td>
+      <td>7</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Le Havre</td>
+      <td>8</td>
+      <td>6</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
       <td>14</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Reims</td>
-      <td>9</td>
-      <td>5</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Nice</td>
-      <td>9</td>
-      <td>5</td>
-      <td>2</td>
-      <td>3</td>
-      <td>0</td>
-      <td>4</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Brest</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>7</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Lens</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>8</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Nantes</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>12</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Montpellier</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>10</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Lorient</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>9</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Strasbourg</td>
-      <td>7</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-      <td>7</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Le Havre</td>
-      <td>7</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-      <td>6</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>15</th>
       <td>Toulouse</td>
       <td>6</td>
-      <td>4</td>
+      <td>5</td>
       <td>1</td>
       <td>3</td>
-      <td>0</td>
-      <td>7</td>
-      <td>4</td>
+      <td>1</td>
+      <td>8</td>
+      <td>6</td>
     </tr>
     <tr>
-      <th>16</th>
+      <td>15</td>
+      <td>Montpellier</td>
+      <td>6</td>
+      <td>6</td>
+      <td>1</td>
+      <td>3</td>
+      <td>2</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>16</td>
       <td>Metz</td>
-      <td>3</td>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>2</td>
-      <td>4</td>
       <td>6</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Lyon</td>
-      <td>2</td>
-      <td>5</td>
-      <td>0</td>
-      <td>2</td>
-      <td>3</td>
       <td>6</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Clermont Foot</td>
       <td>1</td>
-      <td>5</td>
-      <td>0</td>
-      <td>1</td>
-      <td>4</td>
+      <td>3</td>
       <td>2</td>
       <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Clermont Foot</td>
+      <td>4</td>
+      <td>7</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Lyon</td>
+      <td>3</td>
+      <td>7</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>16</td>
     </tr>
   </tbody>
 </table>
-                </div>
-                <div id="away-table" class="simple-table" style="display: none;">
-                    <table border="1" class="dataframe">
+                    </div>
+                    <div id="away-table" class="simple-table" style="display: none;">
+                        <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Pos</th>
       <th>Team</th>
       <th>P</th>
       <th>G</th>
@@ -1848,117 +770,150 @@
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Nice</td>
-      <td>13</td>
-      <td>5</td>
+      <td>14</td>
+      <td>6</td>
       <td>4</td>
-      <td>1</td>
+      <td>2</td>
       <td>0</td>
       <td>7</td>
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Paris S-G</td>
-      <td>11</td>
-      <td>5</td>
-      <td>3</td>
+      <td>14</td>
+      <td>6</td>
+      <td>4</td>
       <td>2</td>
       <td>0</td>
-      <td>11</td>
+      <td>14</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Reims</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>9</td>
+      <td>11</td>
       <td>7</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Monaco</td>
-      <td>8</td>
-      <td>5</td>
+      <td>3</td>
       <td>2</td>
       <td>2</td>
-      <td>1</td>
-      <td>12</td>
+      <td>11</td>
       <td>10</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Brest</td>
-      <td>7</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
       <td>4</td>
-      <td>5</td>
+      <td>Metz</td>
+      <td>10</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>8</td>
+      <td>13</td>
     </tr>
     <tr>
-      <th>6</th>
+      <td>5</td>
+      <td>Lille</td>
+      <td>10</td>
+      <td>7</td>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Brest</td>
+      <td>10</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Monaco</td>
+      <td>9</td>
+      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>14</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Lens</td>
+      <td>8</td>
+      <td>7</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Le Havre</td>
+      <td>8</td>
+      <td>7</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>10</td>
       <td>Montpellier</td>
       <td>7</td>
-      <td>5</td>
+      <td>6</td>
       <td>2</td>
       <td>1</td>
-      <td>2</td>
+      <td>3</td>
       <td>9</td>
-      <td>6</td>
+      <td>9</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>Lille</td>
-      <td>6</td>
-      <td>5</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>7</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Metz</td>
-      <td>6</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>3</td>
-      <td>4</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>9</th>
+      <td>11</td>
       <td>Nantes</td>
       <td>6</td>
-      <td>5</td>
+      <td>6</td>
       <td>2</td>
       <td>0</td>
-      <td>3</td>
       <td>4</td>
-      <td>10</td>
+      <td>5</td>
+      <td>13</td>
     </tr>
     <tr>
-      <th>10</th>
+      <td>12</td>
       <td>Toulouse</td>
-      <td>5</td>
       <td>6</td>
+      <td>8</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Clermont Foot</td>
+      <td>5</td>
+      <td>5</td>
       <td>1</td>
       <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>9</td>
+      <td>2</td>
+      <td>5</td>
+      <td>7</td>
     </tr>
     <tr>
-      <th>11</th>
+      <td>14</td>
       <td>Strasbourg</td>
       <td>4</td>
       <td>5</td>
@@ -1969,96 +924,67 @@
       <td>9</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>Lens</td>
+      <td>15</td>
+      <td>Lyon</td>
       <td>4</td>
       <td>5</td>
       <td>1</td>
       <td>1</td>
       <td>3</td>
-      <td>4</td>
-      <td>9</td>
+      <td>2</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Le Havre</td>
-      <td>4</td>
-      <td>5</td>
+      <td>16</td>
+      <td>Marseille</td>
+      <td>3</td>
+      <td>7</td>
       <td>0</td>
-      <td>4</td>
-      <td>1</td>
-      <td>4</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Clermont Foot</td>
-      <td>4</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
       <td>3</td>
-      <td>7</td>
-      <td>11</td>
+      <td>4</td>
+      <td>6</td>
+      <td>13</td>
     </tr>
     <tr>
-      <th>15</th>
+      <td>17</td>
       <td>Rennes</td>
       <td>3</td>
-      <td>4</td>
-      <td>0</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Marseille</td>
-      <td>2</td>
       <td>5</td>
       <td>0</td>
-      <td>2</td>
       <td>3</td>
+      <td>2</td>
+      <td>2</td>
       <td>5</td>
-      <td>11</td>
     </tr>
     <tr>
-      <th>17</th>
+      <td>18</td>
       <td>Lorient</td>
       <td>2</td>
-      <td>5</td>
+      <td>6</td>
       <td>0</td>
       <td>2</td>
-      <td>3</td>
-      <td>6</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Lyon</td>
-      <td>1</td>
       <td>4</td>
-      <td>0</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>5</td>
+      <td>6</td>
+      <td>13</td>
     </tr>
   </tbody>
 </table>
-                </div>
+                    </div>
+
+                </div> 
+
             </div>
                 
         </div>
 
         <script>
+            // Simple Tables
             function showTable(tableType) {
                 // Get all the buttons
                 var buttons = document.querySelectorAll('.table-toggle-button');
 
                 // Iterate through the buttons to update their style
-                for (var i = 0; i < buttons.length; i++) {
+                for (var i = 0; buttons.length; i++) {
                     if (buttons[i].getAttribute('data-table') === tableType) {
                         buttons[i].classList.add('active-button'); // Add the active class to the selected button
                     } else {
@@ -2084,7 +1010,7 @@
         </script>
 
         <script>
-            // Define variables to keep track of the active button and displayed table
+            // Dynamic table
             var activeButton = null;
 
             function toggleTable(button) {
@@ -2094,20 +1020,28 @@
                 if (activeButton === button) {
                     // If the same button is clicked again, hide the displayed table
                     dynamicTable.style.display = 'none';
+                    button.classList.remove('active-button');
                     activeButton = null;
                 } else {
-                    // Move the table content to the dynamic-table and show it
+                    // Move the table content to the dynamic-table, show it, and add the "active-button" class
                     var tableContent = tableContainer.querySelector('.table-content');
                     dynamicTable.innerHTML = tableContent.innerHTML;
                     dynamicTable.style.display = 'block';
+                    button.classList.add('active-button');
+                    
+                    // If there was a previously active button, remove the "active-button" class from it
+                    if (activeButton) {
+                        activeButton.classList.remove('active-button');
+                    }
+                    
                     activeButton = button;
+                    }
                 }
-            }
 
         </script>
 
         <script>
-            // Initialize the sidebar state to be hidden
+            // Sidebar
             var sidebar = document.getElementById('sidebar');
             sidebar.style.left = "-250px"; // Hide the sidebar
 
@@ -2123,20 +1057,18 @@
                 sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
             });
         </script>
-        <div class="container">
+
+        <div style="width: max-content; margin: auto; display: flex; flex-direction: column;" class="container">
             <h2>
-                Tabela Ligue 1
+                Ligue 1 Overall Stats
             </h2>
-        </div>
-        <div class="container">
-            <table border="1" class="dataframe">
+            <div class="table-container">
+                <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>Pos</th>
+      <th>Tier</th>
       <th>Team</th>
-      <th>BTTS</th>
-      <th>CS</th>
-      <th>FTS</th>
       <th>Form</th>
       <th>Power Ranking</th>
       <th>Win%</th>
@@ -2157,423 +1089,390 @@
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>Nice</td>
-      <td>3</td>
-      <td>7</td>
-      <td>2</td>
-      <td>2.20</td>
-      <td>0.63</td>
-      <td>60%</td>
-      <td>0%</td>
       <td>1</td>
-      <td>0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1.10</td>
-      <td>0.40</td>
-      <td>0.70</td>
-      <td>1.45</td>
-      <td>0.75</td>
-      <td>30%</td>
-      <td>70%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>2</th>
+      <td>A</td>
       <td>Paris S-G</td>
-      <td>6</td>
-      <td>4</td>
-      <td>2</td>
-      <td>2.10</td>
-      <td>1.22</td>
-      <td>60%</td>
-      <td>10%</td>
-      <td>5</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2.30</td>
-      <td>0.90</td>
-      <td>1.40</td>
-      <td>2.28</td>
-      <td>1.02</td>
-      <td>60%</td>
-      <td>40%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Monaco</td>
-      <td>6</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2.00</td>
-      <td>0.80</td>
-      <td>60%</td>
-      <td>20%</td>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2.30</td>
-      <td>1.40</td>
-      <td>0.90</td>
-      <td>1.59</td>
-      <td>0.97</td>
-      <td>60%</td>
-      <td>20%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Lille</td>
-      <td>5</td>
-      <td>5</td>
-      <td>0</td>
-      <td>1.80</td>
-      <td>0.55</td>
-      <td>50%</td>
-      <td>20%</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.40</td>
-      <td>1.00</td>
-      <td>0.40</td>
-      <td>1.30</td>
-      <td>0.94</td>
-      <td>50%</td>
-      <td>50%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Reims</td>
-      <td>7</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1.70</td>
-      <td>0.28</td>
-      <td>50%</td>
-      <td>30%</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.60</td>
-      <td>1.20</td>
-      <td>0.40</td>
-      <td>1.31</td>
-      <td>0.92</td>
-      <td>70%</td>
-      <td>30%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Montpellier</td>
-      <td>5</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1.50</td>
-      <td>0.34</td>
-      <td>40%</td>
-      <td>30%</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1.90</td>
-      <td>1.30</td>
-      <td>0.60</td>
-      <td>0.76</td>
-      <td>0.64</td>
-      <td>50%</td>
-      <td>30%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Brest</td>
-      <td>5</td>
-      <td>3</td>
-      <td>4</td>
-      <td>1.50</td>
-      <td>0.14</td>
-      <td>40%</td>
-      <td>30%</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1.10</td>
-      <td>1.10</td>
-      <td>0.00</td>
-      <td>1.47</td>
-      <td>1.32</td>
-      <td>50%</td>
-      <td>30%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Nantes</td>
-      <td>6</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1.40</td>
-      <td>-0.27</td>
-      <td>40%</td>
-      <td>40%</td>
-      <td>2</td>
-      <td>3</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1.60</td>
-      <td>1.90</td>
-      <td>-0.30</td>
-      <td>1.22</td>
-      <td>1.98</td>
-      <td>60%</td>
-      <td>20%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Marseille</td>
-      <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1.33</td>
-      <td>0.22</td>
-      <td>33%</td>
-      <td>33%</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1.33</td>
-      <td>1.33</td>
-      <td>0.00</td>
-      <td>1.72</td>
-      <td>0.90</td>
-      <td>44%</td>
-      <td>33%</td>
-      <td>33%</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Lens</td>
-      <td>5</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1.20</td>
-      <td>-0.01</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1.20</td>
-      <td>1.30</td>
-      <td>-0.10</td>
-      <td>1.54</td>
-      <td>1.16</td>
-      <td>50%</td>
-      <td>30%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Rennes</td>
+      <td>2.31</td>
+      <td>1.67</td>
+      <td>69%</td>
+      <td>8%</td>
       <td>8</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1.20</td>
-      <td>0.22</td>
-      <td>20%</td>
-      <td>20%</td>
-      <td>2</td>
-      <td>1</td>
       <td>0</td>
-      <td>1</td>
-      <td>1.60</td>
-      <td>1.30</td>
-      <td>0.30</td>
-      <td>1.61</td>
-      <td>1.18</td>
-      <td>80%</td>
-      <td>20%</td>
-      <td>20%</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Strasbourg</td>
-      <td>4</td>
       <td>2</td>
-      <td>4</td>
-      <td>1.10</td>
-      <td>-0.52</td>
-      <td>30%</td>
-      <td>50%</td>
       <td>1</td>
-      <td>3</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0.90</td>
-      <td>1.50</td>
-      <td>-0.60</td>
+      <td>2.62</td>
+      <td>0.85</td>
+      <td>1.77</td>
+      <td>2.22</td>
       <td>1.05</td>
-      <td>1.31</td>
-      <td>40%</td>
-      <td>20%</td>
-      <td>40%</td>
+      <td>54%</td>
+      <td>46%</td>
+      <td>15%</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Toulouse</td>
-      <td>6</td>
       <td>2</td>
-      <td>3</td>
-      <td>1.10</td>
-      <td>-0.13</td>
-      <td>20%</td>
-      <td>30%</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1.10</td>
-      <td>1.30</td>
-      <td>-0.20</td>
-      <td>0.88</td>
-      <td>1.89</td>
-      <td>60%</td>
-      <td>20%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Le Havre</td>
-      <td>4</td>
-      <td>4</td>
-      <td>5</td>
-      <td>1.10</td>
-      <td>-0.36</td>
-      <td>20%</td>
-      <td>30%</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1.00</td>
-      <td>1.20</td>
-      <td>-0.20</td>
-      <td>1.00</td>
-      <td>1.51</td>
-      <td>40%</td>
-      <td>40%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Lorient</td>
-      <td>6</td>
-      <td>1</td>
-      <td>4</td>
-      <td>1.00</td>
-      <td>-0.28</td>
-      <td>20%</td>
-      <td>40%</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.50</td>
-      <td>2.00</td>
-      <td>-0.50</td>
-      <td>0.89</td>
-      <td>1.57</td>
-      <td>60%</td>
-      <td>10%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Metz</td>
-      <td>4</td>
-      <td>3</td>
-      <td>4</td>
-      <td>0.90</td>
-      <td>-0.77</td>
-      <td>20%</td>
-      <td>50%</td>
-      <td>0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>0.80</td>
-      <td>1.60</td>
-      <td>-0.80</td>
-      <td>0.71</td>
-      <td>1.51</td>
-      <td>40%</td>
-      <td>30%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Clermont Foot</td>
-      <td>5</td>
-      <td>1</td>
-      <td>5</td>
-      <td>0.50</td>
-      <td>-0.85</td>
-      <td>10%</td>
-      <td>70%</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0.90</td>
-      <td>1.80</td>
-      <td>-0.90</td>
-      <td>0.53</td>
-      <td>0.94</td>
-      <td>50%</td>
-      <td>10%</td>
-      <td>50%</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Lyon</td>
-      <td>5</td>
-      <td>2</td>
-      <td>4</td>
-      <td>0.33</td>
-      <td>-1.20</td>
+      <td>A</td>
+      <td>Nice</td>
+      <td>2.23</td>
+      <td>0.72</td>
+      <td>62%</td>
       <td>0%</td>
-      <td>67%</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1.08</td>
+      <td>0.31</td>
+      <td>0.77</td>
+      <td>1.37</td>
+      <td>0.78</td>
+      <td>23%</td>
+      <td>77%</td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>A</td>
+      <td>Monaco</td>
+      <td>1.85</td>
+      <td>0.68</td>
+      <td>54%</td>
+      <td>23%</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>2.08</td>
+      <td>1.46</td>
+      <td>0.62</td>
+      <td>1.45</td>
+      <td>1.12</td>
+      <td>54%</td>
+      <td>31%</td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>A</td>
+      <td>Lille</td>
+      <td>1.77</td>
+      <td>0.47</td>
+      <td>46%</td>
+      <td>15%</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.31</td>
+      <td>0.85</td>
+      <td>0.46</td>
+      <td>1.33</td>
+      <td>0.94</td>
+      <td>46%</td>
+      <td>54%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>C</td>
+      <td>Reims</td>
+      <td>1.54</td>
+      <td>0.01</td>
+      <td>46%</td>
+      <td>38%</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1.38</td>
+      <td>1.38</td>
+      <td>0.00</td>
+      <td>1.32</td>
+      <td>1.16</td>
+      <td>62%</td>
+      <td>31%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>B</td>
+      <td>Lens</td>
+      <td>1.46</td>
+      <td>0.27</td>
+      <td>38%</td>
+      <td>31%</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1.23</td>
+      <td>1.00</td>
+      <td>0.23</td>
+      <td>1.48</td>
+      <td>1.15</td>
+      <td>38%</td>
+      <td>46%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>B</td>
+      <td>Brest</td>
+      <td>1.50</td>
+      <td>0.28</td>
+      <td>42%</td>
+      <td>33%</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1.17</td>
+      <td>1.17</td>
+      <td>0.00</td>
+      <td>1.43</td>
+      <td>1.31</td>
+      <td>50%</td>
+      <td>25%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>D</td>
+      <td>Metz</td>
+      <td>1.23</td>
+      <td>-0.50</td>
+      <td>31%</td>
+      <td>38%</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1.15</td>
+      <td>1.54</td>
+      <td>-0.39</td>
+      <td>0.83</td>
+      <td>1.50</td>
+      <td>54%</td>
+      <td>23%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>C</td>
+      <td>Le Havre</td>
+      <td>1.23</td>
+      <td>-0.18</td>
+      <td>23%</td>
+      <td>23%</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0.92</td>
+      <td>1.00</td>
+      <td>-0.08</td>
+      <td>0.98</td>
+      <td>1.51</td>
+      <td>38%</td>
+      <td>46%</td>
+      <td>54%</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>D</td>
+      <td>Nantes</td>
+      <td>1.15</td>
+      <td>-0.57</td>
+      <td>31%</td>
+      <td>46%</td>
+      <td>2</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1.31</td>
+      <td>1.77</td>
+      <td>-0.46</td>
+      <td>1.28</td>
+      <td>1.71</td>
+      <td>54%</td>
+      <td>23%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>B</td>
+      <td>Rennes</td>
+      <td>1.15</td>
+      <td>0.07</td>
+      <td>23%</td>
+      <td>31%</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1.46</td>
+      <td>1.31</td>
+      <td>0.15</td>
+      <td>1.51</td>
+      <td>1.27</td>
+      <td>69%</td>
+      <td>15%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>B</td>
+      <td>Marseille</td>
+      <td>1.17</td>
+      <td>0.16</td>
+      <td>25%</td>
+      <td>33%</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1.08</td>
+      <td>1.17</td>
+      <td>-0.09</td>
+      <td>1.57</td>
+      <td>0.88</td>
+      <td>42%</td>
+      <td>33%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>C</td>
+      <td>Montpellier</td>
+      <td>1.08</td>
+      <td>-0.06</td>
+      <td>25%</td>
+      <td>42%</td>
+      <td>3</td>
+      <td>4</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1.33</td>
+      <td>1.42</td>
+      <td>-0.09</td>
+      <td>1.44</td>
+      <td>1.20</td>
+      <td>42%</td>
+      <td>33%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>D</td>
+      <td>Strasbourg</td>
+      <td>1.08</td>
+      <td>-0.53</td>
+      <td>25%</td>
+      <td>42%</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0.83</td>
+      <td>1.33</td>
+      <td>-0.50</td>
+      <td>1.05</td>
+      <td>1.29</td>
+      <td>42%</td>
+      <td>25%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>C</td>
+      <td>Toulouse</td>
+      <td>0.92</td>
+      <td>-0.15</td>
+      <td>15%</td>
+      <td>38%</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>1.31</td>
+      <td>-0.31</td>
+      <td>0.98</td>
+      <td>1.81</td>
+      <td>62%</td>
+      <td>15%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>D</td>
+      <td>Lorient</td>
+      <td>0.85</td>
+      <td>-0.51</td>
+      <td>15%</td>
+      <td>46%</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.31</td>
+      <td>1.85</td>
+      <td>-0.54</td>
+      <td>0.85</td>
+      <td>1.52</td>
+      <td>54%</td>
+      <td>15%</td>
+      <td>46%</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>D</td>
+      <td>Clermont Foot</td>
+      <td>0.75</td>
+      <td>-0.82</td>
+      <td>17%</td>
+      <td>58%</td>
       <td>0</td>
       <td>3</td>
       <td>0</td>
-      <td>2</td>
-      <td>0.78</td>
-      <td>2.00</td>
-      <td>-1.22</td>
-      <td>1.12</td>
-      <td>1.99</td>
-      <td>56%</td>
-      <td>22%</td>
-      <td>44%</td>
+      <td>3</td>
+      <td>0.67</td>
+      <td>1.42</td>
+      <td>-0.75</td>
+      <td>1.14</td>
+      <td>1.59</td>
+      <td>33%</td>
+      <td>25%</td>
+      <td>58%</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>D</td>
+      <td>Lyon</td>
+      <td>0.58</td>
+      <td>-1.01</td>
+      <td>8%</td>
+      <td>58%</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0.75</td>
+      <td>1.75</td>
+      <td>-1.00</td>
+      <td>1.28</td>
+      <td>1.75</td>
+      <td>50%</td>
+      <td>25%</td>
+      <td>42%</td>
     </tr>
   </tbody>
 </table>
+            </div>
         </div>
+        
     </div>
 
 </body>
+
 </html>

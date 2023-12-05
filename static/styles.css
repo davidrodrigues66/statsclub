@@ -1,3 +1,6 @@
+body {
+    overflow: auto; /* Enable horizontal scrolling for the entire page */
+}
 .top-bar {
     background-color: #2134c4;
     color: white;
@@ -18,8 +21,9 @@
 .content {
     margin-top: 60px; /* Adjust the margin to match the top bar's height */
     height: auto; /* Example content height to demonstrate scrollability */
-    overflow: hidden; /* Enable scrolling for the content when it overflows */
+    
     margin-bottom: 50px;
+    
 }
 
 .logo{
@@ -353,3 +357,4 @@ h3 {
     background-color: #2134c4; /* Change this to the desired darker color */
     color: #fff; /* Change this to the desired text color */
 }
+

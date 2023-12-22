@@ -58,14 +58,604 @@
                     
                     <button class="toggle-button" onclick="toggleTable(this)">
                         <div>
-                            <img src="serie_a_logos\atalanta.png" alt="Atalanta logo"> 
-                            Atalanta 
+                            <img src="serie_a_logos\sassuolo.png" alt="Sassuolo logo"> 
+                            Sassuolo 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\genoa.png" alt="Sassuolo logo"> 
+                            Genoa
+                            <span style="background-color: orange">C</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sassuolo</th>
+      <th>Genoa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.4</td>
+      <td>-0.42</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>25%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>50%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.5</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.88</td>
+      <td>1.31</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.38</td>
+      <td>-0.31</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.3</td>
+      <td>0.84</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.67</td>
+      <td>0.89</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>75%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>0%</td>
+      <td>19%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>25%</td>
+      <td>31%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\empoli.png" alt="Empoli logo"> 
+                            Empoli 
+                            <span style="background-color: red">D</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\lazio.png" alt="Empoli logo"> 
+                            Lazio
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Empoli</th>
+      <th>Lazio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.75</td>
+      <td>1.31</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-1.07</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>19%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>62%</td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>0.62</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.75</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-1.13</td>
+      <td>-0.12</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>0.98</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.4</td>
+      <td>1.06</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>25%</td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>25%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>56%</td>
+      <td>31%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\monza.png" alt="Monza logo"> 
+                            Monza 
                             <span style="background-color: lightgreen">B</span>
                         </div>
 
                         <div style="height: 40px;">
-                            <img src="serie_a_logos\salernitana.png" alt="Atalanta logo"> 
-                            Salernitana
+                            <img src="serie_a_logos\fiorentina.png" alt="Monza logo"> 
+                            Fiorentina
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Monza</th>
+      <th>Fiorentina</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.31</td>
+      <td>1.69</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.1</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>31%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>31%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.0</td>
+      <td>1.56</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.06</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.06</td>
+      <td>0.44</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.1</td>
+      <td>1.18</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.37</td>
+      <td>1.38</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>44%</td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>31%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>31%</td>
+      <td>31%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\salernitana.png" alt="Salernitana logo"> 
+                            Salernitana 
+                            <span style="background-color: red">D</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\milan.png" alt="Salernitana logo"> 
+                            Milan
+                            <span style="background-color: green">A</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Salernitana</th>
+      <th>Milan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.5</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-1.36</td>
+      <td>0.81</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>6%</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>62%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>0.75</td>
+      <td>1.81</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>2.12</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-1.37</td>
+      <td>0.69</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>0.8</td>
+      <td>1.44</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.89</td>
+      <td>1.28</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>50%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>0%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>50%</td>
+      <td>12%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\frosinone.png" alt="Frosinone logo"> 
+                            Frosinone 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\juventus.png" alt="Frosinone logo"> 
+                            Juventus
+                            <span style="background-color: green">A</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frosinone</th>
+      <th>Juventus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.19</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.34</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>31%</td>
+      <td>69%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>44%</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.31</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.62</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.31</td>
+      <td>0.88</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.16</td>
+      <td>1.59</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.48</td>
+      <td>0.71</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>75%</td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>12%</td>
+      <td>56%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>25%</td>
+      <td>6%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\torino.png" alt="Torino logo"> 
+                            Torino 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\udinese.png" alt="Torino logo"> 
+                            Udinese
                             <span style="background-color: red">D</span>
                         </div>
                     </button>
@@ -76,90 +666,562 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Atalanta</th>
-      <th>Salernitana</th>
+      <th>Torino</th>
+      <th>Udinese</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
-      <td>1.53</td>
-      <td>0.53</td>
+      <td>1.44</td>
+      <td>0.81</td>
     </tr>
     <tr>
       <th>Power Ranking</th>
-      <td>0.43</td>
-      <td>-1.31</td>
+      <td>-0.13</td>
+      <td>-0.79</td>
     </tr>
     <tr>
       <th>Win%</th>
-      <td>47%</td>
-      <td>7%</td>
+      <td>38%</td>
+      <td>6%</td>
     </tr>
     <tr>
       <th>Loss%</th>
-      <td>40%</td>
-      <td>60%</td>
+      <td>31%</td>
+      <td>31%</td>
     </tr>
     <tr>
       <th>Wins by &gt;2</th>
-      <td>5</td>
+      <td>2</td>
       <td>0</td>
     </tr>
     <tr>
       <th>Losses by &gt;2</th>
-      <td>1</td>
-      <td>6</td>
+      <td>5</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>W T5</th>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L T5</th>
-      <td>2</td>
+      <td>4</td>
       <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
-      <td>1.6</td>
-      <td>0.73</td>
+      <td>0.88</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>AVG GA</th>
-      <td>1.2</td>
-      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.69</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
-      <td>0.4</td>
-      <td>-1.27</td>
+      <td>-0.12</td>
+      <td>-0.81</td>
     </tr>
     <tr>
       <th>AVG xG</th>
-      <td>1.29</td>
-      <td>0.77</td>
+      <td>1.01</td>
+      <td>1.19</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
-      <td>1.0</td>
-      <td>1.89</td>
+      <td>1.02</td>
+      <td>1.48</td>
     </tr>
     <tr>
       <th>BTTS%</th>
-      <td>47%</td>
-      <td>47%</td>
+      <td>25%</td>
+      <td>56%</td>
     </tr>
     <tr>
       <th>CS%</th>
-      <td>47%</td>
-      <td>0%</td>
+      <td>50%</td>
+      <td>25%</td>
     </tr>
     <tr>
       <th>FTS%</th>
-      <td>13%</td>
-      <td>53%</td>
+      <td>44%</td>
+      <td>38%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\bologna.png" alt="Bologna logo"> 
+                            Bologna 
+                            <span style="background-color: green">A</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\atalanta.png" alt="Bologna logo"> 
+                            Atalanta
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bologna</th>
+      <th>Atalanta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.75</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>0.51</td>
+      <td>0.49</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>44%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>12%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>3</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.25</td>
+      <td>1.75</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>0.75</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.5</td>
+      <td>0.56</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.2</td>
+      <td>1.32</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>0.89</td>
+      <td>1.02</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>50%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>44%</td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>25%</td>
+      <td>12%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\inter.png" alt="Inter logo"> 
+                            Inter 
+                            <span style="background-color: green">A</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\lecce.png" alt="Inter logo"> 
+                            Lecce
+                            <span style="background-color: orange">C</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Inter</th>
+      <th>Lecce</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>2.56</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>1.95</td>
+      <td>-0.26</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>81%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>6%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.44</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>0.44</td>
+      <td>1.31</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>2.0</td>
+      <td>-0.12</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>2.07</td>
+      <td>0.94</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>0.73</td>
+      <td>1.49</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>31%</td>
+      <td>69%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>69%</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>0%</td>
+      <td>19%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\hellas_verona.png" alt="Hellas Verona logo"> 
+                            Hellas Verona 
+                            <span style="background-color: red">D</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\cagliari.png" alt="Hellas Verona logo"> 
+                            Cagliari
+                            <span style="background-color: red">D</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Hellas Verona</th>
+      <th>Cagliari</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.69</td>
+      <td>0.81</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.55</td>
+      <td>-0.65</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>12%</td>
+      <td>19%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>56%</td>
+      <td>56%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>0.81</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.44</td>
+      <td>1.81</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.63</td>
+      <td>-0.81</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>0.86</td>
+      <td>1.14</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.34</td>
+      <td>1.51</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>50%</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>19%</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>44%</td>
+      <td>38%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="serie_a_logos\roma.png" alt="Roma logo"> 
+                            Roma 
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="serie_a_logos\napoli.png" alt="Roma logo"> 
+                            Napoli
+                            <span style="background-color: green">A</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Roma</th>
+      <th>Napoli</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.56</td>
+      <td>1.69</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>0.42</td>
+      <td>0.52</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>44%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>31%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.75</td>
+      <td>1.75</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.19</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.56</td>
+      <td>0.56</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.36</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>0.89</td>
+      <td>1.01</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>62%</td>
+      <td>56%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>25%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>19%</td>
+      <td>25%</td>
     </tr>
   </tbody>
 </table>
@@ -274,6 +1336,18 @@
     <tr>
       <td>7</td>
       <td>B</td>
+      <td>Atalanta</td>
+      <td>26</td>
+      <td>16</td>
+      <td>8</td>
+      <td>2</td>
+      <td>6</td>
+      <td>28</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>B</td>
       <td>Roma</td>
       <td>25</td>
       <td>16</td>
@@ -282,18 +1356,6 @@
       <td>5</td>
       <td>28</td>
       <td>19</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>B</td>
-      <td>Atalanta</td>
-      <td>23</td>
-      <td>15</td>
-      <td>7</td>
-      <td>2</td>
-      <td>6</td>
-      <td>24</td>
-      <td>18</td>
     </tr>
     <tr>
       <td>9</td>
@@ -432,12 +1494,12 @@
       <td>D</td>
       <td>Salernitana</td>
       <td>8</td>
-      <td>15</td>
+      <td>16</td>
       <td>1</td>
       <td>5</td>
-      <td>9</td>
-      <td>11</td>
-      <td>30</td>
+      <td>10</td>
+      <td>12</td>
+      <td>34</td>
     </tr>
   </tbody>
 </table>
@@ -537,14 +1599,14 @@
     </tr>
     <tr>
       <td>8</td>
-      <td>Torino</td>
-      <td>15</td>
-      <td>8</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
+      <td>Atalanta</td>
+      <td>16</td>
       <td>8</td>
       <td>5</td>
+      <td>1</td>
+      <td>2</td>
+      <td>16</td>
+      <td>7</td>
     </tr>
     <tr>
       <td>9</td>
@@ -559,6 +1621,17 @@
     </tr>
     <tr>
       <td>10</td>
+      <td>Torino</td>
+      <td>15</td>
+      <td>8</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>11</td>
       <td>Lazio</td>
       <td>14</td>
       <td>8</td>
@@ -566,17 +1639,6 @@
       <td>2</td>
       <td>2</td>
       <td>8</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Atalanta</td>
-      <td>13</td>
-      <td>7</td>
-      <td>4</td>
-      <td>1</td>
-      <td>2</td>
-      <td>12</td>
       <td>6</td>
     </tr>
     <tr>
@@ -888,12 +1950,12 @@
       <td>18</td>
       <td>Salernitana</td>
       <td>2</td>
-      <td>7</td>
+      <td>8</td>
       <td>0</td>
       <td>2</td>
+      <td>6</td>
       <td>5</td>
-      <td>4</td>
-      <td>14</td>
+      <td>18</td>
     </tr>
     <tr>
       <td>19</td>
@@ -1053,8 +2115,8 @@
       <td>2.44</td>
       <td>0.44</td>
       <td>2.00</td>
-      <td>2.06</td>
-      <td>0.72</td>
+      <td>2.07</td>
+      <td>0.73</td>
       <td>31%</td>
       <td>69%</td>
       <td>0%</td>
@@ -1106,7 +2168,7 @@
       <td>A</td>
       <td>Bologna</td>
       <td>1.75</td>
-      <td>0.52</td>
+      <td>0.51</td>
       <td>44%</td>
       <td>12%</td>
       <td>3</td>
@@ -1167,6 +2229,27 @@
     <tr>
       <td>7</td>
       <td>B</td>
+      <td>Atalanta</td>
+      <td>1.62</td>
+      <td>0.49</td>
+      <td>50%</td>
+      <td>38%</td>
+      <td>6</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1.75</td>
+      <td>1.19</td>
+      <td>0.56</td>
+      <td>1.32</td>
+      <td>1.02</td>
+      <td>50%</td>
+      <td>44%</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>B</td>
       <td>Roma</td>
       <td>1.56</td>
       <td>0.42</td>
@@ -1184,27 +2267,6 @@
       <td>62%</td>
       <td>25%</td>
       <td>19%</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>B</td>
-      <td>Atalanta</td>
-      <td>1.53</td>
-      <td>0.43</td>
-      <td>47%</td>
-      <td>40%</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1.60</td>
-      <td>1.20</td>
-      <td>0.40</td>
-      <td>1.29</td>
-      <td>1.00</td>
-      <td>47%</td>
-      <td>47%</td>
-      <td>13%</td>
     </tr>
     <tr>
       <td>9</td>
@@ -1242,8 +2304,8 @@
       <td>1.00</td>
       <td>1.12</td>
       <td>-0.12</td>
-      <td>1.23</td>
-      <td>1.05</td>
+      <td>1.24</td>
+      <td>1.06</td>
       <td>44%</td>
       <td>31%</td>
       <td>31%</td>
@@ -1441,22 +2503,22 @@
       <td>20</td>
       <td>D</td>
       <td>Salernitana</td>
-      <td>0.53</td>
-      <td>-1.31</td>
-      <td>7%</td>
-      <td>60%</td>
+      <td>0.50</td>
+      <td>-1.36</td>
+      <td>6%</td>
+      <td>62%</td>
       <td>0</td>
-      <td>6</td>
+      <td>7</td>
       <td>0</td>
       <td>3</td>
-      <td>0.73</td>
-      <td>2.00</td>
-      <td>-1.27</td>
-      <td>0.77</td>
+      <td>0.75</td>
+      <td>2.12</td>
+      <td>-1.37</td>
+      <td>0.80</td>
       <td>1.89</td>
-      <td>47%</td>
+      <td>50%</td>
       <td>0%</td>
-      <td>53%</td>
+      <td>50%</td>
     </tr>
   </tbody>
 </table>

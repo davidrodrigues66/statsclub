@@ -40,7 +40,7 @@
             </div>
             <div>
                 <h2> Primeira Liga 23/24</h2>
-                <h3>The home team has an average advantage of 0.33 goals</h3>
+                <h3>The home team has an average advantage of 0.34 goals</h3>
             </div>
         </div>
 
@@ -60,15 +60,15 @@
                     
                     <button class="toggle-button" onclick="toggleTable(this)">
                         <div>
-                            <img src="liga_portugal_logos\sporting_cp.png" alt="Sporting CP logo"> 
-                            Sporting CP 
-                            <span style="background-color: green">A</span>
+                            <img src="liga_portugal_logos\vitoria.png" alt="Vitória logo"> 
+                            Vitória 
+                            <span style="background-color: lightgreen">B</span>
                         </div>
 
                         <div style="height: 40px;">
-                            <img src="liga_portugal_logos\porto.png" alt="Sporting CP logo"> 
-                            Porto
-                            <span style="background-color: green">A</span>
+                            <img src="liga_portugal_logos\rio_ave.png" alt="Vitória logo"> 
+                            Rio Ave
+                            <span style="background-color: red">D</span>
                         </div>
                     </button>
 
@@ -78,40 +78,158 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Sporting CP</th>
-      <th>Porto</th>
+      <th>Vitória</th>
+      <th>Rio Ave</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
-      <td>2.38</td>
-      <td>2.38</td>
+      <td>1.86</td>
+      <td>0.86</td>
     </tr>
     <tr>
       <th>Power Ranking</th>
-      <td>1.03</td>
-      <td>0.89</td>
+      <td>0.45</td>
+      <td>-0.54</td>
     </tr>
     <tr>
       <th>Win%</th>
-      <td>77%</td>
-      <td>77%</td>
+      <td>57%</td>
+      <td>14%</td>
     </tr>
     <tr>
       <th>Loss%</th>
-      <td>15%</td>
-      <td>15%</td>
+      <td>29%</td>
+      <td>43%</td>
     </tr>
     <tr>
       <th>Wins by &gt;2</th>
-      <td>4</td>
       <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>Losses by &gt;2</th>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
       <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.71</td>
+      <td>1.14</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.21</td>
+      <td>1.64</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.5</td>
+      <td>-0.5</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.39</td>
+      <td>1.38</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.23</td>
+      <td>1.27</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>57%</td>
+      <td>64%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>29%</td>
+      <td>14%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>21%</td>
+      <td>21%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="liga_portugal_logos\vizela.png" alt="Vizela logo"> 
+                            Vizela 
+                            <span style="background-color: red">D</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="liga_portugal_logos\moreirense.png" alt="Vizela logo"> 
+                            Moreirense
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Vizela</th>
+      <th>Moreirense</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.79</td>
+      <td>1.79</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.52</td>
+      <td>0.52</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>14%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>50%</td>
+      <td>21%</td>
+    </tr>
+    <tr>
+      <th>Wins by &gt;2</th>
       <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Losses by &gt;2</th>
+      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>W T5</th>
@@ -120,48 +238,48 @@
     </tr>
     <tr>
       <th>L T5</th>
-      <td>2</td>
-      <td>1</td>
+      <td>5</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
-      <td>2.15</td>
-      <td>1.62</td>
+      <td>1.0</td>
+      <td>1.43</td>
     </tr>
     <tr>
       <th>AVG GA</th>
-      <td>1.15</td>
-      <td>0.69</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>1.0</td>
+      <td>1.57</td>
       <td>0.93</td>
     </tr>
     <tr>
+      <th>AVG Excess</th>
+      <td>-0.57</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
       <th>AVG xG</th>
-      <td>1.83</td>
-      <td>1.7</td>
+      <td>1.14</td>
+      <td>1.08</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
-      <td>0.82</td>
-      <td>0.94</td>
+      <td>1.3</td>
+      <td>0.97</td>
     </tr>
     <tr>
       <th>BTTS%</th>
-      <td>69%</td>
-      <td>54%</td>
+      <td>57%</td>
+      <td>43%</td>
     </tr>
     <tr>
       <th>CS%</th>
-      <td>31%</td>
-      <td>31%</td>
+      <td>29%</td>
+      <td>50%</td>
     </tr>
     <tr>
       <th>FTS%</th>
-      <td>0%</td>
-      <td>15%</td>
+      <td>29%</td>
+      <td>21%</td>
     </tr>
   </tbody>
 </table>
@@ -204,6 +322,18 @@
     <tr>
       <td>1</td>
       <td>A</td>
+      <td>Sporting CP</td>
+      <td>34</td>
+      <td>14</td>
+      <td>11</td>
+      <td>1</td>
+      <td>2</td>
+      <td>30</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>A</td>
       <td>Benfica</td>
       <td>33</td>
       <td>14</td>
@@ -214,28 +344,16 @@
       <td>10</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>A</td>
-      <td>Sporting CP</td>
-      <td>31</td>
-      <td>13</td>
-      <td>10</td>
-      <td>1</td>
-      <td>2</td>
-      <td>28</td>
-      <td>15</td>
-    </tr>
-    <tr>
       <td>3</td>
       <td>A</td>
       <td>Porto</td>
       <td>31</td>
-      <td>13</td>
+      <td>14</td>
       <td>10</td>
       <td>1</td>
-      <td>2</td>
+      <td>3</td>
       <td>21</td>
-      <td>9</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>4</td>
@@ -439,12 +557,12 @@
     <tr>
       <td>1</td>
       <td>Sporting CP</td>
-      <td>21</td>
-      <td>7</td>
-      <td>7</td>
+      <td>24</td>
+      <td>8</td>
+      <td>8</td>
       <td>0</td>
       <td>0</td>
-      <td>17</td>
+      <td>19</td>
       <td>6</td>
     </tr>
     <tr>
@@ -668,12 +786,12 @@
       <td>2</td>
       <td>Porto</td>
       <td>18</td>
-      <td>7</td>
+      <td>8</td>
       <td>6</td>
       <td>0</td>
-      <td>1</td>
+      <td>2</td>
       <td>12</td>
-      <td>4</td>
+      <td>6</td>
     </tr>
     <tr>
       <td>3</td>
@@ -975,6 +1093,27 @@
     <tr>
       <td>1</td>
       <td>A</td>
+      <td>Sporting CP</td>
+      <td>2.43</td>
+      <td>1.13</td>
+      <td>79%</td>
+      <td>14%</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2.14</td>
+      <td>1.07</td>
+      <td>1.07</td>
+      <td>1.80</td>
+      <td>0.81</td>
+      <td>64%</td>
+      <td>36%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>A</td>
       <td>Benfica</td>
       <td>2.36</td>
       <td>1.10</td>
@@ -988,59 +1127,38 @@
       <td>0.71</td>
       <td>1.08</td>
       <td>2.26</td>
-      <td>0.97</td>
+      <td>0.98</td>
       <td>50%</td>
       <td>50%</td>
       <td>7%</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>A</td>
-      <td>Sporting CP</td>
-      <td>2.38</td>
-      <td>1.03</td>
-      <td>77%</td>
-      <td>15%</td>
-      <td>4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2.15</td>
-      <td>1.15</td>
-      <td>1.00</td>
-      <td>1.83</td>
-      <td>0.82</td>
-      <td>69%</td>
-      <td>31%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
       <td>3</td>
       <td>A</td>
       <td>Porto</td>
-      <td>2.38</td>
-      <td>0.89</td>
-      <td>77%</td>
-      <td>15%</td>
+      <td>2.21</td>
+      <td>0.79</td>
+      <td>71%</td>
+      <td>21%</td>
       <td>3</td>
-      <td>0</td>
       <td>1</td>
       <td>1</td>
-      <td>1.62</td>
-      <td>0.69</td>
-      <td>0.93</td>
-      <td>1.70</td>
-      <td>0.94</td>
-      <td>54%</td>
-      <td>31%</td>
-      <td>15%</td>
+      <td>2</td>
+      <td>1.50</td>
+      <td>0.79</td>
+      <td>0.71</td>
+      <td>1.63</td>
+      <td>0.97</td>
+      <td>50%</td>
+      <td>29%</td>
+      <td>21%</td>
     </tr>
     <tr>
       <td>4</td>
       <td>A</td>
       <td>Braga</td>
       <td>2.07</td>
-      <td>0.93</td>
+      <td>0.94</td>
       <td>64%</td>
       <td>21%</td>
       <td>6</td>
@@ -1050,7 +1168,7 @@
       <td>2.57</td>
       <td>1.50</td>
       <td>1.07</td>
-      <td>2.14</td>
+      <td>2.15</td>
       <td>1.43</td>
       <td>86%</td>
       <td>7%</td>
@@ -1071,8 +1189,8 @@
       <td>1.71</td>
       <td>1.21</td>
       <td>0.50</td>
-      <td>1.38</td>
-      <td>1.22</td>
+      <td>1.39</td>
+      <td>1.23</td>
       <td>57%</td>
       <td>29%</td>
       <td>21%</td>
@@ -1092,8 +1210,8 @@
       <td>1.43</td>
       <td>0.93</td>
       <td>0.50</td>
-      <td>1.05</td>
-      <td>0.98</td>
+      <td>1.08</td>
+      <td>0.97</td>
       <td>43%</td>
       <td>50%</td>
       <td>21%</td>
@@ -1114,7 +1232,7 @@
       <td>1.29</td>
       <td>0.28</td>
       <td>1.26</td>
-      <td>1.84</td>
+      <td>1.86</td>
       <td>50%</td>
       <td>29%</td>
       <td>36%</td>
@@ -1134,7 +1252,7 @@
       <td>0.93</td>
       <td>1.07</td>
       <td>-0.14</td>
-      <td>0.87</td>
+      <td>0.88</td>
       <td>1.16</td>
       <td>50%</td>
       <td>29%</td>
@@ -1145,7 +1263,7 @@
       <td>C</td>
       <td>Estrela</td>
       <td>1.14</td>
-      <td>-0.14</td>
+      <td>-0.13</td>
       <td>29%</td>
       <td>43%</td>
       <td>1</td>
@@ -1155,7 +1273,7 @@
       <td>1.07</td>
       <td>1.29</td>
       <td>-0.22</td>
-      <td>1.06</td>
+      <td>1.09</td>
       <td>1.28</td>
       <td>50%</td>
       <td>21%</td>
@@ -1177,7 +1295,7 @@
       <td>1.21</td>
       <td>-0.28</td>
       <td>0.81</td>
-      <td>1.18</td>
+      <td>1.20</td>
       <td>43%</td>
       <td>29%</td>
       <td>36%</td>
@@ -1187,7 +1305,7 @@
       <td>D</td>
       <td>Boavista</td>
       <td>1.14</td>
-      <td>-0.52</td>
+      <td>-0.51</td>
       <td>29%</td>
       <td>43%</td>
       <td>2</td>
@@ -1197,7 +1315,7 @@
       <td>1.50</td>
       <td>2.00</td>
       <td>-0.50</td>
-      <td>1.21</td>
+      <td>1.22</td>
       <td>1.59</td>
       <td>79%</td>
       <td>0%</td>
@@ -1219,7 +1337,7 @@
       <td>2.29</td>
       <td>-1.15</td>
       <td>0.99</td>
-      <td>1.51</td>
+      <td>1.54</td>
       <td>71%</td>
       <td>7%</td>
       <td>21%</td>
@@ -1229,7 +1347,7 @@
       <td>B</td>
       <td>Estoril</td>
       <td>1.00</td>
-      <td>-0.01</td>
+      <td>-0.02</td>
       <td>29%</td>
       <td>57%</td>
       <td>3</td>
@@ -1303,7 +1421,7 @@
       <td>1.64</td>
       <td>-0.50</td>
       <td>1.38</td>
-      <td>1.26</td>
+      <td>1.27</td>
       <td>64%</td>
       <td>14%</td>
       <td>21%</td>
@@ -1323,7 +1441,7 @@
       <td>1.00</td>
       <td>1.57</td>
       <td>-0.57</td>
-      <td>1.13</td>
+      <td>1.14</td>
       <td>1.30</td>
       <td>57%</td>
       <td>29%</td>
@@ -1344,7 +1462,7 @@
       <td>1.14</td>
       <td>2.71</td>
       <td>-1.57</td>
-      <td>1.07</td>
+      <td>1.09</td>
       <td>1.77</td>
       <td>57%</td>
       <td>7%</td>

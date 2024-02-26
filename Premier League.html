@@ -2,10 +2,11 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Premier League</title>
     <link rel="icon" type="image/x-icon" href="logo_32.ico">
-    <link rel="stylesheet" href="static\styles.css">
+    <link rel="stylesheet" href="static\styles_test.css">
 
     
 </head>
@@ -22,862 +23,68 @@
     <div id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-button">X</button>
         <ul>
-            <li style="font-weight: bold;">Leagues</li>
-            <li><a href="/Premier League"> Premier League</a></li>
-            <li><a href="/Liga Portugal"> Liga Portugal </a></li>
-            <li><a href="/La Liga"> La Liga </a></li>
-            <li><a href="/Serie A"> Serie A </a></li>
-            <li><a href="/Bundesliga"> Bundesliga </a></li>
-            <li><a href="/Ligue 1"> Ligue 1 </a></li>
+            <li style="font-weight: bold;margin-bottom: 10px;">Leagues</li>
+            <li><a href="/Premier League"> <img src="./logos/premier_league_logo.png"> Premier League</a></li>
+            <li><a href="/Primeira Liga"> <img src="./logos/primeira_liga_logo.png"> Liga Portugal </a></li>
+            <li><a href="/La Liga"> <img src="./logos/la_liga_logo.png"> La Liga </a></li>
+            <li><a href="/Serie A"> <img src="./logos/serie_a_logo.png"> Serie A </a></li>
+            <li><a href="/Bundesliga"> <img src="./logos/bundesliga_logo.png"> Bundesliga </a></li>
+            <li><a href="/Ligue 1"> <img src="./logos/ligue_1_logo.png"> Ligue 1 </a></li>
         </ul>
     </div>
 
     <div class="content">
 
-        <div class="info-container">
-            <div class="logo">
-                <img src="./logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;">
+        <div class="top-container">
+            <div class="info-container" style="display: flex; flex-direction: row;">
+                <h2><img src="./logos/premier_league_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;"> Premier League 23/24</h2>
+
+                <div style="display: flex; flex-direction:row;margin-top: 0;">
+                    <ul> 
+                        <h4> <b>Best Attacks: </b>Liverpool, Arsenal, Manchester City</h4>
+                        <h4> <b>Worst Attacks: </b>Sheffield Utd, Burnley, Everton </h4>
+                    </ul>
+                    <ul>
+                        <h4> <b>Best Defenses: </b>Arsenal, Liverpool, Manchester City </h4>
+                        <h4> <b>Worst Defenses: </b>Sheffield Utd, Burnley, Luton Town </h4>
+                    </ul>
+                    
+                </div>
             </div>
-            <div>
-                <h2> Premier League 23/24</h2>
-                <h3>The home team has an average advantage of 0.27 goals</h3>
+            <!--Está display none-->
+            <div class="info-container" style="margin-left: 20px; display: flex; flex-direction: row; display: none;">
+                <ul> 
+                    
+                    
+                    <h4> <b>Best Attack: </b>[&#39;Liverpool&#39;, &#39;Arsenal&#39;, &#39;Manchester City&#39;] </h4>
+                    <h4> <b>Worst Attack: </b>[&#39;Sheffield Utd&#39;, &#39;Burnley&#39;, &#39;Everton&#39;] </h4>
+                </ul>
+                <ul>
+                    <h4> <b>Best Defense: </b>[&#39;Arsenal&#39;, &#39;Liverpool&#39;, &#39;Manchester City&#39;] </h4>
+                    <h4> <b>Worst Defense: </b>[&#39;Sheffield Utd&#39;, &#39;Burnley&#39;, &#39;Luton Town&#39;] </h4>
+                </ul>
             </div>
         </div>
 
-        <div class="maincontainer">
+        <div class="main-container">
 
             <div class="left-container">
                 <h2>Fixtures</h2>
                 <div class="button-container">
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\manchester_utd.png" alt="Manchester Utd logo"> 
-                            Manchester Utd 
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
 
-                        <div style="height: 40px;">
-                            <img src="premier_logos\fulham.png" alt="Manchester Utd logo"> 
-                            Fulham
-                            <span style="background-color: orange">C</span>
-                        </div>
-                    </button>
+                    
+                    
+                    
+                    
+                    
+                    
 
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Manchester Utd</th>
-      <th>Fulham</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.76</td>
-      <td>1.16</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.04</td>
-      <td>-0.26</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>56%</td>
-      <td>32%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>36%</td>
-      <td>48%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>2</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>6</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>6</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>3</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.4</td>
-      <td>1.36</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.36</td>
-      <td>1.64</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.04</td>
-      <td>-0.28</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.55</td>
-      <td>1.26</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.66</td>
-      <td>1.75</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>48%</td>
-      <td>44%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>28%</td>
-      <td>24%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
                     
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\crystal_palace.png" alt="Crystal Palace logo"> 
-                            Crystal Palace 
-                            <span style="background-color: red">D</span>
-                        </div>
 
-                        <div style="height: 40px;">
-                            <img src="premier_logos\burnley.png" alt="Crystal Palace logo"> 
-                            Burnley
-                            <span style="background-color: red">D</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Crystal Palace</th>
-      <th>Burnley</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.0</td>
-      <td>0.52</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.62</td>
-      <td>-1.03</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>24%</td>
-      <td>12%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>48%</td>
-      <td>72%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>6</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>5</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.12</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.76</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.64</td>
-      <td>-1.2</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.11</td>
-      <td>0.93</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.48</td>
-      <td>1.74</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>64%</td>
-      <td>56%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>20%</td>
-      <td>8%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\brighton.png" alt="Brighton logo"> 
-                            Brighton 
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="premier_logos\everton.png" alt="Brighton logo"> 
-                            Everton
-                            <span style="background-color: orange">C</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Brighton</th>
-      <th>Everton</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.52</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.21</td>
-      <td>-0.19</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>40%</td>
-      <td>32%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>28%</td>
-      <td>44%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>8</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>4</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>1</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>4</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.92</td>
-      <td>1.08</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.6</td>
-      <td>1.32</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.32</td>
-      <td>-0.24</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.68</td>
-      <td>1.5</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.46</td>
-      <td>1.35</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>80%</td>
-      <td>36%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>12%</td>
-      <td>32%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\aston_villa.png" alt="Aston Villa logo"> 
-                            Aston Villa 
-                            <span style="background-color: green">A</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="premier_logos\nott&#39;ham_forest.png" alt="Aston Villa logo"> 
-                            Nott&#39;ham Forest
-                            <span style="background-color: red">D</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Aston Villa</th>
-      <th>Nott'ham Forest</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.96</td>
-      <td>0.96</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.64</td>
-      <td>-0.44</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>60%</td>
-      <td>24%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>24%</td>
-      <td>52%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>8</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>4</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>2.08</td>
-      <td>1.28</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.32</td>
-      <td>1.76</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>0.76</td>
-      <td>-0.48</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.79</td>
-      <td>1.22</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.36</td>
-      <td>1.41</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>68%</td>
-      <td>64%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>24%</td>
-      <td>16%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\bournemouth.png" alt="Bournemouth logo"> 
-                            Bournemouth 
-                            <span style="background-color: orange">C</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="premier_logos\manchester_city.png" alt="Bournemouth logo"> 
-                            Manchester City
-                            <span style="background-color: green">A</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Bournemouth</th>
-      <th>Manchester City</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.17</td>
-      <td>2.24</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.42</td>
-      <td>1.12</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>29%</td>
-      <td>68%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>42%</td>
-      <td>12%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>5</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>9</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>4</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>6</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.38</td>
-      <td>2.32</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.92</td>
-      <td>1.04</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.54</td>
-      <td>1.28</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.46</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.61</td>
-      <td>0.94</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>62%</td>
-      <td>64%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>21%</td>
-      <td>28%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\arsenal.png" alt="Arsenal logo"> 
-                            Arsenal 
-                            <span style="background-color: green">A</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="premier_logos\newcastle_utd.png" alt="Arsenal logo"> 
-                            Newcastle Utd
-                            <span style="background-color: green">A</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Arsenal</th>
-      <th>Newcastle Utd</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>2.2</td>
-      <td>1.48</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>1.35</td>
-      <td>0.52</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>68%</td>
-      <td>44%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>16%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>9</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>1</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>10</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>2.32</td>
-      <td>2.12</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>0.88</td>
-      <td>1.64</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>1.44</td>
-      <td>0.48</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>2.01</td>
-      <td>1.92</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>0.72</td>
-      <td>1.76</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>48%</td>
-      <td>56%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>40%</td>
-      <td>28%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="premier_logos\wolves.png" alt="Wolves logo"> 
-                            Wolves 
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="premier_logos\sheffield_utd.png" alt="Wolves logo"> 
-                            Sheffield Utd
-                            <span style="background-color: red">D</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wolves</th>
-      <th>Sheffield Utd</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.4</td>
-      <td>0.52</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.01</td>
-      <td>-1.65</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>40%</td>
-      <td>12%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>40%</td>
-      <td>72%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>4</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.56</td>
-      <td>0.88</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.6</td>
-      <td>2.6</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.04</td>
-      <td>-1.72</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.4</td>
-      <td>0.94</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.7</td>
-      <td>2.01</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>72%</td>
-      <td>56%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>16%</td>
-      <td>4%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
                     
                     
                     
@@ -900,99 +107,250 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.28 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="premier_logos\west_ham.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">West Ham</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.33</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>West Ham</th>
-      <th>Brentford</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>1.44</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.33</td>
-      <td>-0.28</td>
+      <td>1.58</td>
+      <td>1.31</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>40%</td>
-      <td>28%</td>
+      <td>42%</td>
+      <td>38%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>36%</td>
-      <td>56%</td>
+      <td>25%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>6</td>
-      <td>5</td>
+      <td>4</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>7</td>
-      <td>6</td>
+      <td>2</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>4</td>
-      <td>4</td>
+      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>2</td>
       <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>4</td>
-      <td>7</td>
+      <td>2</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.44</td>
-      <td>1.4</td>
+      <td>1.5</td>
+      <td>1.38</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.76</td>
-      <td>1.76</td>
+      <td>1.42</td>
+      <td>2.08</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-0.32</td>
-      <td>-0.36</td>
+      <td>0.08</td>
+      <td>-0.7</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.33</td>
-      <td>1.61</td>
+      <td>1.18</td>
+      <td>1.47</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.84</td>
-      <td>1.5</td>
+      <td>1.78</td>
+      <td>1.9</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>60%</td>
-      <td>64%</td>
+      <td>50%</td>
+      <td>69%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>20%</td>
-      <td>16%</td>
+      <td>33%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>24%</td>
+      <td>25%</td>
+      <td>23%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="premier_logos\brentford.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Brentford</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.28</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.0</td>
+      <td>1.15</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>28%</td>
+      <td>31%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>56%</td>
+      <td>46%</td>
+      <td>67%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>5</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>6</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>4</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>7</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.4</td>
+      <td>1.69</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.76</td>
+      <td>2.08</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.36</td>
+      <td>-0.39</td>
+      <td>-0.34</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.61</td>
+      <td>1.72</td>
+      <td>1.49</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.5</td>
+      <td>1.59</td>
+      <td>1.41</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>64%</td>
+      <td>85%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>16%</td>
+      <td>8%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>20%</td>
+      <td>8%</td>
+      <td>33%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
                     
                 </div>
             </div>
@@ -1004,7 +362,7 @@
             </div>
 
             <div class="right-container">
-                <h2>Premier League Standings </h2>
+                <h2><img src="./logos/premier_league_logo.png" alt="Premier League Logo" style="width: 60px; height: auto; align-items: baseline;"> Premier League Standings </h2>
                 <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Overall</button>
                 <button class="table-toggle-button" data-table="home" onclick="showTable('home')">Home</button>
                 <button class="table-toggle-button" data-table="away" onclick="showTable('away')">Away</button>
@@ -1043,41 +401,41 @@
       <td>2</td>
       <td>A</td>
       <td>Manchester City</td>
-      <td>56</td>
-      <td>25</td>
-      <td>17</td>
+      <td>59</td>
+      <td>26</td>
+      <td>18</td>
       <td>5</td>
       <td>3</td>
-      <td>58</td>
+      <td>59</td>
       <td>26</td>
     </tr>
     <tr>
       <td>3</td>
       <td>A</td>
       <td>Arsenal</td>
-      <td>55</td>
-      <td>25</td>
-      <td>17</td>
-      <td>4</td>
-      <td>4</td>
       <td>58</td>
-      <td>22</td>
+      <td>26</td>
+      <td>18</td>
+      <td>4</td>
+      <td>4</td>
+      <td>62</td>
+      <td>23</td>
     </tr>
     <tr>
       <td>4</td>
       <td>A</td>
       <td>Aston Villa</td>
-      <td>49</td>
-      <td>25</td>
-      <td>15</td>
+      <td>52</td>
+      <td>26</td>
+      <td>16</td>
       <td>4</td>
       <td>6</td>
-      <td>52</td>
-      <td>33</td>
+      <td>56</td>
+      <td>35</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>B</td>
+      <td>A</td>
       <td>Tottenham</td>
       <td>47</td>
       <td>25</td>
@@ -1092,39 +450,51 @@
       <td>B</td>
       <td>Manchester Utd</td>
       <td>44</td>
-      <td>25</td>
+      <td>26</td>
       <td>14</td>
       <td>2</td>
-      <td>9</td>
-      <td>35</td>
-      <td>34</td>
+      <td>10</td>
+      <td>36</td>
+      <td>36</td>
     </tr>
     <tr>
       <td>7</td>
       <td>B</td>
       <td>Brighton</td>
-      <td>38</td>
-      <td>25</td>
+      <td>39</td>
+      <td>26</td>
       <td>10</td>
-      <td>8</td>
+      <td>9</td>
       <td>7</td>
-      <td>48</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>A</td>
-      <td>Newcastle Utd</td>
-      <td>37</td>
-      <td>25</td>
-      <td>11</td>
-      <td>4</td>
-      <td>10</td>
-      <td>53</td>
+      <td>49</td>
       <td>41</td>
     </tr>
     <tr>
+      <td>8</td>
+      <td>B</td>
+      <td>Wolves</td>
+      <td>38</td>
+      <td>26</td>
+      <td>11</td>
+      <td>5</td>
+      <td>10</td>
+      <td>40</td>
+      <td>40</td>
+    </tr>
+    <tr>
       <td>9</td>
+      <td>B</td>
+      <td>Newcastle Utd</td>
+      <td>37</td>
+      <td>26</td>
+      <td>11</td>
+      <td>4</td>
+      <td>11</td>
+      <td>54</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>10</td>
       <td>C</td>
       <td>West Ham</td>
       <td>36</td>
@@ -1136,7 +506,7 @@
       <td>44</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td>B</td>
       <td>Chelsea</td>
       <td>35</td>
@@ -1148,55 +518,55 @@
       <td>41</td>
     </tr>
     <tr>
-      <td>11</td>
-      <td>B</td>
-      <td>Wolves</td>
-      <td>35</td>
-      <td>25</td>
-      <td>10</td>
-      <td>5</td>
-      <td>10</td>
-      <td>39</td>
-      <td>40</td>
-    </tr>
-    <tr>
       <td>12</td>
       <td>C</td>
-      <td>Everton</td>
-      <td>30</td>
-      <td>25</td>
-      <td>8</td>
-      <td>6</td>
-      <td>11</td>
-      <td>27</td>
-      <td>33</td>
+      <td>Fulham</td>
+      <td>32</td>
+      <td>26</td>
+      <td>9</td>
+      <td>5</td>
+      <td>12</td>
+      <td>36</td>
+      <td>42</td>
     </tr>
     <tr>
       <td>13</td>
       <td>C</td>
-      <td>Fulham</td>
-      <td>29</td>
-      <td>25</td>
+      <td>Everton</td>
+      <td>31</td>
+      <td>26</td>
       <td>8</td>
-      <td>5</td>
-      <td>12</td>
+      <td>7</td>
+      <td>11</td>
+      <td>28</td>
       <td>34</td>
-      <td>41</td>
     </tr>
     <tr>
       <td>14</td>
-      <td>C</td>
-      <td>Bournemouth</td>
+      <td>D</td>
+      <td>Crystal Palace</td>
       <td>28</td>
-      <td>24</td>
+      <td>26</td>
       <td>7</td>
       <td>7</td>
-      <td>10</td>
-      <td>33</td>
-      <td>46</td>
+      <td>12</td>
+      <td>31</td>
+      <td>44</td>
     </tr>
     <tr>
       <td>15</td>
+      <td>C</td>
+      <td>Bournemouth</td>
+      <td>28</td>
+      <td>25</td>
+      <td>7</td>
+      <td>7</td>
+      <td>11</td>
+      <td>33</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>16</td>
       <td>C</td>
       <td>Brentford</td>
       <td>25</td>
@@ -1208,28 +578,16 @@
       <td>44</td>
     </tr>
     <tr>
-      <td>16</td>
-      <td>D</td>
-      <td>Crystal Palace</td>
-      <td>25</td>
-      <td>25</td>
-      <td>6</td>
-      <td>7</td>
-      <td>12</td>
-      <td>28</td>
-      <td>44</td>
-    </tr>
-    <tr>
       <td>17</td>
       <td>D</td>
       <td>Nott'ham Forest</td>
       <td>24</td>
-      <td>25</td>
+      <td>26</td>
       <td>6</td>
       <td>6</td>
-      <td>13</td>
-      <td>32</td>
-      <td>44</td>
+      <td>14</td>
+      <td>34</td>
+      <td>48</td>
     </tr>
     <tr>
       <td>18</td>
@@ -1248,24 +606,24 @@
       <td>D</td>
       <td>Burnley</td>
       <td>13</td>
-      <td>25</td>
+      <td>26</td>
       <td>3</td>
       <td>4</td>
-      <td>18</td>
+      <td>19</td>
       <td>25</td>
-      <td>55</td>
+      <td>58</td>
     </tr>
     <tr>
       <td>20</td>
       <td>D</td>
       <td>Sheffield Utd</td>
       <td>13</td>
-      <td>25</td>
+      <td>26</td>
       <td>3</td>
       <td>4</td>
-      <td>18</td>
+      <td>19</td>
       <td>22</td>
-      <td>65</td>
+      <td>66</td>
     </tr>
   </tbody>
 </table>
@@ -1299,6 +657,17 @@
     </tr>
     <tr>
       <td>2</td>
+      <td>Arsenal</td>
+      <td>32</td>
+      <td>13</td>
+      <td>10</td>
+      <td>2</td>
+      <td>1</td>
+      <td>34</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>3</td>
       <td>Manchester City</td>
       <td>31</td>
       <td>13</td>
@@ -1309,26 +678,15 @@
       <td>11</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>Arsenal</td>
-      <td>29</td>
-      <td>12</td>
-      <td>9</td>
-      <td>2</td>
-      <td>1</td>
-      <td>30</td>
-      <td>11</td>
-    </tr>
-    <tr>
       <td>4</td>
       <td>Aston Villa</td>
-      <td>28</td>
-      <td>12</td>
-      <td>9</td>
-      <td>1</td>
-      <td>2</td>
       <td>31</td>
       <td>13</td>
+      <td>10</td>
+      <td>1</td>
+      <td>2</td>
+      <td>35</td>
+      <td>15</td>
     </tr>
     <tr>
       <td>5</td>
@@ -1355,13 +713,13 @@
     <tr>
       <td>7</td>
       <td>Brighton</td>
-      <td>23</td>
-      <td>12</td>
+      <td>24</td>
+      <td>13</td>
       <td>6</td>
-      <td>5</td>
+      <td>6</td>
       <td>1</td>
-      <td>26</td>
-      <td>15</td>
+      <td>27</td>
+      <td>16</td>
     </tr>
     <tr>
       <td>8</td>
@@ -1378,15 +736,26 @@
       <td>9</td>
       <td>Manchester Utd</td>
       <td>22</td>
-      <td>12</td>
+      <td>13</td>
       <td>7</td>
       <td>1</td>
-      <td>4</td>
-      <td>18</td>
-      <td>18</td>
+      <td>5</td>
+      <td>19</td>
+      <td>20</td>
     </tr>
     <tr>
       <td>10</td>
+      <td>Wolves</td>
+      <td>21</td>
+      <td>13</td>
+      <td>6</td>
+      <td>3</td>
+      <td>4</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>11</td>
       <td>West Ham</td>
       <td>19</td>
       <td>12</td>
@@ -1397,7 +766,7 @@
       <td>17</td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>12</td>
       <td>Chelsea</td>
       <td>18</td>
       <td>12</td>
@@ -1408,18 +777,18 @@
       <td>18</td>
     </tr>
     <tr>
-      <td>12</td>
-      <td>Wolves</td>
-      <td>18</td>
-      <td>12</td>
-      <td>5</td>
-      <td>3</td>
+      <td>13</td>
+      <td>Crystal Palace</td>
+      <td>15</td>
+      <td>13</td>
       <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>18</td>
       <td>19</td>
-      <td>20</td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>14</td>
       <td>Nott'ham Forest</td>
       <td>15</td>
       <td>13</td>
@@ -1430,7 +799,7 @@
       <td>20</td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>15</td>
       <td>Brentford</td>
       <td>15</td>
       <td>13</td>
@@ -1441,7 +810,7 @@
       <td>27</td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>16</td>
       <td>Everton</td>
       <td>13</td>
       <td>13</td>
@@ -1452,26 +821,15 @@
       <td>15</td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>17</td>
       <td>Bournemouth</td>
       <td>13</td>
-      <td>11</td>
+      <td>12</td>
       <td>3</td>
       <td>4</td>
-      <td>4</td>
+      <td>5</td>
       <td>12</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>Crystal Palace</td>
-      <td>12</td>
-      <td>12</td>
-      <td>3</td>
-      <td>3</td>
-      <td>6</td>
-      <td>15</td>
-      <td>19</td>
+      <td>18</td>
     </tr>
     <tr>
       <td>18</td>
@@ -1527,6 +885,17 @@
   <tbody>
     <tr>
       <td>1</td>
+      <td>Manchester City</td>
+      <td>28</td>
+      <td>13</td>
+      <td>9</td>
+      <td>1</td>
+      <td>3</td>
+      <td>28</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>2</td>
       <td>Arsenal</td>
       <td>26</td>
       <td>13</td>
@@ -1537,7 +906,7 @@
       <td>11</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>3</td>
       <td>Liverpool</td>
       <td>25</td>
       <td>13</td>
@@ -1546,17 +915,6 @@
       <td>2</td>
       <td>26</td>
       <td>14</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Manchester City</td>
-      <td>25</td>
-      <td>12</td>
-      <td>8</td>
-      <td>1</td>
-      <td>3</td>
-      <td>27</td>
-      <td>15</td>
     </tr>
     <tr>
       <td>4</td>
@@ -1593,6 +951,17 @@
     </tr>
     <tr>
       <td>7</td>
+      <td>Everton</td>
+      <td>18</td>
+      <td>13</td>
+      <td>5</td>
+      <td>3</td>
+      <td>5</td>
+      <td>14</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>8</td>
       <td>Chelsea</td>
       <td>17</td>
       <td>13</td>
@@ -1601,17 +970,6 @@
       <td>6</td>
       <td>22</td>
       <td>23</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Everton</td>
-      <td>17</td>
-      <td>12</td>
-      <td>5</td>
-      <td>2</td>
-      <td>5</td>
-      <td>13</td>
-      <td>18</td>
     </tr>
     <tr>
       <td>9</td>
@@ -1672,12 +1030,12 @@
       <td>14</td>
       <td>Newcastle Utd</td>
       <td>11</td>
-      <td>12</td>
+      <td>13</td>
       <td>3</td>
       <td>2</td>
-      <td>7</td>
-      <td>22</td>
-      <td>25</td>
+      <td>8</td>
+      <td>23</td>
+      <td>29</td>
     </tr>
     <tr>
       <td>15</td>
@@ -1692,6 +1050,17 @@
     </tr>
     <tr>
       <td>16</td>
+      <td>Fulham</td>
+      <td>10</td>
+      <td>13</td>
+      <td>2</td>
+      <td>4</td>
+      <td>7</td>
+      <td>13</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>17</td>
       <td>Luton Town</td>
       <td>9</td>
       <td>12</td>
@@ -1702,48 +1071,37 @@
       <td>29</td>
     </tr>
     <tr>
-      <td>17</td>
+      <td>18</td>
       <td>Nott'ham Forest</td>
       <td>9</td>
-      <td>12</td>
+      <td>13</td>
       <td>2</td>
       <td>3</td>
-      <td>7</td>
-      <td>13</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>Burnley</td>
       <td>8</td>
-      <td>12</td>
-      <td>2</td>
-      <td>2</td>
-      <td>8</td>
-      <td>12</td>
-      <td>23</td>
+      <td>15</td>
+      <td>28</td>
     </tr>
     <tr>
       <td>19</td>
-      <td>Fulham</td>
-      <td>7</td>
+      <td>Burnley</td>
+      <td>8</td>
+      <td>13</td>
+      <td>2</td>
+      <td>2</td>
+      <td>9</td>
       <td>12</td>
-      <td>1</td>
-      <td>4</td>
-      <td>7</td>
-      <td>11</td>
       <td>26</td>
     </tr>
     <tr>
       <td>20</td>
       <td>Sheffield Utd</td>
       <td>5</td>
-      <td>12</td>
+      <td>13</td>
       <td>1</td>
       <td>2</td>
-      <td>9</td>
       <td>10</td>
-      <td>29</td>
+      <td>10</td>
+      <td>30</td>
     </tr>
   </tbody>
 </table>
@@ -1756,11 +1114,55 @@
         </div>
 
         <script>
+            // Team 1 tables
+            function team1Table(tableType) {
+                // Toggle the table visibility based on the tableType
+                var allTables = document.querySelectorAll('.team1-stats-container');
+                
+                allTables.forEach(function(table) {
+                    var tableId = table.getAttribute('data-table');
+                    if (tableId === tableType) {
+                        table.style.display = 'block';
+                    } else {
+                        table.style.display = 'none';
+                    }
+                });
+            }
+            // Team 2 tables
+            function team2Table(tableType) {
+                // Toggle the table visibility based on the tableType
+                var allTables = document.querySelectorAll('.team2-stats-container');
+                
+                allTables.forEach(function(table) {
+                    var tableId = table.getAttribute('data-table');
+                    if (tableId === tableType) {
+                        table.style.display = 'block';
+                    } else {
+                        table.style.display = 'none';
+                    }
+                });
+            }
+            // Sidebar
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.left = "-250px"; // Hide the sidebar
+        
+            document.getElementById('toggle-sidebar').addEventListener('click', function() {
+                if (sidebar.style.left === "0px" || sidebar.style.left === "") {
+                    sidebar.style.left = "-250px"; // Hide the sidebar
+                } else {
+                    sidebar.style.left = "0px"; // Show the sidebar
+                }
+            });
+        
+            document.getElementById('close-sidebar').addEventListener('click', function() {
+                sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
+            });
+        
             // Simple Tables
             function showTable(tableType) {
                 // Get all the buttons
                 var buttons = document.querySelectorAll('.table-toggle-button');
-
+        
                 // Iterate through the buttons to update their style
                 for (var i = 0; i < buttons.length; i++) {
                     if (buttons[i].getAttribute('data-table') === tableType) {
@@ -1769,7 +1171,7 @@
                         buttons[i].classList.remove('active-button'); // Remove the active class from other buttons
                     }
                 }
-
+        
                 // Toggle the table visibility as before
                 if (tableType === 'total') {
                     document.getElementById('total-table').style.display = 'block';
@@ -1785,16 +1187,13 @@
                     document.getElementById('away-table').style.display = 'block';
                 }
             }
-        </script>
-
-        <script>
+        
             // Dynamic table
             var activeButton = null;
-
             function toggleTable(button) {
                 var tableContainer = button.nextElementSibling;
                 var dynamicTable = document.getElementById('dynamic-table');
-
+        
                 if (activeButton === button) {
                     // If the same button is clicked again, hide the displayed table
                     dynamicTable.style.display = 'none';
@@ -1813,28 +1212,10 @@
                     }
                     
                     activeButton = button;
-                    }
                 }
-
+            }
         </script>
-
-        <script>
-            // Sidebar
-            var sidebar = document.getElementById('sidebar');
-            sidebar.style.left = "-250px"; // Hide the sidebar
-
-            document.getElementById('toggle-sidebar').addEventListener('click', function() {
-                if (sidebar.style.left === "0px" || sidebar.style.left === "") {
-                    sidebar.style.left = "-250px"; // Hide the sidebar
-                } else {
-                    sidebar.style.left = "0px"; // Show the sidebar
-                }
-            });
-
-            document.getElementById('close-sidebar').addEventListener('click', function() {
-                sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
-            });
-        </script>
+        
 
         <div style="width: max-content; margin: auto; display: flex; flex-direction: column;" class="container">
             <h2>
@@ -1893,71 +1274,71 @@
       <td>2</td>
       <td>A</td>
       <td>Manchester City</td>
-      <td>2.24</td>
-      <td>1.12</td>
-      <td>68%</td>
+      <td>2.27</td>
+      <td>1.11</td>
+      <td>69%</td>
       <td>12%</td>
       <td>11</td>
       <td>0</td>
-      <td>7</td>
+      <td>8</td>
       <td>0</td>
       <td>2</td>
-      <td>2.32</td>
-      <td>1.04</td>
-      <td>1.28</td>
-      <td>2.00</td>
+      <td>2.27</td>
+      <td>1.00</td>
+      <td>1.27</td>
+      <td>1.99</td>
       <td>0.94</td>
-      <td>64%</td>
-      <td>28%</td>
+      <td>62%</td>
+      <td>31%</td>
       <td>8%</td>
     </tr>
     <tr>
       <td>3</td>
       <td>A</td>
       <td>Arsenal</td>
-      <td>2.20</td>
-      <td>1.35</td>
-      <td>68%</td>
-      <td>16%</td>
-      <td>9</td>
+      <td>2.23</td>
+      <td>1.41</td>
+      <td>69%</td>
+      <td>15%</td>
+      <td>10</td>
       <td>1</td>
       <td>10</td>
       <td>2</td>
       <td>1</td>
-      <td>2.32</td>
+      <td>2.38</td>
       <td>0.88</td>
-      <td>1.44</td>
-      <td>2.01</td>
-      <td>0.72</td>
-      <td>48%</td>
-      <td>40%</td>
+      <td>1.50</td>
+      <td>2.03</td>
+      <td>0.70</td>
+      <td>50%</td>
+      <td>38%</td>
       <td>12%</td>
     </tr>
     <tr>
       <td>4</td>
       <td>A</td>
       <td>Aston Villa</td>
-      <td>1.96</td>
-      <td>0.64</td>
-      <td>60%</td>
-      <td>24%</td>
-      <td>8</td>
+      <td>2.00</td>
+      <td>0.66</td>
+      <td>62%</td>
+      <td>23%</td>
+      <td>9</td>
       <td>4</td>
       <td>5</td>
       <td>3</td>
       <td>1</td>
-      <td>2.08</td>
-      <td>1.32</td>
-      <td>0.76</td>
-      <td>1.79</td>
-      <td>1.36</td>
-      <td>68%</td>
-      <td>24%</td>
+      <td>2.15</td>
+      <td>1.35</td>
+      <td>0.80</td>
+      <td>1.86</td>
+      <td>1.41</td>
+      <td>69%</td>
+      <td>23%</td>
       <td>12%</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>B</td>
+      <td>A</td>
       <td>Tottenham</td>
       <td>1.88</td>
       <td>0.50</td>
@@ -1981,70 +1362,92 @@
       <td>6</td>
       <td>B</td>
       <td>Manchester Utd</td>
-      <td>1.76</td>
-      <td>0.04</td>
-      <td>56%</td>
-      <td>36%</td>
+      <td>1.69</td>
+      <td>-0.02</td>
+      <td>54%</td>
+      <td>38%</td>
       <td>2</td>
       <td>6</td>
       <td>6</td>
       <td>2</td>
       <td>3</td>
-      <td>1.40</td>
-      <td>1.36</td>
-      <td>0.04</td>
+      <td>1.38</td>
+      <td>1.38</td>
+      <td>0.00</td>
       <td>1.55</td>
-      <td>1.66</td>
-      <td>48%</td>
-      <td>28%</td>
-      <td>28%</td>
+      <td>1.63</td>
+      <td>50%</td>
+      <td>27%</td>
+      <td>27%</td>
     </tr>
     <tr>
       <td>7</td>
       <td>B</td>
       <td>Brighton</td>
-      <td>1.52</td>
-      <td>0.21</td>
-      <td>40%</td>
-      <td>28%</td>
+      <td>1.50</td>
+      <td>0.19</td>
+      <td>38%</td>
+      <td>27%</td>
       <td>8</td>
       <td>4</td>
       <td>1</td>
       <td>1</td>
       <td>4</td>
-      <td>1.92</td>
-      <td>1.60</td>
-      <td>0.32</td>
-      <td>1.68</td>
-      <td>1.46</td>
-      <td>80%</td>
+      <td>1.88</td>
+      <td>1.58</td>
+      <td>0.30</td>
+      <td>1.67</td>
+      <td>1.42</td>
+      <td>81%</td>
       <td>12%</td>
-      <td>16%</td>
+      <td>15%</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>A</td>
-      <td>Newcastle Utd</td>
-      <td>1.48</td>
-      <td>0.52</td>
-      <td>44%</td>
-      <td>40%</td>
-      <td>7</td>
-      <td>6</td>
-      <td>7</td>
+      <td>B</td>
+      <td>Wolves</td>
+      <td>1.46</td>
+      <td>-0.05</td>
+      <td>42%</td>
+      <td>38%</td>
       <td>3</td>
-      <td>5</td>
-      <td>2.12</td>
-      <td>1.64</td>
-      <td>0.48</td>
-      <td>1.92</td>
-      <td>1.76</td>
-      <td>56%</td>
-      <td>28%</td>
-      <td>16%</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1.54</td>
+      <td>1.54</td>
+      <td>0.00</td>
+      <td>1.39</td>
+      <td>1.66</td>
+      <td>69%</td>
+      <td>19%</td>
+      <td>15%</td>
     </tr>
     <tr>
       <td>9</td>
+      <td>B</td>
+      <td>Newcastle Utd</td>
+      <td>1.42</td>
+      <td>0.45</td>
+      <td>42%</td>
+      <td>42%</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2.08</td>
+      <td>1.73</td>
+      <td>0.35</td>
+      <td>1.86</td>
+      <td>1.79</td>
+      <td>58%</td>
+      <td>27%</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td>10</td>
       <td>C</td>
       <td>West Ham</td>
       <td>1.44</td>
@@ -2066,7 +1469,7 @@
       <td>24%</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td>B</td>
       <td>Chelsea</td>
       <td>1.40</td>
@@ -2088,95 +1491,95 @@
       <td>20%</td>
     </tr>
     <tr>
-      <td>11</td>
-      <td>B</td>
-      <td>Wolves</td>
-      <td>1.40</td>
-      <td>-0.01</td>
-      <td>40%</td>
-      <td>40%</td>
-      <td>3</td>
-      <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1.56</td>
-      <td>1.60</td>
-      <td>-0.04</td>
-      <td>1.40</td>
-      <td>1.70</td>
-      <td>72%</td>
-      <td>16%</td>
-      <td>16%</td>
-    </tr>
-    <tr>
       <td>12</td>
       <td>C</td>
+      <td>Fulham</td>
+      <td>1.23</td>
+      <td>-0.20</td>
+      <td>35%</td>
+      <td>46%</td>
+      <td>4</td>
+      <td>8</td>
+      <td>4</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1.38</td>
+      <td>1.62</td>
+      <td>-0.24</td>
+      <td>1.25</td>
+      <td>1.75</td>
+      <td>46%</td>
+      <td>23%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>C</td>
       <td>Everton</td>
-      <td>1.20</td>
-      <td>-0.19</td>
-      <td>32%</td>
-      <td>44%</td>
+      <td>1.19</td>
+      <td>-0.16</td>
+      <td>31%</td>
+      <td>42%</td>
       <td>5</td>
       <td>6</td>
       <td>6</td>
       <td>0</td>
       <td>6</td>
       <td>1.08</td>
-      <td>1.32</td>
-      <td>-0.24</td>
-      <td>1.50</td>
+      <td>1.31</td>
+      <td>-0.23</td>
+      <td>1.45</td>
       <td>1.35</td>
-      <td>36%</td>
-      <td>32%</td>
-      <td>40%</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>C</td>
-      <td>Fulham</td>
-      <td>1.16</td>
-      <td>-0.26</td>
-      <td>32%</td>
-      <td>48%</td>
-      <td>4</td>
-      <td>8</td>
-      <td>4</td>
-      <td>1</td>
-      <td>5</td>
-      <td>1.36</td>
-      <td>1.64</td>
-      <td>-0.28</td>
-      <td>1.26</td>
-      <td>1.75</td>
-      <td>44%</td>
-      <td>24%</td>
-      <td>40%</td>
+      <td>38%</td>
+      <td>31%</td>
+      <td>38%</td>
     </tr>
     <tr>
       <td>14</td>
+      <td>D</td>
+      <td>Crystal Palace</td>
+      <td>1.08</td>
+      <td>-0.54</td>
+      <td>27%</td>
+      <td>46%</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4</td>
+      <td>0</td>
+      <td>5</td>
+      <td>1.19</td>
+      <td>1.69</td>
+      <td>-0.50</td>
+      <td>1.16</td>
+      <td>1.43</td>
+      <td>62%</td>
+      <td>23%</td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <td>15</td>
       <td>C</td>
       <td>Bournemouth</td>
-      <td>1.17</td>
-      <td>-0.42</td>
-      <td>29%</td>
-      <td>42%</td>
+      <td>1.12</td>
+      <td>-0.41</td>
+      <td>28%</td>
+      <td>44%</td>
       <td>5</td>
       <td>9</td>
       <td>4</td>
       <td>0</td>
-      <td>6</td>
-      <td>1.38</td>
-      <td>1.92</td>
-      <td>-0.54</td>
-      <td>1.46</td>
+      <td>7</td>
+      <td>1.32</td>
+      <td>1.88</td>
+      <td>-0.56</td>
+      <td>1.44</td>
       <td>1.61</td>
-      <td>62%</td>
-      <td>21%</td>
-      <td>21%</td>
+      <td>60%</td>
+      <td>20%</td>
+      <td>24%</td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>16</td>
       <td>C</td>
       <td>Brentford</td>
       <td>1.00</td>
@@ -2198,48 +1601,26 @@
       <td>20%</td>
     </tr>
     <tr>
-      <td>16</td>
-      <td>D</td>
-      <td>Crystal Palace</td>
-      <td>1.00</td>
-      <td>-0.62</td>
-      <td>24%</td>
-      <td>48%</td>
-      <td>2</td>
-      <td>6</td>
-      <td>3</td>
-      <td>0</td>
-      <td>5</td>
-      <td>1.12</td>
-      <td>1.76</td>
-      <td>-0.64</td>
-      <td>1.11</td>
-      <td>1.48</td>
-      <td>64%</td>
-      <td>20%</td>
-      <td>24%</td>
-    </tr>
-    <tr>
       <td>17</td>
       <td>D</td>
       <td>Nott'ham Forest</td>
-      <td>0.96</td>
-      <td>-0.44</td>
-      <td>24%</td>
-      <td>52%</td>
+      <td>0.92</td>
+      <td>-0.46</td>
+      <td>23%</td>
+      <td>54%</td>
       <td>3</td>
-      <td>4</td>
+      <td>5</td>
       <td>3</td>
       <td>1</td>
-      <td>5</td>
-      <td>1.28</td>
-      <td>1.76</td>
-      <td>-0.48</td>
-      <td>1.22</td>
-      <td>1.41</td>
-      <td>64%</td>
-      <td>16%</td>
-      <td>24%</td>
+      <td>6</td>
+      <td>1.31</td>
+      <td>1.85</td>
+      <td>-0.54</td>
+      <td>1.27</td>
+      <td>1.49</td>
+      <td>65%</td>
+      <td>15%</td>
+      <td>23%</td>
     </tr>
     <tr>
       <td>18</td>
@@ -2267,45 +1648,45 @@
       <td>19</td>
       <td>D</td>
       <td>Burnley</td>
-      <td>0.52</td>
-      <td>-1.03</td>
+      <td>0.50</td>
+      <td>-1.10</td>
       <td>12%</td>
-      <td>72%</td>
+      <td>73%</td>
       <td>2</td>
-      <td>13</td>
+      <td>14</td>
       <td>2</td>
       <td>0</td>
       <td>9</td>
-      <td>1.00</td>
-      <td>2.20</td>
-      <td>-1.20</td>
-      <td>0.93</td>
-      <td>1.74</td>
-      <td>56%</td>
+      <td>0.96</td>
+      <td>2.23</td>
+      <td>-1.27</td>
+      <td>0.90</td>
+      <td>1.77</td>
+      <td>54%</td>
       <td>8%</td>
-      <td>36%</td>
+      <td>38%</td>
     </tr>
     <tr>
       <td>20</td>
       <td>D</td>
       <td>Sheffield Utd</td>
-      <td>0.52</td>
-      <td>-1.65</td>
+      <td>0.50</td>
+      <td>-1.61</td>
       <td>12%</td>
-      <td>72%</td>
+      <td>73%</td>
       <td>1</td>
       <td>11</td>
       <td>1</td>
       <td>0</td>
       <td>6</td>
-      <td>0.88</td>
-      <td>2.60</td>
-      <td>-1.72</td>
-      <td>0.94</td>
-      <td>2.01</td>
-      <td>56%</td>
+      <td>0.85</td>
+      <td>2.54</td>
+      <td>-1.69</td>
+      <td>0.92</td>
+      <td>1.98</td>
+      <td>54%</td>
       <td>4%</td>
-      <td>40%</td>
+      <td>42%</td>
     </tr>
   </tbody>
 </table>

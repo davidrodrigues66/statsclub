@@ -1,0 +1,528 @@
+body {
+    overflow: auto; /* Enable horizontal scrolling for the entire page */
+    font-family: 'Roboto', sans-serif;
+}
+.top-bar {
+    background-color: #2134c4;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 36px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    z-index: 100; /* Set a higher z-index to keep the top bar above other elements */
+    height: 50px;
+}
+
+
+.content {
+    margin-top: 60px; /* Adjust the margin to match the top bar's height */
+    height: auto; /* Example content height to demonstrate scrollability */
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px; 
+}
+
+.logo{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:  transparent; /* Set a background color for the left container */
+    display: flex;
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+
+
+/* Center the tables on the page */
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Items at opposite ends of the container */
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.table-container {
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+    width: max-content;
+    text-align: center;
+    padding: 0;
+}
+
+
+/*Container das duas tabelas*/
+.middle-table-container{
+    margin-top: 0px;
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    flex: 1;
+    display: flex; /* Keep tables on the same line */
+    flex-direction: row;
+    
+    width: min-content;
+    text-align: center;
+    padding: 10px;
+}
+
+.team-table-container{
+    margin: 10px;
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: transparent;
+    display: inline-block;
+    width: max-content;
+    padding: 10px;
+    color: white;
+}
+
+.team1-button{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    padding: 4px;
+    margin-right: 5px;
+    background-color: #f5f5f5;
+    color: #2c2c2c; 
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px; /* Larger font size for modern look */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.team1-logo-container{
+    height: 80px;
+    display:flex;
+    flex-direction: row;
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #2134c4;
+    margin-bottom: 15px;
+}
+
+.team1-stats-container{
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #2134c4;
+    width: max-content;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.team1-stats-container table{
+    color:white;
+    margin-top: 0px; /* Ensure no top margin for the table */
+    margin-bottom: 0px;
+}
+
+.team1-stats-container th{
+    color:white;
+}
+
+#team1a table tr th:nth-child(3),
+#team1a table tr td:nth-child(3) {
+    /* Your styling here */
+    background-color: rgba(0, 0, 0, 0.2); /* Darken the original background color */
+    font-weight: bold;
+}
+
+.team2-button{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    padding: 4px;
+    margin-right: 5px;
+    background-color: #f5f5f5;
+    color: #2c2c2c; 
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px; /* Larger font size for modern look */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.team2-logo-container{
+    height: 80px;
+    display:flex;
+    flex-direction: row;
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #2134c4;
+    margin-bottom: 15px;
+}
+
+.team2-stats-container{
+    border: 1px solid transparent; /* Border around the container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #2134c4;
+    width: max-content;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.team2-stats-container table{
+    color:white;
+    margin-top: 0px; /* Ensure no top margin for the table */
+    margin-bottom: 0px;
+}
+
+.team2-stats-container th{
+    color:white;
+}
+
+#team2a table tr th:nth-child(4),
+#team2a table tr td:nth-child(4) {
+    /* Your styling here */
+    background-color: rgba(0, 0, 0, 0.2); /* Darken the original background color */
+    font-weight: bold;
+}
+
+
+.table-container table {
+    display: inline-block; /* Ensure the table behaves as an inline-block element */
+    text-align: center; /* Reset text alignment for table content */
+    width: max-content;
+}
+
+#dynamic-table {
+    display: none; /* Add this CSS to hide the dynamic table initially */
+}
+
+table {
+    border: 1px #cccccc;
+    box-shadow: none;
+    border-collapse: collapse;
+    background-color: transparent;
+    color:black;
+    margin-top: 10px;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px 10px;
+    text-align: center;
+    border-left: none;
+    border-right: none;  
+}
+
+tr:last-child{
+    border-bottom: 1px solid transparent;
+}
+
+th {
+    background-color: transparent;
+    font-weight: bold;
+    color:black;
+    text-align: left;
+    border-top:1px solid transparent;
+    margin-top: 0;
+}
+
+tr:hover {background-color: rgba(0, 0, 0, 0.1); /* Darken the original background color */}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Let the button container take up available space */
+    text-align: left;
+    align-items: flex-start;
+}
+
+.toggle-button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5; /* Modern blue color */
+    color: #2c2c2c; /* White text */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px; /* Adequate padding */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; /* Larger font size for modern look */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    width: 280px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height */
+}
+
+.toggle-button:hover {
+    background-color: #2134c4; /* Darker blue on hover */
+    color:white 
+}
+
+.toggle-button img {
+    width: 30px;
+    height: auto;
+    display: inline;
+}
+
+.toggle-button div {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-button span {
+    background-color: var(--tier-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.table-display {
+    display: block;
+}
+
+.table-toggle-button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    padding: 4px;
+    margin-right: 5px;
+    background-color: #f5f5f5;
+    color: #2c2c2c; 
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px; /* Larger font size for modern look */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.table-toggle-button:hover {
+    background-color: #2134c4; /* Darker blue on hover */
+    color:white 
+}
+
+.simple-table {
+    display: block;
+    font-size: 13px;
+}
+
+.simple-table table {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    color:#000000;
+    font-size: 20px;
+}
+
+h2 img {
+    vertical-align: middle; /* or other appropriate value like 'top' or 'bottom' */
+    margin-right: 5px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 15px;
+    color:#000000;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 15px;
+    color:#000000;
+}
+
+h4 img {
+    vertical-align: middle; /* or other appropriate value like 'top' or 'bottom' */
+    margin-right: 0px;
+}
+
+.main-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* FLEX É O QUE DECIDE O QUE CADA OCUPA */
+.left-container {
+    margin-top: 12px;
+    flex: 0; /* Occupy half the available space */
+    background-color:  transparent; /* Set a background color for the left container */
+    
+}
+
+.middle-container {
+    display: flex;
+    flex: 2; /* Occupy the remaining space */
+    background-color:transparent ; /* Set the desired background color */
+}
+
+/* Style for the right container */
+.right-container {
+    flex: 1;
+    background-color:  transparent; /* Set a background color for the right container */
+    
+}
+
+/* Style for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background:#2134c4;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 200;
+}
+
+.sidebar img {
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block; /* Ensures the anchor element behaves like a block element */
+}
+
+.sidebar li img {
+    pointer-events: none; /* Disable pointer events on the image */
+}
+
+.sidebar li :hover {
+    background-color: white; /* Darker blue on hover */
+    color:#2134c4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a {
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.sidebar ul li:first-child {
+    margin-top: 40px; /* Adjust the margin as needed to create space */
+}
+
+/* Style for the button */
+#toggle-sidebar {
+    background-color: #2134c4;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Style for the hamburger button */
+.hamburger {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute; /* Position absolutely within the top bar */
+    left: 10px; /* Adjust the left position as needed */
+}
+
+.line {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    margin: 4px 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.active-button {
+    background-color: #2134c4; /* Change this to the desired darker color */
+    color: #fff; /* Change this to the desired text color */
+}
+
+

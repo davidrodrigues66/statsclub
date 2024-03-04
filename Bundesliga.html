@@ -38,7 +38,7 @@
             </div>
             <div>
                 <h2> Bundesliga 23/24</h2>
-                <h3>The home team has an average advantage of 0.47 goals</h3>
+                <h3>The home team has an average advantage of 0.44 goals</h3>
             </div>
         </div>
 
@@ -58,15 +58,15 @@
                     
                     <button class="toggle-button" onclick="toggleTable(this)">
                         <div>
-                            <img src="bundesliga_logos\freiburg.png" alt="Freiburg logo"> 
-                            Freiburg 
-                            <span style="background-color: red">D</span>
+                            <img src="bundesliga_logos\stuttgart.png" alt="Stuttgart logo"> 
+                            Stuttgart 
+                            <span style="background-color: green">A</span>
                         </div>
 
                         <div style="height: 40px;">
-                            <img src="bundesliga_logos\bayern_munich.png" alt="Freiburg logo"> 
-                            Bayern Munich
-                            <span style="background-color: green">A</span>
+                            <img src="bundesliga_logos\union_berlin.png" alt="Stuttgart logo"> 
+                            Union Berlin
+                            <span style="background-color: red">D</span>
                         </div>
                     </button>
 
@@ -76,90 +76,680 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Freiburg</th>
-      <th>Bayern Munich</th>
+      <th>Stuttgart</th>
+      <th>Union Berlin</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
-      <td>1.26</td>
-      <td>2.3</td>
+      <td>2.08</td>
+      <td>1.04</td>
     </tr>
     <tr>
       <th>Power Ranking</th>
-      <td>-0.45</td>
-      <td>1.58</td>
+      <td>0.83</td>
+      <td>-0.69</td>
     </tr>
     <tr>
       <th>Win%</th>
-      <td>35%</td>
-      <td>74%</td>
+      <td>67%</td>
+      <td>29%</td>
     </tr>
     <tr>
       <th>Loss%</th>
-      <td>43%</td>
+      <td>25%</td>
+      <td>54%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>2</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.29</td>
+      <td>0.96</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.29</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>1.0</td>
+      <td>-0.66</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>2.13</td>
+      <td>1.14</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.07</td>
+      <td>1.48</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>62%</td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>25%</td>
+      <td>21%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\bayern_munich.png" alt="Bayern Munich logo"> 
+                            Bayern Munich 
+                            <span style="background-color: green">A</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\mgladbach.png" alt="Bayern Munich logo"> 
+                            Mainz 05
+                            <span style="background-color: red">D</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bayern Munich</th>
+      <th>Mainz 05</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>2.25</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>1.53</td>
+      <td>-0.7</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>71%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
       <td>17%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>11</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>9</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.71</td>
+      <td>0.79</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.17</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>1.54</td>
+      <td>-0.79</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>2.57</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>0.89</td>
+      <td>1.18</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>54%</td>
+      <td>58%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>38%</td>
+      <td>17%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\rb_leipzig.png" alt="RB Leipzig logo"> 
+                            RB Leipzig 
+                            <span style="background-color: green">A</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\darmstadt.png" alt="RB Leipzig logo"> 
+                            Darmstadt 98
+                            <span style="background-color: red">D</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>RB Leipzig</th>
+      <th>Darmstadt 98</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.79</td>
+      <td>0.54</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>0.98</td>
+      <td>-1.33</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>54%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>29%</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>2</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.21</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.29</td>
+      <td>2.42</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.92</td>
+      <td>-1.42</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.86</td>
+      <td>1.02</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.16</td>
+      <td>2.05</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>62%</td>
+      <td>58%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>29%</td>
+      <td>8%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\mainz.png" alt="M&#39;Gladbach logo"> 
+                            M&#39;Gladbach 
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\koln.png" alt="M&#39;Gladbach logo"> 
+                            Köln
+                            <span style="background-color: red">D</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>M'Gladbach</th>
+      <th>Köln</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.08</td>
+      <td>0.71</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.1</td>
+      <td>-0.82</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>25%</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>42%</td>
+      <td>54%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.75</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.92</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.17</td>
+      <td>-0.95</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.45</td>
+      <td>1.02</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.69</td>
+      <td>1.98</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>75%</td>
+      <td>46%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>12%</td>
+      <td>12%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\augsburg.png" alt="Augsburg logo"> 
+                            Augsburg 
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\heidenheim.png" alt="Augsburg logo"> 
+                            Heidenheim
+                            <span style="background-color: orange">C</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Augsburg</th>
+      <th>Heidenheim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.21</td>
+      <td>1.17</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.11</td>
+      <td>-0.28</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>29%</td>
+      <td>29%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>38%</td>
+      <td>42%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>2</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>7</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>Win to Nil</th>
+      <th>L by &gt;2</th>
       <td>5</td>
-      <td>9</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>0</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>7</td>
       <td>1</td>
     </tr>
     <tr>
+      <th>L T5</th>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>AVG GF</th>
-      <td>1.3</td>
-      <td>2.74</td>
+      <td>1.62</td>
+      <td>1.42</td>
     </tr>
     <tr>
       <th>AVG GA</th>
-      <td>1.83</td>
-      <td>1.13</td>
+      <td>1.71</td>
+      <td>1.75</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
-      <td>-0.53</td>
-      <td>1.61</td>
+      <td>-0.09</td>
+      <td>-0.33</td>
     </tr>
     <tr>
       <th>AVG xG</th>
-      <td>1.5</td>
-      <td>2.6</td>
+      <td>1.44</td>
+      <td>1.19</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
-      <td>1.51</td>
-      <td>0.86</td>
+      <td>1.62</td>
+      <td>1.97</td>
     </tr>
     <tr>
       <th>BTTS%</th>
-      <td>57%</td>
-      <td>52%</td>
+      <td>71%</td>
+      <td>71%</td>
     </tr>
     <tr>
       <th>CS%</th>
-      <td>30%</td>
-      <td>39%</td>
+      <td>4%</td>
+      <td>21%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\werder_bremen.png" alt="Werder Bremen logo"> 
+                            Werder Bremen 
+                            <span style="background-color: orange">C</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\dortmund.png" alt="Werder Bremen logo"> 
+                            Dortmund
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Werder Bremen</th>
+      <th>Dortmund</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.25</td>
+      <td>1.83</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>-0.24</td>
+      <td>0.59</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>33%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>42%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>4</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.38</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.54</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.16</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.35</td>
+      <td>1.94</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.6</td>
+      <td>1.51</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>54%</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>25%</td>
+      <td>33%</td>
     </tr>
   </tbody>
 </table>
@@ -182,9 +772,9 @@
                         </div>
 
                         <div style="height: 40px;">
-                            <img src="bundesliga_logos\rb_leipzig.png" alt="Bochum logo"> 
-                            RB Leipzig
-                            <span style="background-color: green">A</span>
+                            <img src="bundesliga_logos\freiburg.png" alt="Bochum logo"> 
+                            Freiburg
+                            <span style="background-color: red">D</span>
                         </div>
                     </button>
 
@@ -195,915 +785,325 @@
     <tr style="text-align: right;">
       <th></th>
       <th>Bochum</th>
-      <th>RB Leipzig</th>
+      <th>Freiburg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
-      <td>1.09</td>
-      <td>1.74</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.62</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>22%</td>
-      <td>52%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>35%</td>
-      <td>30%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>2</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>7</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>4</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.22</td>
-      <td>2.13</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>2.0</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.78</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.3</td>
-      <td>1.85</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.95</td>
-      <td>1.18</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>70%</td>
-      <td>61%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>17%</td>
-      <td>30%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\heidenheim.png" alt="Heidenheim logo"> 
-                            Heidenheim 
-                            <span style="background-color: orange">C</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\eint_frankfurt.png" alt="Heidenheim logo"> 
-                            Eint Frankfurt
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Heidenheim</th>
-      <th>Eint Frankfurt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.22</td>
-      <td>1.48</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.23</td>
-      <td>0.1</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>30%</td>
-      <td>35%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>39%</td>
-      <td>22%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>2</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>3</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>4</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.43</td>
-      <td>1.57</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.74</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.31</td>
-      <td>0.27</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.2</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>2.0</td>
-      <td>1.53</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>70%</td>
-      <td>61%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>22%</td>
-      <td>26%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\mgladbach.png" alt="Mainz 05 logo"> 
-                            Mainz 05 
-                            <span style="background-color: red">D</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\mainz.png" alt="Mainz 05 logo"> 
-                            M&#39;Gladbach
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Mainz 05</th>
-      <th>M'Gladbach</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>0.65</td>
-      <td>1.09</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.71</td>
-      <td>-0.09</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>9%</td>
-      <td>26%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>52%</td>
-      <td>43%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>1</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>6</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>0.78</td>
-      <td>1.78</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.61</td>
-      <td>1.96</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.83</td>
-      <td>-0.18</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.12</td>
-      <td>1.47</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.19</td>
-      <td>1.72</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>57%</td>
-      <td>74%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>17%</td>
-      <td>13%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\union_berlin.png" alt="Union Berlin logo"> 
-                            Union Berlin 
-                            <span style="background-color: red">D</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\dortmund.png" alt="Union Berlin logo"> 
-                            Dortmund
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Union Berlin</th>
-      <th>Dortmund</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.09</td>
-      <td>1.78</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.63</td>
-      <td>0.54</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>30%</td>
-      <td>48%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>52%</td>
-      <td>17%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>4</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>9</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>4</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>6</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.61</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.61</td>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.14</td>
-      <td>1.95</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.48</td>
-      <td>1.53</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>35%</td>
-      <td>65%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>22%</td>
-      <td>30%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\darmstadt.png" alt="Darmstadt 98 logo"> 
-                            Darmstadt 98 
-                            <span style="background-color: red">D</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\augsburg.png" alt="Darmstadt 98 logo"> 
-                            Augsburg
-                            <span style="background-color: orange">C</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Darmstadt 98</th>
-      <th>Augsburg</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>0.57</td>
-      <td>1.13</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-1.11</td>
-      <td>-0.33</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>9%</td>
-      <td>26%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>61%</td>
-      <td>39%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
       <td>1.04</td>
-      <td>1.43</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>2.26</td>
-      <td>1.78</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-1.22</td>
-      <td>-0.35</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.03</td>
-      <td>1.37</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>2.02</td>
-      <td>1.65</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>61%</td>
-      <td>74%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>9%</td>
-      <td>0%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\wolfsburg.png" alt="Wolfsburg logo"> 
-                            Wolfsburg 
-                            <span style="background-color: orange">C</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\stuttgart.png" alt="Wolfsburg logo"> 
-                            Stuttgart
-                            <span style="background-color: green">A</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wolfsburg</th>
-      <th>Stuttgart</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.09</td>
-      <td>2.04</td>
+      <td>1.25</td>
     </tr>
     <tr>
       <th>Power Ranking</th>
-      <td>-0.36</td>
-      <td>0.82</td>
+      <td>-0.69</td>
+      <td>-0.38</td>
     </tr>
     <tr>
       <th>Win%</th>
-      <td>26%</td>
-      <td>65%</td>
+      <td>21%</td>
+      <td>33%</td>
     </tr>
     <tr>
       <th>Loss%</th>
-      <td>43%</td>
-      <td>26%</td>
+      <td>38%</td>
+      <td>42%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>2</td>
-      <td>12</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
-      <td>4</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>Win to Nil</th>
-      <td>3</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>4</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>1.22</td>
-      <td>2.26</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.57</td>
-      <td>1.26</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.35</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.24</td>
-      <td>2.17</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.39</td>
-      <td>1.08</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>70%</td>
-      <td>61%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>13%</td>
-      <td>26%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\koln.png" alt="Köln logo"> 
-                            Köln 
-                            <span style="background-color: red">D</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\leverkusen.png" alt="Köln logo"> 
-                            Leverkusen
-                            <span style="background-color: green">A</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Köln</th>
-      <th>Leverkusen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>0.74</td>
-      <td>2.65</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.82</td>
-      <td>1.79</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>13%</td>
-      <td>83%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>52%</td>
-      <td>0%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>2</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
+      <td>8</td>
       <td>7</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>2</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
-      <td>0</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>L T5</th>
-      <td>6</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>AVG GF</th>
-      <td>0.7</td>
-      <td>2.57</td>
-    </tr>
-    <tr>
-      <th>AVG GA</th>
-      <td>1.61</td>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>AVG Excess</th>
-      <td>-0.91</td>
-      <td>1.87</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.02</td>
-      <td>2.03</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>2.0</td>
-      <td>0.89</td>
-    </tr>
-    <tr>
-      <th>BTTS%</th>
-      <td>48%</td>
-      <td>52%</td>
-    </tr>
-    <tr>
-      <th>CS%</th>
-      <td>13%</td>
-      <td>48%</td>
-    </tr>
-  </tbody>
-</table>
-                        </div>
-                    </div> 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <button class="toggle-button" onclick="toggleTable(this)">
-                        <div>
-                            <img src="bundesliga_logos\hoffenheim.png" alt="Hoffenheim logo"> 
-                            Hoffenheim 
-                            <span style="background-color: lightgreen">B</span>
-                        </div>
-
-                        <div style="height: 40px;">
-                            <img src="bundesliga_logos\werder_bremen.png" alt="Hoffenheim logo"> 
-                            Werder Bremen
-                            <span style="background-color: orange">C</span>
-                        </div>
-                    </button>
-
-                    <div class="table-container" style="display: none;" id="left-table-container">
-                        <div class="table-content">
-                            <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hoffenheim</th>
-      <th>Werder Bremen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Form</th>
-      <td>1.3</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.15</td>
-      <td>-0.22</td>
-    </tr>
-    <tr>
-      <th>Win%</th>
-      <td>35%</td>
-      <td>35%</td>
-    </tr>
-    <tr>
-      <th>Loss%</th>
-      <td>39%</td>
-      <td>39%</td>
-    </tr>
-    <tr>
-      <th>W by &gt;2</th>
-      <td>4</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>L by &gt;2</th>
-      <td>4</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>Win to Nil</th>
-      <td>1</td>
-      <td>6</td>
-    </tr>
-    <tr>
       <th>W T5</th>
       <td>2</td>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
-      <td>4</td>
-      <td>4</td>
+      <td>5</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>AVG GF</th>
-      <td>1.78</td>
-      <td>1.39</td>
+      <td>1.21</td>
+      <td>1.33</td>
     </tr>
     <tr>
       <th>AVG GA</th>
-      <td>1.87</td>
+      <td>2.08</td>
+      <td>1.83</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.87</td>
+      <td>-0.5</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.28</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.95</td>
       <td>1.52</td>
     </tr>
     <tr>
-      <th>AVG Excess</th>
-      <td>-0.09</td>
-      <td>-0.13</td>
-    </tr>
-    <tr>
-      <th>AVG xG</th>
-      <td>1.64</td>
-      <td>1.34</td>
-    </tr>
-    <tr>
-      <th>AVG xGA</th>
-      <td>1.71</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
       <th>BTTS%</th>
-      <td>87%</td>
-      <td>52%</td>
+      <td>71%</td>
+      <td>58%</td>
     </tr>
     <tr>
       <th>CS%</th>
+      <td>17%</td>
+      <td>29%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\eint_frankfurt.png" alt="Eint Frankfurt logo"> 
+                            Eint Frankfurt 
+                            <span style="background-color: lightgreen">B</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\hoffenheim.png" alt="Eint Frankfurt logo"> 
+                            Hoffenheim
+                            <span style="background-color: orange">C</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Eint Frankfurt</th>
+      <th>Hoffenheim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.54</td>
+      <td>1.38</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>0.13</td>
+      <td>-0.13</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>38%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>21%</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.58</td>
+      <td>1.79</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.29</td>
+      <td>1.83</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.29</td>
+      <td>-0.04</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.29</td>
+      <td>1.65</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.51</td>
+      <td>1.71</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>62%</td>
+      <td>88%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>25%</td>
       <td>4%</td>
-      <td>26%</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button class="toggle-button" onclick="toggleTable(this)">
+                        <div>
+                            <img src="bundesliga_logos\leverkusen.png" alt="Leverkusen logo"> 
+                            Leverkusen 
+                            <span style="background-color: green">A</span>
+                        </div>
+
+                        <div style="height: 40px;">
+                            <img src="bundesliga_logos\wolfsburg.png" alt="Leverkusen logo"> 
+                            Wolfsburg
+                            <span style="background-color: orange">C</span>
+                        </div>
+                    </button>
+
+                    <div class="table-container" style="display: none;" id="left-table-container">
+                        <div class="table-content">
+                            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Leverkusen</th>
+      <th>Wolfsburg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>2.67</td>
+      <td>1.04</td>
+    </tr>
+    <tr>
+      <th>Power Ranking</th>
+      <td>1.77</td>
+      <td>-0.37</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>83%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>0%</td>
+      <td>46%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>12</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>11</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.54</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>0.67</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>1.87</td>
+      <td>-0.37</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>2.01</td>
+      <td>1.22</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>0.89</td>
+      <td>1.38</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>50%</td>
+      <td>71%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>50%</td>
+      <td>12%</td>
     </tr>
   </tbody>
 </table>
@@ -1147,217 +1147,217 @@
       <td>1</td>
       <td>A</td>
       <td>Leverkusen</td>
-      <td>61</td>
-      <td>23</td>
-      <td>19</td>
+      <td>64</td>
+      <td>24</td>
+      <td>20</td>
       <td>4</td>
       <td>0</td>
-      <td>59</td>
+      <td>61</td>
       <td>16</td>
     </tr>
     <tr>
       <td>2</td>
       <td>A</td>
       <td>Bayern Munich</td>
-      <td>53</td>
-      <td>23</td>
+      <td>54</td>
+      <td>24</td>
       <td>17</td>
-      <td>2</td>
+      <td>3</td>
       <td>4</td>
-      <td>63</td>
-      <td>26</td>
+      <td>65</td>
+      <td>28</td>
     </tr>
     <tr>
       <td>3</td>
       <td>A</td>
       <td>Stuttgart</td>
-      <td>47</td>
-      <td>23</td>
-      <td>15</td>
+      <td>50</td>
+      <td>24</td>
+      <td>16</td>
       <td>2</td>
       <td>6</td>
-      <td>52</td>
-      <td>29</td>
+      <td>55</td>
+      <td>31</td>
     </tr>
     <tr>
       <td>4</td>
       <td>B</td>
       <td>Dortmund</td>
-      <td>41</td>
-      <td>23</td>
-      <td>11</td>
+      <td>44</td>
+      <td>24</td>
+      <td>12</td>
       <td>8</td>
       <td>4</td>
-      <td>46</td>
+      <td>48</td>
       <td>30</td>
     </tr>
     <tr>
       <td>5</td>
       <td>A</td>
       <td>RB Leipzig</td>
-      <td>40</td>
-      <td>23</td>
-      <td>12</td>
+      <td>43</td>
+      <td>24</td>
+      <td>13</td>
       <td>4</td>
       <td>7</td>
-      <td>49</td>
-      <td>30</td>
+      <td>53</td>
+      <td>31</td>
     </tr>
     <tr>
       <td>6</td>
       <td>B</td>
       <td>Eint Frankfurt</td>
-      <td>34</td>
-      <td>23</td>
-      <td>8</td>
+      <td>37</td>
+      <td>24</td>
+      <td>9</td>
       <td>10</td>
       <td>5</td>
-      <td>36</td>
-      <td>30</td>
+      <td>38</td>
+      <td>31</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>B</td>
+      <td>C</td>
       <td>Hoffenheim</td>
-      <td>30</td>
-      <td>23</td>
-      <td>8</td>
+      <td>33</td>
+      <td>24</td>
+      <td>9</td>
       <td>6</td>
       <td>9</td>
-      <td>41</td>
       <td>43</td>
+      <td>44</td>
     </tr>
     <tr>
       <td>8</td>
       <td>C</td>
       <td>Werder Bremen</td>
       <td>30</td>
-      <td>23</td>
+      <td>24</td>
       <td>8</td>
       <td>6</td>
-      <td>9</td>
-      <td>32</td>
-      <td>35</td>
+      <td>10</td>
+      <td>33</td>
+      <td>37</td>
     </tr>
     <tr>
       <td>9</td>
       <td>D</td>
       <td>Freiburg</td>
-      <td>29</td>
-      <td>23</td>
-      <td>8</td>
-      <td>5</td>
-      <td>10</td>
       <td>30</td>
-      <td>42</td>
+      <td>24</td>
+      <td>8</td>
+      <td>6</td>
+      <td>10</td>
+      <td>32</td>
+      <td>44</td>
     </tr>
     <tr>
       <td>10</td>
-      <td>C</td>
-      <td>Heidenheim</td>
-      <td>28</td>
-      <td>23</td>
+      <td>B</td>
+      <td>Augsburg</td>
+      <td>29</td>
+      <td>24</td>
       <td>7</td>
-      <td>7</td>
+      <td>8</td>
       <td>9</td>
-      <td>33</td>
-      <td>40</td>
+      <td>39</td>
+      <td>41</td>
     </tr>
     <tr>
       <td>11</td>
       <td>C</td>
-      <td>Augsburg</td>
-      <td>26</td>
-      <td>23</td>
-      <td>6</td>
-      <td>8</td>
-      <td>9</td>
-      <td>33</td>
-      <td>41</td>
+      <td>Heidenheim</td>
+      <td>28</td>
+      <td>24</td>
+      <td>7</td>
+      <td>7</td>
+      <td>10</td>
+      <td>34</td>
+      <td>42</td>
     </tr>
     <tr>
       <td>12</td>
-      <td>D</td>
-      <td>Union Berlin</td>
-      <td>25</td>
-      <td>23</td>
-      <td>7</td>
-      <td>4</td>
-      <td>12</td>
-      <td>23</td>
-      <td>37</td>
+      <td>B</td>
+      <td>M'Gladbach</td>
+      <td>26</td>
+      <td>24</td>
+      <td>6</td>
+      <td>8</td>
+      <td>10</td>
+      <td>42</td>
+      <td>46</td>
     </tr>
     <tr>
       <td>13</td>
-      <td>B</td>
-      <td>M'Gladbach</td>
+      <td>D</td>
+      <td>Union Berlin</td>
       <td>25</td>
-      <td>23</td>
-      <td>6</td>
+      <td>24</td>
       <td>7</td>
-      <td>10</td>
-      <td>41</td>
-      <td>45</td>
+      <td>4</td>
+      <td>13</td>
+      <td>23</td>
+      <td>39</td>
     </tr>
     <tr>
       <td>14</td>
       <td>C</td>
       <td>Wolfsburg</td>
       <td>25</td>
-      <td>23</td>
+      <td>24</td>
       <td>6</td>
       <td>7</td>
-      <td>10</td>
-      <td>28</td>
-      <td>36</td>
+      <td>11</td>
+      <td>30</td>
+      <td>39</td>
     </tr>
     <tr>
       <td>15</td>
       <td>D</td>
       <td>Bochum</td>
       <td>25</td>
-      <td>23</td>
+      <td>24</td>
       <td>5</td>
       <td>10</td>
-      <td>8</td>
-      <td>28</td>
-      <td>46</td>
+      <td>9</td>
+      <td>29</td>
+      <td>50</td>
     </tr>
     <tr>
       <td>16</td>
       <td>D</td>
       <td>Köln</td>
       <td>17</td>
-      <td>23</td>
+      <td>24</td>
       <td>3</td>
       <td>8</td>
-      <td>12</td>
+      <td>13</td>
       <td>16</td>
-      <td>37</td>
+      <td>39</td>
     </tr>
     <tr>
       <td>17</td>
       <td>D</td>
       <td>Mainz 05</td>
-      <td>15</td>
-      <td>23</td>
+      <td>16</td>
+      <td>24</td>
       <td>2</td>
-      <td>9</td>
+      <td>10</td>
       <td>12</td>
-      <td>18</td>
-      <td>37</td>
+      <td>19</td>
+      <td>38</td>
     </tr>
     <tr>
       <td>18</td>
       <td>D</td>
       <td>Darmstadt 98</td>
       <td>13</td>
-      <td>23</td>
+      <td>24</td>
       <td>2</td>
       <td>7</td>
-      <td>14</td>
+      <td>15</td>
       <td>24</td>
-      <td>52</td>
+      <td>58</td>
     </tr>
   </tbody>
 </table>
@@ -1435,6 +1435,17 @@
     </tr>
     <tr>
       <td>6</td>
+      <td>Freiburg</td>
+      <td>20</td>
+      <td>12</td>
+      <td>5</td>
+      <td>5</td>
+      <td>2</td>
+      <td>22</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>7</td>
       <td>Eint Frankfurt</td>
       <td>20</td>
       <td>11</td>
@@ -1443,17 +1454,6 @@
       <td>1</td>
       <td>19</td>
       <td>11</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Freiburg</td>
-      <td>19</td>
-      <td>11</td>
-      <td>5</td>
-      <td>4</td>
-      <td>2</td>
-      <td>20</td>
-      <td>17</td>
     </tr>
     <tr>
       <td>8</td>
@@ -1470,12 +1470,12 @@
       <td>9</td>
       <td>Bochum</td>
       <td>18</td>
-      <td>11</td>
+      <td>12</td>
       <td>4</td>
       <td>6</td>
-      <td>1</td>
-      <td>18</td>
-      <td>13</td>
+      <td>2</td>
+      <td>19</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>10</td>
@@ -1492,12 +1492,12 @@
       <td>11</td>
       <td>Heidenheim</td>
       <td>18</td>
-      <td>11</td>
+      <td>12</td>
       <td>5</td>
       <td>3</td>
-      <td>3</td>
+      <td>4</td>
+      <td>20</td>
       <td>19</td>
-      <td>17</td>
     </tr>
     <tr>
       <td>12</td>
@@ -1514,67 +1514,67 @@
       <td>13</td>
       <td>Union Berlin</td>
       <td>17</td>
-      <td>11</td>
+      <td>12</td>
       <td>5</td>
       <td>2</td>
-      <td>4</td>
+      <td>5</td>
       <td>14</td>
-      <td>16</td>
+      <td>18</td>
     </tr>
     <tr>
       <td>14</td>
       <td>Wolfsburg</td>
       <td>16</td>
-      <td>11</td>
+      <td>12</td>
       <td>4</td>
       <td>4</td>
-      <td>3</td>
+      <td>4</td>
+      <td>18</td>
       <td>16</td>
-      <td>13</td>
     </tr>
     <tr>
       <td>15</td>
       <td>Hoffenheim</td>
-      <td>10</td>
-      <td>11</td>
-      <td>2</td>
+      <td>13</td>
+      <td>12</td>
+      <td>3</td>
       <td>4</td>
       <td>5</td>
-      <td>17</td>
-      <td>20</td>
+      <td>19</td>
+      <td>21</td>
     </tr>
     <tr>
       <td>16</td>
+      <td>Mainz 05</td>
+      <td>10</td>
+      <td>12</td>
+      <td>2</td>
+      <td>4</td>
+      <td>6</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>17</td>
       <td>Köln</td>
       <td>9</td>
-      <td>11</td>
+      <td>12</td>
       <td>2</td>
       <td>3</td>
-      <td>6</td>
+      <td>7</td>
       <td>9</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>Mainz 05</td>
-      <td>9</td>
-      <td>11</td>
-      <td>2</td>
-      <td>3</td>
-      <td>6</td>
-      <td>8</td>
-      <td>15</td>
+      <td>18</td>
     </tr>
     <tr>
       <td>18</td>
       <td>Darmstadt 98</td>
       <td>6</td>
-      <td>12</td>
+      <td>13</td>
       <td>1</td>
       <td>3</td>
-      <td>8</td>
+      <td>9</td>
       <td>13</td>
-      <td>25</td>
+      <td>31</td>
     </tr>
   </tbody>
 </table>
@@ -1598,27 +1598,49 @@
     <tr>
       <td>1</td>
       <td>Leverkusen</td>
-      <td>29</td>
-      <td>11</td>
-      <td>9</td>
+      <td>32</td>
+      <td>12</td>
+      <td>10</td>
       <td>2</td>
       <td>0</td>
-      <td>25</td>
+      <td>27</td>
       <td>9</td>
     </tr>
     <tr>
       <td>2</td>
       <td>Bayern Munich</td>
-      <td>22</td>
-      <td>11</td>
+      <td>23</td>
+      <td>12</td>
       <td>7</td>
-      <td>1</td>
+      <td>2</td>
       <td>3</td>
-      <td>24</td>
-      <td>18</td>
+      <td>26</td>
+      <td>20</td>
     </tr>
     <tr>
       <td>3</td>
+      <td>Stuttgart</td>
+      <td>21</td>
+      <td>12</td>
+      <td>7</td>
+      <td>0</td>
+      <td>5</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Dortmund</td>
+      <td>21</td>
+      <td>12</td>
+      <td>5</td>
+      <td>6</td>
+      <td>1</td>
+      <td>24</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>5</td>
       <td>Hoffenheim</td>
       <td>20</td>
       <td>12</td>
@@ -1629,62 +1651,51 @@
       <td>23</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>Stuttgart</td>
-      <td>18</td>
-      <td>11</td>
-      <td>6</td>
-      <td>0</td>
-      <td>5</td>
-      <td>17</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Dortmund</td>
-      <td>18</td>
-      <td>11</td>
-      <td>4</td>
-      <td>6</td>
-      <td>1</td>
-      <td>22</td>
-      <td>12</td>
-    </tr>
-    <tr>
       <td>6</td>
       <td>RB Leipzig</td>
-      <td>14</td>
-      <td>11</td>
-      <td>4</td>
+      <td>17</td>
+      <td>12</td>
+      <td>5</td>
       <td>2</td>
       <td>5</td>
-      <td>19</td>
-      <td>20</td>
+      <td>23</td>
+      <td>21</td>
     </tr>
     <tr>
       <td>7</td>
       <td>Eint Frankfurt</td>
-      <td>14</td>
-      <td>12</td>
-      <td>3</td>
+      <td>17</td>
+      <td>13</td>
+      <td>4</td>
       <td>5</td>
       <td>4</td>
-      <td>17</td>
       <td>19</td>
+      <td>20</td>
     </tr>
     <tr>
       <td>8</td>
       <td>Werder Bremen</td>
       <td>12</td>
-      <td>11</td>
-      <td>3</td>
-      <td>3</td>
-      <td>5</td>
       <td>12</td>
-      <td>17</td>
+      <td>3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>13</td>
+      <td>19</td>
     </tr>
     <tr>
       <td>9</td>
+      <td>Augsburg</td>
+      <td>12</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>6</td>
+      <td>17</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>10</td>
       <td>Heidenheim</td>
       <td>10</td>
       <td>12</td>
@@ -1695,7 +1706,7 @@
       <td>23</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td>Freiburg</td>
       <td>10</td>
       <td>12</td>
@@ -1706,7 +1717,7 @@
       <td>25</td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>12</td>
       <td>Wolfsburg</td>
       <td>9</td>
       <td>12</td>
@@ -1715,17 +1726,6 @@
       <td>7</td>
       <td>12</td>
       <td>23</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Augsburg</td>
-      <td>9</td>
-      <td>11</td>
-      <td>2</td>
-      <td>3</td>
-      <td>6</td>
-      <td>11</td>
-      <td>20</td>
     </tr>
     <tr>
       <td>13</td>
@@ -1740,6 +1740,17 @@
     </tr>
     <tr>
       <td>14</td>
+      <td>M'Gladbach</td>
+      <td>8</td>
+      <td>12</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+      <td>20</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>15</td>
       <td>Union Berlin</td>
       <td>8</td>
       <td>12</td>
@@ -1748,17 +1759,6 @@
       <td>8</td>
       <td>9</td>
       <td>21</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>M'Gladbach</td>
-      <td>7</td>
-      <td>11</td>
-      <td>1</td>
-      <td>4</td>
-      <td>6</td>
-      <td>19</td>
-      <td>28</td>
     </tr>
     <tr>
       <td>16</td>
@@ -1919,397 +1919,397 @@
       <td>1</td>
       <td>A</td>
       <td>Leverkusen</td>
-      <td>2.65</td>
-      <td>1.79</td>
+      <td>2.67</td>
+      <td>1.77</td>
       <td>83%</td>
       <td>0%</td>
-      <td>11</td>
+      <td>12</td>
       <td>0</td>
-      <td>10</td>
+      <td>11</td>
       <td>3</td>
       <td>0</td>
-      <td>2.57</td>
-      <td>0.70</td>
+      <td>2.54</td>
+      <td>0.67</td>
       <td>1.87</td>
-      <td>2.03</td>
+      <td>2.01</td>
       <td>0.89</td>
-      <td>52%</td>
-      <td>48%</td>
+      <td>50%</td>
+      <td>50%</td>
       <td>4%</td>
     </tr>
     <tr>
       <td>2</td>
       <td>A</td>
       <td>Bayern Munich</td>
-      <td>2.30</td>
-      <td>1.58</td>
-      <td>74%</td>
+      <td>2.25</td>
+      <td>1.53</td>
+      <td>71%</td>
       <td>17%</td>
       <td>11</td>
       <td>2</td>
       <td>9</td>
       <td>3</td>
       <td>1</td>
-      <td>2.74</td>
-      <td>1.13</td>
-      <td>1.61</td>
-      <td>2.60</td>
-      <td>0.86</td>
-      <td>52%</td>
-      <td>39%</td>
-      <td>9%</td>
+      <td>2.71</td>
+      <td>1.17</td>
+      <td>1.54</td>
+      <td>2.57</td>
+      <td>0.89</td>
+      <td>54%</td>
+      <td>38%</td>
+      <td>8%</td>
     </tr>
     <tr>
       <td>3</td>
       <td>A</td>
       <td>Stuttgart</td>
-      <td>2.04</td>
-      <td>0.82</td>
-      <td>65%</td>
-      <td>26%</td>
+      <td>2.08</td>
+      <td>0.83</td>
+      <td>67%</td>
+      <td>25%</td>
       <td>12</td>
       <td>4</td>
       <td>6</td>
       <td>2</td>
       <td>2</td>
-      <td>2.26</td>
-      <td>1.26</td>
+      <td>2.29</td>
+      <td>1.29</td>
       <td>1.00</td>
-      <td>2.17</td>
-      <td>1.08</td>
-      <td>61%</td>
-      <td>26%</td>
-      <td>13%</td>
+      <td>2.13</td>
+      <td>1.07</td>
+      <td>62%</td>
+      <td>25%</td>
+      <td>12%</td>
     </tr>
     <tr>
       <td>4</td>
       <td>B</td>
       <td>Dortmund</td>
-      <td>1.78</td>
-      <td>0.54</td>
-      <td>48%</td>
+      <td>1.83</td>
+      <td>0.59</td>
+      <td>50%</td>
       <td>17%</td>
-      <td>8</td>
+      <td>9</td>
       <td>1</td>
-      <td>6</td>
+      <td>7</td>
       <td>0</td>
       <td>3</td>
       <td>2.00</td>
-      <td>1.30</td>
-      <td>0.70</td>
-      <td>1.95</td>
-      <td>1.53</td>
-      <td>65%</td>
-      <td>30%</td>
-      <td>9%</td>
+      <td>1.25</td>
+      <td>0.75</td>
+      <td>1.94</td>
+      <td>1.51</td>
+      <td>62%</td>
+      <td>33%</td>
+      <td>8%</td>
     </tr>
     <tr>
       <td>5</td>
       <td>A</td>
       <td>RB Leipzig</td>
-      <td>1.74</td>
-      <td>0.90</td>
-      <td>52%</td>
-      <td>30%</td>
-      <td>9</td>
+      <td>1.79</td>
+      <td>0.98</td>
+      <td>54%</td>
+      <td>29%</td>
+      <td>10</td>
       <td>2</td>
       <td>6</td>
       <td>2</td>
       <td>4</td>
-      <td>2.13</td>
-      <td>1.30</td>
-      <td>0.83</td>
-      <td>1.85</td>
-      <td>1.18</td>
-      <td>61%</td>
-      <td>30%</td>
-      <td>13%</td>
+      <td>2.21</td>
+      <td>1.29</td>
+      <td>0.92</td>
+      <td>1.86</td>
+      <td>1.16</td>
+      <td>62%</td>
+      <td>29%</td>
+      <td>12%</td>
     </tr>
     <tr>
       <td>6</td>
       <td>B</td>
       <td>Eint Frankfurt</td>
-      <td>1.48</td>
-      <td>0.10</td>
-      <td>35%</td>
-      <td>22%</td>
+      <td>1.54</td>
+      <td>0.13</td>
+      <td>38%</td>
+      <td>21%</td>
       <td>4</td>
       <td>3</td>
       <td>5</td>
       <td>2</td>
       <td>2</td>
-      <td>1.57</td>
-      <td>1.30</td>
-      <td>0.27</td>
-      <td>1.30</td>
-      <td>1.53</td>
-      <td>61%</td>
-      <td>26%</td>
+      <td>1.58</td>
+      <td>1.29</td>
+      <td>0.29</td>
+      <td>1.29</td>
+      <td>1.51</td>
+      <td>62%</td>
+      <td>25%</td>
       <td>17%</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>B</td>
+      <td>C</td>
       <td>Hoffenheim</td>
-      <td>1.30</td>
-      <td>-0.15</td>
-      <td>35%</td>
-      <td>39%</td>
+      <td>1.38</td>
+      <td>-0.13</td>
+      <td>38%</td>
+      <td>38%</td>
       <td>4</td>
       <td>4</td>
       <td>1</td>
       <td>2</td>
       <td>4</td>
-      <td>1.78</td>
-      <td>1.87</td>
-      <td>-0.09</td>
-      <td>1.64</td>
+      <td>1.79</td>
+      <td>1.83</td>
+      <td>-0.04</td>
+      <td>1.65</td>
       <td>1.71</td>
-      <td>87%</td>
+      <td>88%</td>
       <td>4%</td>
-      <td>9%</td>
+      <td>8%</td>
     </tr>
     <tr>
       <td>8</td>
       <td>C</td>
       <td>Werder Bremen</td>
-      <td>1.30</td>
-      <td>-0.22</td>
-      <td>35%</td>
-      <td>39%</td>
+      <td>1.25</td>
+      <td>-0.24</td>
+      <td>33%</td>
+      <td>42%</td>
       <td>4</td>
       <td>5</td>
       <td>6</td>
       <td>1</td>
       <td>4</td>
-      <td>1.39</td>
-      <td>1.52</td>
-      <td>-0.13</td>
-      <td>1.34</td>
+      <td>1.38</td>
+      <td>1.54</td>
+      <td>-0.16</td>
+      <td>1.35</td>
       <td>1.60</td>
-      <td>52%</td>
-      <td>26%</td>
-      <td>22%</td>
+      <td>54%</td>
+      <td>25%</td>
+      <td>21%</td>
     </tr>
     <tr>
       <td>9</td>
       <td>D</td>
       <td>Freiburg</td>
-      <td>1.26</td>
-      <td>-0.45</td>
-      <td>35%</td>
-      <td>43%</td>
+      <td>1.25</td>
+      <td>-0.38</td>
+      <td>33%</td>
+      <td>42%</td>
       <td>2</td>
       <td>7</td>
       <td>5</td>
       <td>0</td>
       <td>7</td>
-      <td>1.30</td>
+      <td>1.33</td>
       <td>1.83</td>
-      <td>-0.53</td>
+      <td>-0.50</td>
       <td>1.50</td>
-      <td>1.51</td>
-      <td>57%</td>
-      <td>30%</td>
-      <td>22%</td>
+      <td>1.52</td>
+      <td>58%</td>
+      <td>29%</td>
+      <td>21%</td>
     </tr>
     <tr>
       <td>10</td>
+      <td>B</td>
+      <td>Augsburg</td>
+      <td>1.21</td>
+      <td>-0.11</td>
+      <td>29%</td>
+      <td>38%</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>1.62</td>
+      <td>1.71</td>
+      <td>-0.09</td>
+      <td>1.44</td>
+      <td>1.62</td>
+      <td>71%</td>
+      <td>4%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td>11</td>
       <td>C</td>
       <td>Heidenheim</td>
-      <td>1.22</td>
-      <td>-0.23</td>
-      <td>30%</td>
-      <td>39%</td>
+      <td>1.17</td>
+      <td>-0.28</td>
+      <td>29%</td>
+      <td>42%</td>
       <td>2</td>
       <td>5</td>
       <td>3</td>
       <td>1</td>
       <td>4</td>
-      <td>1.43</td>
-      <td>1.74</td>
-      <td>-0.31</td>
-      <td>1.20</td>
-      <td>2.00</td>
-      <td>70%</td>
-      <td>22%</td>
+      <td>1.42</td>
+      <td>1.75</td>
+      <td>-0.33</td>
+      <td>1.19</td>
+      <td>1.97</td>
+      <td>71%</td>
+      <td>21%</td>
       <td>17%</td>
     </tr>
     <tr>
-      <td>11</td>
-      <td>C</td>
-      <td>Augsburg</td>
-      <td>1.13</td>
-      <td>-0.33</td>
-      <td>26%</td>
-      <td>39%</td>
-      <td>1</td>
-      <td>5</td>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
-      <td>1.43</td>
-      <td>1.78</td>
-      <td>-0.35</td>
-      <td>1.37</td>
-      <td>1.65</td>
-      <td>74%</td>
-      <td>0%</td>
-      <td>26%</td>
-    </tr>
-    <tr>
       <td>12</td>
-      <td>D</td>
-      <td>Union Berlin</td>
-      <td>1.09</td>
-      <td>-0.63</td>
-      <td>30%</td>
-      <td>52%</td>
+      <td>B</td>
+      <td>M'Gladbach</td>
+      <td>1.08</td>
+      <td>-0.10</td>
+      <td>25%</td>
+      <td>42%</td>
       <td>4</td>
-      <td>9</td>
-      <td>4</td>
-      <td>0</td>
       <td>6</td>
-      <td>1.00</td>
-      <td>1.61</td>
-      <td>-0.61</td>
-      <td>1.14</td>
-      <td>1.48</td>
-      <td>35%</td>
-      <td>22%</td>
-      <td>48%</td>
+      <td>1</td>
+      <td>1</td>
+      <td>6</td>
+      <td>1.75</td>
+      <td>1.92</td>
+      <td>-0.17</td>
+      <td>1.45</td>
+      <td>1.69</td>
+      <td>75%</td>
+      <td>12%</td>
+      <td>21%</td>
     </tr>
     <tr>
       <td>13</td>
-      <td>B</td>
-      <td>M'Gladbach</td>
-      <td>1.09</td>
-      <td>-0.09</td>
-      <td>26%</td>
-      <td>43%</td>
+      <td>D</td>
+      <td>Union Berlin</td>
+      <td>1.04</td>
+      <td>-0.69</td>
+      <td>29%</td>
+      <td>54%</td>
       <td>4</td>
-      <td>6</td>
-      <td>1</td>
-      <td>1</td>
-      <td>6</td>
-      <td>1.78</td>
-      <td>1.96</td>
-      <td>-0.18</td>
-      <td>1.47</td>
-      <td>1.72</td>
-      <td>74%</td>
-      <td>13%</td>
-      <td>22%</td>
+      <td>10</td>
+      <td>4</td>
+      <td>0</td>
+      <td>7</td>
+      <td>0.96</td>
+      <td>1.62</td>
+      <td>-0.66</td>
+      <td>1.14</td>
+      <td>1.48</td>
+      <td>33%</td>
+      <td>21%</td>
+      <td>50%</td>
     </tr>
     <tr>
       <td>14</td>
       <td>C</td>
       <td>Wolfsburg</td>
-      <td>1.09</td>
-      <td>-0.36</td>
-      <td>26%</td>
-      <td>43%</td>
+      <td>1.04</td>
+      <td>-0.37</td>
+      <td>25%</td>
+      <td>46%</td>
       <td>2</td>
       <td>4</td>
       <td>3</td>
       <td>1</td>
-      <td>4</td>
+      <td>5</td>
+      <td>1.25</td>
+      <td>1.62</td>
+      <td>-0.37</td>
       <td>1.22</td>
-      <td>1.57</td>
-      <td>-0.35</td>
-      <td>1.24</td>
-      <td>1.39</td>
-      <td>70%</td>
-      <td>13%</td>
+      <td>1.38</td>
+      <td>71%</td>
+      <td>12%</td>
       <td>17%</td>
     </tr>
     <tr>
       <td>15</td>
       <td>D</td>
       <td>Bochum</td>
-      <td>1.09</td>
-      <td>-0.62</td>
-      <td>22%</td>
-      <td>35%</td>
+      <td>1.04</td>
+      <td>-0.69</td>
+      <td>21%</td>
+      <td>38%</td>
       <td>2</td>
-      <td>7</td>
+      <td>8</td>
       <td>2</td>
       <td>2</td>
-      <td>4</td>
-      <td>1.22</td>
-      <td>2.00</td>
-      <td>-0.78</td>
-      <td>1.30</td>
+      <td>5</td>
+      <td>1.21</td>
+      <td>2.08</td>
+      <td>-0.87</td>
+      <td>1.28</td>
       <td>1.95</td>
-      <td>70%</td>
+      <td>71%</td>
       <td>17%</td>
-      <td>22%</td>
+      <td>21%</td>
     </tr>
     <tr>
       <td>16</td>
       <td>D</td>
       <td>Köln</td>
-      <td>0.74</td>
+      <td>0.71</td>
       <td>-0.82</td>
-      <td>13%</td>
-      <td>52%</td>
+      <td>12%</td>
+      <td>54%</td>
       <td>2</td>
-      <td>7</td>
+      <td>8</td>
       <td>2</td>
       <td>0</td>
-      <td>6</td>
-      <td>0.70</td>
-      <td>1.61</td>
-      <td>-0.91</td>
+      <td>7</td>
+      <td>0.67</td>
+      <td>1.62</td>
+      <td>-0.95</td>
       <td>1.02</td>
-      <td>2.00</td>
-      <td>48%</td>
-      <td>13%</td>
-      <td>43%</td>
+      <td>1.98</td>
+      <td>46%</td>
+      <td>12%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <td>17</td>
       <td>D</td>
       <td>Mainz 05</td>
-      <td>0.65</td>
-      <td>-0.71</td>
-      <td>9%</td>
-      <td>52%</td>
+      <td>0.67</td>
+      <td>-0.70</td>
+      <td>8%</td>
+      <td>50%</td>
       <td>1</td>
       <td>6</td>
       <td>2</td>
       <td>1</td>
       <td>5</td>
-      <td>0.78</td>
-      <td>1.61</td>
-      <td>-0.83</td>
+      <td>0.79</td>
+      <td>1.58</td>
+      <td>-0.79</td>
       <td>1.12</td>
-      <td>1.19</td>
-      <td>57%</td>
+      <td>1.18</td>
+      <td>58%</td>
       <td>17%</td>
-      <td>35%</td>
+      <td>33%</td>
     </tr>
     <tr>
       <td>18</td>
       <td>D</td>
       <td>Darmstadt 98</td>
-      <td>0.57</td>
-      <td>-1.11</td>
-      <td>9%</td>
-      <td>61%</td>
+      <td>0.54</td>
+      <td>-1.33</td>
+      <td>8%</td>
+      <td>62%</td>
       <td>1</td>
-      <td>7</td>
+      <td>8</td>
       <td>0</td>
       <td>0</td>
       <td>7</td>
-      <td>1.04</td>
-      <td>2.26</td>
-      <td>-1.22</td>
-      <td>1.03</td>
-      <td>2.02</td>
-      <td>61%</td>
-      <td>9%</td>
-      <td>39%</td>
+      <td>1.00</td>
+      <td>2.42</td>
+      <td>-1.42</td>
+      <td>1.02</td>
+      <td>2.05</td>
+      <td>58%</td>
+      <td>8%</td>
+      <td>42%</td>
     </tr>
   </tbody>
 </table>

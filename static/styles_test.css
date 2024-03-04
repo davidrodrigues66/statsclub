@@ -23,8 +23,8 @@ body {
     height: auto; /* Example content height to demonstrate scrollability */
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 50px;
-    width: min-content;
+    margin-bottom: 50px; 
+    width: min-content; /* Ajustar aqui para o mobile*/
 }
 
 .logo{
@@ -421,9 +421,9 @@ h4 img {
 
 /* Style for the right container */
 .right-container {
-    flex: 1;
+    flex: 1.2;
     background-color:  transparent; /* Set a background color for the right container */
-    
+
 }
 
 /* Style for the sidebar */
@@ -525,4 +525,5 @@ h4 img {
     background-color: #2134c4; /* Change this to the desired darker color */
     color: #fff; /* Change this to the desired text color */
 }
+
 

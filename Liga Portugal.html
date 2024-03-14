@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Primeira Liga</title>
     <link rel="icon" type="image/x-icon" href="logo_32.ico">
-    <link rel="stylesheet" href="static\styles.css">
+    <link rel="stylesheet" href="static\styles_test.css">
 
+    
 </head>
 <body>
     <div class="top-bar">
@@ -21,37 +23,68 @@
     <div id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-button">X</button>
         <ul>
-            <li style="font-weight: bold;">Leagues</li>
-            <li><a href="/Premier League"> Premier League</a></li>
-            <li><a href="/Liga Portugal"> Liga Portugal </a></li>
-            <li><a href="/La Liga"> La Liga </a></li>
-            <li><a href="/Serie A"> Serie A </a></li>
-            <li><a href="/Bundesliga"> Bundesliga </a></li>
-            <li><a href="/Ligue 1"> Ligue 1 </a></li>
-            
+            <li style="font-weight: bold;margin-bottom: 10px;">Leagues</li>
+            <li><a href="/Premier League"> <img src="./logos/premier_league_logo.png"> Premier League</a></li>
+            <li><a href="/Liga Portugal"> <img src="./logos/liga_portugal_logo.png"> Liga Portugal </a></li>
+            <li><a href="/La Liga"> <img src="./logos/la_liga_logo.png"> La Liga </a></li>
+            <li><a href="/Serie A"> <img src="./logos/serie_a_logo.png"> Serie A </a></li>
+            <li><a href="/Bundesliga"> <img src="./logos/bundesliga_logo.png"> Bundesliga </a></li>
+            <li><a href="/Ligue 1"> <img src="./logos/ligue_1_logo.png"> Ligue 1 </a></li>
         </ul>
     </div>
 
     <div class="content">
 
-        <div class="info-container">
-            <div class="logo">
-                <img src="./logos/primeira_liga_logo.png" alt="Liga Portugal Logo" style="width: 100px; height: auto;">
+        <div class="top-container">
+            <div class="info-container" style="display: flex; flex-direction: row;">
+                <h2><img src="./logos/liga_portugal_logo.png" alt="Premier League Logo" style="width: 100px; height: auto;"> Primeira Liga 23/24</h2>
+
+                <div style="display: flex; flex-direction:row;margin-top: 0;">
+                    <ul> 
+                        <h4> <b>Best Attacks: </b>Sporting CP, Benfica, Braga</h4>
+                        <h4> <b>Worst Attacks: </b>Casa Pia, Famalicão, Portimonense </h4>
+                    </ul>
+                    <ul>
+                        <h4> <b>Best Defenses: </b>Porto, Benfica, Sporting CP </h4>
+                        <h4> <b>Worst Defenses: </b>Chaves, Portimonense, Estoril </h4>
+                    </ul>
+                    
+                </div>
             </div>
-            <div>
-                <h2> Primeira Liga 23/24</h2>
-                <h3>The home team has an average advantage of 0.34 goals</h3>
+            <!--Está display none-->
+            <div class="info-container" style="margin-left: 20px; display: flex; flex-direction: row; display: none;">
+                <ul> 
+                    
+                    
+                    <h4> <b>Best Attack: </b>[&#39;Sporting CP&#39;, &#39;Benfica&#39;, &#39;Braga&#39;] </h4>
+                    <h4> <b>Worst Attack: </b>[&#39;Casa Pia&#39;, &#39;Famalicão&#39;, &#39;Portimonense&#39;] </h4>
+                </ul>
+                <ul>
+                    <h4> <b>Best Defense: </b>[&#39;Porto&#39;, &#39;Benfica&#39;, &#39;Sporting CP&#39;] </h4>
+                    <h4> <b>Worst Defense: </b>[&#39;Chaves&#39;, &#39;Portimonense&#39;, &#39;Estoril&#39;] </h4>
+                </ul>
             </div>
         </div>
 
-        <div class="maincontainer">
+        <div class="main-container">
 
             <div class="left-container">
                 <h2>Fixtures</h2>
                 <div class="button-container">
                     
+
                     
                     
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -74,102 +107,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\estoril.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Estoril</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.31</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Estoril</th>
-      <th>Portimonense</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>0.88</td>
-      <td>0.92</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.31</td>
-      <td>-1.05</td>
+      <td>1.33</td>
+      <td>0.46</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>24%</td>
-      <td>24%</td>
+      <td>42%</td>
+      <td>8%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>60%</td>
-      <td>56%</td>
+      <td>50%</td>
+      <td>69%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>4</td>
-      <td>1</td>
+      <td>4</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>7</td>
-      <td>10</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>6</td>
-      <td>2</td>
+      <td>5</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>1</td>
+      <td>0</td>
       <td>1</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>6</td>
-      <td>6</td>
+      <td>2</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.64</td>
-      <td>0.96</td>
+      <td>1.83</td>
+      <td>1.46</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.96</td>
-      <td>2.08</td>
+      <td>1.33</td>
+      <td>2.54</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-0.32</td>
-      <td>-1.12</td>
+      <td>0.5</td>
+      <td>-1.08</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.27</td>
-      <td>0.93</td>
+      <td>1.38</td>
+      <td>1.16</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.63</td>
-      <td>1.65</td>
+      <td>1.23</td>
+      <td>1.99</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>68%</td>
-      <td>56%</td>
+      <td>50%</td>
+      <td>85%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>24%</td>
-      <td>12%</td>
+      <td>42%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>8%</td>
+      <td>8%</td>
+      <td>8%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\portimonense.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Portimonense</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-1.05</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.92</td>
+      <td>1.0</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>24%</td>
+      <td>23%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>56%</td>
+      <td>46%</td>
+      <td>67%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>10</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>6</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>0.96</td>
+      <td>0.85</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>2.08</td>
+      <td>1.54</td>
+      <td>2.67</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-1.12</td>
+      <td>-0.69</td>
+      <td>-1.59</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>0.93</td>
+      <td>1.05</td>
+      <td>0.8</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.65</td>
+      <td>1.53</td>
+      <td>1.77</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>56%</td>
+      <td>62%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>12%</td>
+      <td>23%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>36%</td>
+      <td>23%</td>
+      <td>50%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -192,102 +387,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\famalicao.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Famalicão</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.19</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Famalicão</th>
-      <th>Estrela</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>1.12</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.19</td>
-      <td>-0.49</td>
+      <td>1.45</td>
+      <td>0.85</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>25%</td>
-      <td>24%</td>
+      <td>36%</td>
+      <td>15%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>38%</td>
-      <td>48%</td>
+      <td>27%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>2</td>
-      <td>3</td>
+      <td>1</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>3</td>
-      <td>7</td>
+      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>3</td>
-      <td>3</td>
+      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>1</td>
       <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>6</td>
-      <td>9</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.0</td>
-      <td>1.04</td>
+      <td>1.18</td>
+      <td>0.85</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.25</td>
-      <td>1.56</td>
+      <td>1.27</td>
+      <td>1.23</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-0.25</td>
-      <td>-0.52</td>
+      <td>-0.09</td>
+      <td>-0.38</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>0.97</td>
-      <td>1.09</td>
+      <td>1.07</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.31</td>
-      <td>1.43</td>
+      <td>1.25</td>
+      <td>1.36</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>54%</td>
-      <td>52%</td>
+      <td>64%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>21%</td>
-      <td>16%</td>
+      <td>27%</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>33%</td>
+      <td>18%</td>
+      <td>46%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\estrela.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Estrela</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-0.49</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.0</td>
+      <td>1.31</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>24%</td>
+      <td>38%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>48%</td>
+      <td>46%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>7</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>9</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.04</td>
+      <td>1.38</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.56</td>
+      <td>1.54</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.52</td>
+      <td>-0.16</td>
+      <td>-0.91</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.09</td>
+      <td>1.18</td>
+      <td>0.99</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.43</td>
+      <td>1.4</td>
+      <td>1.47</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>52%</td>
+      <td>62%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>16%</td>
+      <td>15%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>36%</td>
+      <td>23%</td>
+      <td>50%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -310,102 +667,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\farense.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Farense</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: lightgreen;">-0.1</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Farense</th>
-      <th>Rio Ave</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>1.04</td>
-      <td>0.96</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.1</td>
-      <td>-0.3</td>
+      <td>1.25</td>
+      <td>0.85</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>28%</td>
-      <td>16%</td>
+      <td>33%</td>
+      <td>23%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>52%</td>
-      <td>36%</td>
+      <td>42%</td>
+      <td>62%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>5</td>
       <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>3</td>
-      <td>4</td>
+      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>3</td>
-      <td>4</td>
+      <td>3</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>W T5</th>
+      <td>1</td>
       <td>1</td>
       <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>6</td>
-      <td>5</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.32</td>
-      <td>1.0</td>
+      <td>1.33</td>
+      <td>1.31</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.48</td>
-      <td>1.36</td>
+      <td>1.17</td>
+      <td>1.77</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-0.16</td>
-      <td>-0.36</td>
+      <td>0.16</td>
+      <td>-0.46</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.3</td>
-      <td>1.2</td>
+      <td>1.57</td>
+      <td>1.05</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.7</td>
-      <td>1.24</td>
+      <td>1.5</td>
+      <td>1.88</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>56%</td>
-      <td>52%</td>
+      <td>42%</td>
+      <td>69%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>20%</td>
+      <td>42%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
       <td>32%</td>
+      <td>33%</td>
+      <td>31%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\rio_ave.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Rio Ave</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.3</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.96</td>
+      <td>1.38</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>16%</td>
+      <td>31%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>36%</td>
+      <td>23%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>4</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>5</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.0</td>
+      <td>1.38</td>
+      <td>0.58</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.36</td>
+      <td>1.31</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.36</td>
+      <td>0.07</td>
+      <td>-0.84</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.2</td>
+      <td>1.22</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.24</td>
+      <td>0.94</td>
+      <td>1.56</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>52%</td>
+      <td>54%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>32%</td>
+      <td>38%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>32%</td>
+      <td>15%</td>
+      <td>50%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -428,102 +947,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\braga.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Braga</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: green;">0.74</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Braga</th>
-      <th>Gil Vicente FC</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>2.0</td>
-      <td>1.12</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.74</td>
-      <td>-0.17</td>
+      <td>2.0</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>60%</td>
-      <td>28%</td>
+      <td>58%</td>
+      <td>62%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>20%</td>
-      <td>44%</td>
+      <td>17%</td>
+      <td>23%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>9</td>
+      <td>4</td>
       <td>5</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>3</td>
-      <td>5</td>
+      <td>0</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>4</td>
-      <td>5</td>
+      <td>2</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>3</td>
-      <td>5</td>
+      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>2.12</td>
-      <td>1.36</td>
+      <td>2.08</td>
+      <td>2.15</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.32</td>
-      <td>1.48</td>
+      <td>0.92</td>
+      <td>1.69</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>0.8</td>
-      <td>-0.12</td>
+      <td>1.16</td>
+      <td>0.46</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.93</td>
-      <td>1.15</td>
+      <td>2.38</td>
+      <td>1.51</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.26</td>
-      <td>1.41</td>
+      <td>0.89</td>
+      <td>1.59</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>68%</td>
-      <td>52%</td>
+      <td>75%</td>
+      <td>62%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>20%</td>
-      <td>28%</td>
+      <td>17%</td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>16%</td>
+      <td>8%</td>
+      <td>23%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\gil_vincente.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Gil Vicente FC</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: orange;">-0.17</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.12</td>
+      <td>1.62</td>
+      <td>0.58</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>28%</td>
+      <td>38%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>44%</td>
+      <td>15%</td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>5</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>5</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>5</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.36</td>
+      <td>1.77</td>
+      <td>0.92</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.48</td>
+      <td>1.08</td>
+      <td>1.92</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.12</td>
+      <td>0.69</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.15</td>
+      <td>1.22</td>
+      <td>1.07</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.41</td>
+      <td>1.47</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>52%</td>
+      <td>54%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>28%</td>
+      <td>38%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>28%</td>
+      <td>15%</td>
+      <td>42%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -546,102 +1227,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\porto.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Porto</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: green;">1.11</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Porto</th>
-      <th>Vizela</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>2.2</td>
-      <td>0.84</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>1.11</td>
-      <td>-0.82</td>
+      <td>2.42</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>68%</td>
-      <td>16%</td>
+      <td>75%</td>
+      <td>62%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>16%</td>
-      <td>48%</td>
+      <td>8%</td>
+      <td>23%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>9</td>
-      <td>0</td>
+      <td>5</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>1</td>
-      <td>7</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>10</td>
-      <td>3</td>
+      <td>6</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>3</td>
-      <td>0</td>
+      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>2</td>
-      <td>8</td>
+      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.84</td>
-      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.69</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>0.68</td>
-      <td>1.92</td>
+      <td>0.42</td>
+      <td>0.92</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>1.16</td>
-      <td>-0.92</td>
+      <td>1.58</td>
+      <td>0.77</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.85</td>
-      <td>1.14</td>
+      <td>2.22</td>
+      <td>1.52</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>0.85</td>
-      <td>1.48</td>
+      <td>0.57</td>
+      <td>1.11</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>44%</td>
-      <td>56%</td>
+      <td>33%</td>
+      <td>54%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>44%</td>
-      <td>28%</td>
+      <td>58%</td>
+      <td>31%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>16%</td>
+      <td>17%</td>
+      <td>15%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\vizela.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Vizela</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-0.82</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>0.84</td>
+      <td>0.77</td>
+      <td>0.92</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>16%</td>
+      <td>15%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>48%</td>
+      <td>54%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>7</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>8</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.0</td>
+      <td>1.15</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.92</td>
+      <td>2.0</td>
+      <td>1.83</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.92</td>
+      <td>-0.85</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.14</td>
+      <td>1.34</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.48</td>
+      <td>1.42</td>
+      <td>1.53</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>56%</td>
+      <td>62%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>28%</td>
+      <td>23%</td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>32%</td>
+      <td>31%</td>
+      <td>33%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -664,102 +1507,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\moreirense.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Moreirense</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: lightgreen;">0.06</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Moreirense</th>
-      <th>Arouca</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>1.56</td>
-      <td>1.36</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>0.06</td>
-      <td>0.21</td>
+      <td>1.5</td>
+      <td>1.62</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>44%</td>
-      <td>40%</td>
+      <td>42%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>32%</td>
-      <td>44%</td>
+      <td>33%</td>
+      <td>31%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>3</td>
-      <td>5</td>
+      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>4</td>
-      <td>4</td>
+      <td>2</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>8</td>
-      <td>3</td>
+      <td>4</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>1</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>6</td>
-      <td>5</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>1.08</td>
-      <td>1.72</td>
+      <td>1.17</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.08</td>
-      <td>1.44</td>
+      <td>1.17</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>0.0</td>
-      <td>0.28</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>0.98</td>
-      <td>1.39</td>
+      <td>1.09</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>0.95</td>
-      <td>1.44</td>
+      <td>0.96</td>
+      <td>0.95</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>32%</td>
-      <td>52%</td>
+      <td>42%</td>
+      <td>23%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>48%</td>
-      <td>12%</td>
+      <td>50%</td>
+      <td>46%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>36%</td>
+      <td>25%</td>
+      <td>46%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\arouca.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Arouca</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: lightgreen;">0.21</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.36</td>
+      <td>1.31</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>40%</td>
+      <td>38%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>44%</td>
+      <td>46%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>5</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.72</td>
+      <td>1.62</td>
+      <td>1.83</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.44</td>
+      <td>1.62</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.28</td>
+      <td>0.0</td>
+      <td>0.58</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.39</td>
+      <td>1.22</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.44</td>
+      <td>1.32</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>52%</td>
+      <td>38%</td>
+      <td>67%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>12%</td>
+      <td>15%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>36%</td>
+      <td>46%</td>
+      <td>25%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -782,102 +1787,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\chaves.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Chaves</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-1.16</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Chaves</th>
-      <th>Vitória</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>0.76</td>
-      <td>1.88</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-1.16</td>
-      <td>0.4</td>
+      <td>1.0</td>
+      <td>0.54</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>16%</td>
-      <td>56%</td>
+      <td>25%</td>
+      <td>8%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>56%</td>
-      <td>24%</td>
+      <td>50%</td>
+      <td>62%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>2</td>
-      <td>5</td>
+      <td>1</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>10</td>
-      <td>2</td>
+      <td>5</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>1</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>W T5</th>
       <td>0</td>
       <td>1</td>
     </tr>
     <tr>
+      <th>W T5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>L T5</th>
       <td>5</td>
+      <td>3</td>
       <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>0.96</td>
-      <td>1.56</td>
+      <td>1.33</td>
+      <td>0.62</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>2.16</td>
-      <td>1.04</td>
+      <td>2.17</td>
+      <td>2.15</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-1.2</td>
-      <td>0.52</td>
+      <td>-0.84</td>
+      <td>-1.53</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>1.02</td>
-      <td>1.43</td>
+      <td>1.17</td>
+      <td>0.89</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.8</td>
-      <td>1.18</td>
+      <td>1.66</td>
+      <td>1.94</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>56%</td>
-      <td>52%</td>
+      <td>75%</td>
+      <td>38%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>12%</td>
-      <td>32%</td>
+      <td>8%</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>40%</td>
+      <td>25%</td>
+      <td>54%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\vitoria.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Vitória</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: lightgreen;">0.4</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.88</td>
+      <td>2.15</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>56%</td>
+      <td>69%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>24%</td>
+      <td>23%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>7</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.56</td>
+      <td>2.0</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.04</td>
+      <td>1.08</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>0.52</td>
+      <td>0.92</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.43</td>
+      <td>1.78</td>
+      <td>1.04</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.18</td>
+      <td>0.96</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>52%</td>
+      <td>54%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>32%</td>
+      <td>38%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>20%</td>
+      <td>8%</td>
+      <td>33%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -900,102 +2067,264 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\casa_pia.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Casa Pia</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-0.53</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Casa Pia</th>
-      <th>Benfica</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>1.08</td>
-      <td>2.44</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>-0.53</td>
-      <td>1.38</td>
+      <td>0.83</td>
+      <td>1.31</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>28%</td>
-      <td>76%</td>
+      <td>17%</td>
+      <td>38%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>48%</td>
-      <td>8%</td>
+      <td>50%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>4</td>
-      <td>13</td>
+      <td>0</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>8</td>
-      <td>1</td>
+      <td>3</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>5</td>
-      <td>11</td>
+      <td>2</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>1</td>
-      <td>4</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>4</td>
-      <td>1</td>
+      <td>2</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>0.92</td>
-      <td>2.36</td>
+      <td>0.5</td>
+      <td>1.31</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.52</td>
-      <td>0.84</td>
+      <td>1.08</td>
+      <td>1.92</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>-0.6</td>
-      <td>1.52</td>
+      <td>-0.58</td>
+      <td>-0.61</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>0.8</td>
-      <td>2.25</td>
+      <td>0.73</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>1.29</td>
-      <td>1.02</td>
+      <td>1.0</td>
+      <td>1.56</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>40%</td>
-      <td>48%</td>
+      <td>33%</td>
+      <td>46%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>32%</td>
-      <td>48%</td>
+      <td>42%</td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>40%</td>
+      <td>50%</td>
+      <td>31%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\benfica.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Benfica</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: green;">1.38</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>2.44</td>
+      <td>2.69</td>
+      <td>2.17</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>76%</td>
+      <td>85%</td>
+      <td>67%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>8%</td>
+      <td>0%</td>
+      <td>17%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>13</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>11</td>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>2.36</td>
+      <td>2.77</td>
+      <td>1.92</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>0.84</td>
+      <td>0.46</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>1.52</td>
+      <td>2.31</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>2.25</td>
+      <td>2.57</td>
+      <td>1.91</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.02</td>
+      <td>0.78</td>
+      <td>1.28</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>48%</td>
+      <td>46%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>48%</td>
+      <td>54%</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>8%</td>
+      <td>0%</td>
+      <td>17%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
+                    
+
                     
                     
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+
                     
                     
                     
@@ -1018,99 +2347,250 @@
 
                     <div class="table-container" style="display: none;" id="left-table-container">
                         <div class="table-content">
-                            <table border="1" class="dataframe">
+                            <h3 style="text-align: center;">The home team has an average advantage of 0.34 goals</h3>
+                            <div class="team-table-container">
+                                <div class="team1-logo-container">
+                                    <img src="liga_portugal_logos\sporting_cp.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Sporting CP</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: green;">1.77</span>
+                                </div>
+                                
+                                <div class="team1-stats-container" data-table="team1a" id="team1a">
+                                    <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Sporting CP</th>
-      <th>Boavista</th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Form</th>
       <td>2.58</td>
-      <td>1.12</td>
-    </tr>
-    <tr>
-      <th>Power Ranking</th>
-      <td>1.77</td>
-      <td>-0.55</td>
+      <td>3.0</td>
+      <td>2.17</td>
     </tr>
     <tr>
       <th>Win%</th>
       <td>83%</td>
-      <td>28%</td>
+      <td>100%</td>
+      <td>67%</td>
     </tr>
     <tr>
       <th>Loss%</th>
       <td>8%</td>
-      <td>44%</td>
+      <td>0%</td>
+      <td>17%</td>
     </tr>
     <tr>
       <th>W by &gt;2</th>
       <td>12</td>
-      <td>3</td>
+      <td>7</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>L by &gt;2</th>
       <td>0</td>
-      <td>9</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>Win to Nil</th>
       <td>10</td>
-      <td>1</td>
+      <td>6</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>W T5</th>
       <td>2</td>
-      <td>1</td>
+      <td>2</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>L T5</th>
       <td>2</td>
-      <td>4</td>
+      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>AVG GF</th>
       <td>2.88</td>
-      <td>1.28</td>
+      <td>3.33</td>
+      <td>2.42</td>
     </tr>
     <tr>
       <th>AVG GA</th>
       <td>1.0</td>
-      <td>1.8</td>
+      <td>0.75</td>
+      <td>1.25</td>
     </tr>
     <tr>
       <th>AVG Excess</th>
       <td>1.88</td>
-      <td>-0.52</td>
+      <td>2.58</td>
+      <td>1.17</td>
     </tr>
     <tr>
       <th>AVG xG</th>
       <td>2.16</td>
-      <td>1.09</td>
+      <td>2.35</td>
+      <td>1.98</td>
     </tr>
     <tr>
       <th>AVG xGA</th>
       <td>0.78</td>
-      <td>1.5</td>
+      <td>0.67</td>
+      <td>0.88</td>
     </tr>
     <tr>
       <th>BTTS%</th>
       <td>58%</td>
-      <td>68%</td>
+      <td>50%</td>
+      <td>67%</td>
     </tr>
     <tr>
       <th>CS%</th>
       <td>42%</td>
-      <td>8%</td>
+      <td>50%</td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>0%</td>
+      <td>0%</td>
+      <td>0%</td>
     </tr>
   </tbody>
 </table>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-table-container">
+                                <div class="team2-logo-container">
+                                    <img src="liga_portugal_logos\boavista.png" alt="logo" style="height: 50px; width: auto; font-size: 5px;margin-left: auto;margin-right: 5px;margin-top: auto;margin-bottom: auto;" >
+                                    <h2 style="color: white;margin: 5px;margin-top: auto;margin-bottom: auto;">Boavista</h2>
+                                    <span style="padding: 5px; border-radius: 5px;margin: auto;font-size: 12px;font-weight: bold; background-color: red;">-0.55</span>
+                                </div>
+                                
+                                <div class="team2-stats-container" data-table="team2a" id="team2a">
+                                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Overall</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Form</th>
+      <td>1.12</td>
+      <td>1.23</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Win%</th>
+      <td>28%</td>
+      <td>31%</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <th>Loss%</th>
+      <td>44%</td>
+      <td>38%</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <th>W by &gt;2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>L by &gt;2</th>
+      <td>9</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Win to Nil</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>W T5</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L T5</th>
+      <td>4</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>AVG GF</th>
+      <td>1.28</td>
+      <td>1.31</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>AVG GA</th>
+      <td>1.8</td>
+      <td>2.0</td>
+      <td>1.58</td>
+    </tr>
+    <tr>
+      <th>AVG Excess</th>
+      <td>-0.52</td>
+      <td>-0.69</td>
+      <td>-0.33</td>
+    </tr>
+    <tr>
+      <th>AVG xG</th>
+      <td>1.09</td>
+      <td>1.22</td>
+      <td>0.95</td>
+    </tr>
+    <tr>
+      <th>AVG xGA</th>
+      <td>1.5</td>
+      <td>1.53</td>
+      <td>1.48</td>
+    </tr>
+    <tr>
+      <th>BTTS%</th>
+      <td>68%</td>
+      <td>69%</td>
+      <td>67%</td>
+    </tr>
+    <tr>
+      <th>CS%</th>
+      <td>8%</td>
+      <td>8%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <th>FTS%</th>
+      <td>28%</td>
+      <td>23%</td>
+      <td>33%</td>
+    </tr>
+  </tbody>
+</table>
+                                </div>
+                                
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+
+
                     
                 </div>
             </div>
@@ -1122,7 +2602,7 @@
             </div>
 
             <div class="right-container">
-                <h2>Liga Portugal Standings </h2>
+                <h2><img src="./logos/liga_portugal_logo.png" alt="Premier League Logo" style="width: 60px; height: auto; align-items: baseline;"> Primeira Liga Standings </h2>
                 <button class="table-toggle-button active-button" data-table="total" onclick="showTable('total')">Overall</button>
                 <button class="table-toggle-button" data-table="home" onclick="showTable('home')">Home</button>
                 <button class="table-toggle-button" data-table="away" onclick="showTable('away')">Away</button>
@@ -1806,11 +3286,56 @@
         </div>
 
         <script>
+            
+            // Team 1 tables
+            function team1Table(tableType) {
+                // Toggle the table visibility based on the tableType
+                var allTables = document.querySelectorAll('.team1-stats-container');
+                
+                allTables.forEach(function(table) {
+                    var tableId = table.getAttribute('data-table');
+                    if (tableId === tableType) {
+                        table.style.display = 'block';
+                    } else {
+                        table.style.display = 'none';
+                    }
+                });
+            }
+            // Team 2 tables
+            function team2Table(tableType) {
+                // Toggle the table visibility based on the tableType
+                var allTables = document.querySelectorAll('.team2-stats-container');
+                
+                allTables.forEach(function(table) {
+                    var tableId = table.getAttribute('data-table');
+                    if (tableId === tableType) {
+                        table.style.display = 'block';
+                    } else {
+                        table.style.display = 'none';
+                    }
+                });
+            }
+            // Sidebar
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.left = "-250px"; // Hide the sidebar
+        
+            document.getElementById('toggle-sidebar').addEventListener('click', function() {
+                if (sidebar.style.left === "0px" || sidebar.style.left === "") {
+                    sidebar.style.left = "-250px"; // Hide the sidebar
+                } else {
+                    sidebar.style.left = "0px"; // Show the sidebar
+                }
+            });
+        
+            document.getElementById('close-sidebar').addEventListener('click', function() {
+                sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
+            });
+        
             // Simple Tables
             function showTable(tableType) {
                 // Get all the buttons
                 var buttons = document.querySelectorAll('.table-toggle-button');
-
+        
                 // Iterate through the buttons to update their style
                 for (var i = 0; i < buttons.length; i++) {
                     if (buttons[i].getAttribute('data-table') === tableType) {
@@ -1819,7 +3344,7 @@
                         buttons[i].classList.remove('active-button'); // Remove the active class from other buttons
                     }
                 }
-
+        
                 // Toggle the table visibility as before
                 if (tableType === 'total') {
                     document.getElementById('total-table').style.display = 'block';
@@ -1835,16 +3360,13 @@
                     document.getElementById('away-table').style.display = 'block';
                 }
             }
-        </script>
-
-        <script>
+        
             // Dynamic table
             var activeButton = null;
-
             function toggleTable(button) {
                 var tableContainer = button.nextElementSibling;
                 var dynamicTable = document.getElementById('dynamic-table');
-
+        
                 if (activeButton === button) {
                     // If the same button is clicked again, hide the displayed table
                     dynamicTable.style.display = 'none';
@@ -1863,28 +3385,11 @@
                     }
                     
                     activeButton = button;
-                    }
                 }
-
+            }
+            
         </script>
-
-        <script>
-            // Sidebar
-            var sidebar = document.getElementById('sidebar');
-            sidebar.style.left = "-250px"; // Hide the sidebar
-
-            document.getElementById('toggle-sidebar').addEventListener('click', function() {
-                if (sidebar.style.left === "0px" || sidebar.style.left === "") {
-                    sidebar.style.left = "-250px"; // Hide the sidebar
-                } else {
-                    sidebar.style.left = "0px"; // Show the sidebar
-                }
-            });
-
-            document.getElementById('close-sidebar').addEventListener('click', function() {
-                sidebar.style.left = "-250px"; // Hide the sidebar when the close button is clicked
-            });
-        </script>
+        
 
         <div style="width: max-content; margin: auto; display: flex; flex-direction: column;" class="container">
             <h2>
@@ -2321,4 +3826,5 @@
     </div>
 
 </body>
+
 </html>

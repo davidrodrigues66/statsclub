@@ -24,7 +24,7 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 50px; 
-    width: min-content; /* Ajustar aqui para o mobile*/
+    width: 100vw; /* Ajustar aqui para o mobile*/
 }
 
 .logo{

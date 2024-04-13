@@ -23,7 +23,8 @@ body {
     height: auto; /* Example content height to demonstrate scrollability */
     margin-left: 30px;
     margin-right: 0px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    width: 100%;
 }
 
 .logo{

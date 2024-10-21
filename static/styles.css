@@ -51,6 +51,15 @@ body {
     height: fit-content;
 }
 
+.bw-list{
+    display:flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 10px;
+    width: 160px;
+    text-align: center;
+}
+
 .top-container {
     display: flex;
     flex-direction: row;
@@ -359,9 +368,12 @@ tr:hover {background-color: rgba(0, 0, 0, 0.1); /* Darken the original backgroun
 
 .simple-table table {
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
 }
 
+.simple-table th {text-align: center;}
+
+.simple-table tbody tr:nth-child(-n+5) {background-color: rgba(0, 0, 0, 0.05);}
 
 h1 {
     font-size: 24px;
@@ -370,6 +382,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color:#000000;
     font-size: 20px;
@@ -381,12 +394,14 @@ h2 img {
 }
 
 h3 {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 15px;
     color:#000000;
 }
 
 h4 {
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 15px;
     color:#000000;
